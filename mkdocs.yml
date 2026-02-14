@@ -66,23 +66,31 @@ nav:
       - Understanding the Interface: gee/1. Code Editor/1. User Interface of Code Editor.md
       - JavaScript vs Python: gee/1. Code Editor/3. Javascipt vs python.md
   - Programming Basics:
-      - What is Programming?: programming/01.What is Programming.md
-      - Understanding Data Types: programming/05.JSON_Python_ee.md
-      - Working with Functions: programming/06.Functions.md
-      - Using Loops Efficiently: programming/08.map() function.md
+      - What is Programming?: programming/1. What is Programming.md
+      - Understanding Data Types: programming/2. Data Types.md
+      - Working with Functions: programming/3. Functions.md
+      - Using Loops Efficiently: programming/4. Loops.md
   - Core Concepts:
       - Best Practices: gee/modern_best_practices.md
-      - JavaScript vs Python Examples: gee/code_examples.md
+      - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
       - Syntax Guide: gee/gee_syntax.md
-      - Scale & Projection Explained: gee/scale_projection.md
+      - Scale & Projection: gee/scale_projection.md
       - Fixing Errors: gee/Debugging.md
   - Working with Data:
-      - Satellite Images (Raster): gee/5. Working with Raster Data/README.md
-      - Maps & Boundaries (Vector): gee/6. Working with Vector Data/README.md
-      - Machine Learning Basics: gee/7. Machine Learning/README.md
+      - Satellite Images (Raster): 
+          - Overview: gee/5. Working with Raster Data/README.md
+          - Single Band Images: gee/5. Working with Raster Data/1. Single Band Images.md
+          - Multi Band Images: gee/5. Working with Raster Data/2. Multi Band Images.md
+          - Calculating Indices: gee/5. Working with Raster Data/3. Calculating Indices.md
+          - Time Series Analysis: gee/5. Working with Raster Data/4. Time Series Analysis.md
+          - Exporting Data: gee/5. Working with Raster Data/5. Exporting Data.md
+      - Maps & Boundaries (Vector):
+          - Overview: gee/6. Working with Vector Data/README.md
+          - Understanding Features: gee/6. Working with Vector Data/1. Overview of Features.md
+          - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
+          - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
   - Real-World Projects:
-      - Water Body Mapping:
-          - Understanding Water Data: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
+      - Water Body Mapping: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
           - Creating Water Charts: gee/Projects/1.Water Body Mapping/3. Water Surface Area Charting.md
           - Mapping Floods: gee/Projects/1.Water Body Mapping/4. Flood Mapping.md
       - Land Classification: lulc/Supervised LULC Classification GEE.md

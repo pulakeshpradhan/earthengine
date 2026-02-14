@@ -1,0 +1,139 @@
+/* ========================================
+   MODERN GEOSPATIAL THEME - Clean & Professional
+   ======================================== */
+
+/* Enhance the default theme (Teal/Blue) */
+:root {
+  --md-primary-fg-color--light: #4db6ac;
+  --md-primary-fg-color--dark: #00695c;
+}
+
+/* Header Styling - Add a subtle gradient */
+.md-header {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
+  border-bottom: 2px solid var(--md-accent-fg-color);
+}
+
+/* Typography - Clean and Readable */
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  border-bottom: 3px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  border-bottom: 1px solid var(--md-accent-fg-color);
+  padding-bottom: 0.3rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+
+/* Admonitions - Modern & Clean */
+.md-typeset .admonition {
+  border-radius: 6px;
+  border-left: 4px solid var(--md-admonition-fg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation - Highlight Active Links */
+.md-nav__link--active {
+  font-weight: 700;
+  color: var(--md-primary-fg-color) !important;
+  border-left: 3px solid var(--md-primary-fg-color);
+  background-color: rgba(0, 150, 136, 0.05);
+  /* Subtle teal background */
+}
+
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Tabbed code blocks */
+.tabbed-set {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tabbed-labels {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .tabbed-labels {
+  background-color: #202124;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: #f1f3f4;
+  color: #c0392b;
+  /* Code red for visibility */
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: #2d2f31;
+  color: #ff8a80;
+  border: 1px solid #444;
+}
+
+/* Tables - Clean Styling */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-typeset-table-color);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  /* Always white text on header */
+  font-weight: 700;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--md-primary-fg-color);
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+  border-bottom: 2px solid var(--md-accent-fg-color);
+}
+
+/* Buttons */
+.md-button {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.md-button:hover {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
