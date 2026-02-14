@@ -1,0 +1,93 @@
+site_name: Google Earth Engine - A Beginner's Guide
+site_url: https://your-username.github.io/gee_beginners/
+site_author: Pulak
+site_description: Learn Google Earth Engine from scratch - A simple, clear guide to satellite imagery and geospatial analysis for everyone.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - What is Google Earth Engine?: gee/README.md
+      - Quick Start (Try It Now!): gee/quick_start.md
+      - Sign Up & Setup: gee/1. Code Editor/0. Registration.md
+      - Understanding the Interface: gee/1. Code Editor/1. User Interface of Code Editor.md
+      - JavaScript vs Python: gee/1. Code Editor/3. Javascipt vs python.md
+  - Programming Basics:
+      - What is Programming?: programming/01.What is Programming.md
+      - Understanding Data Types: programming/05.JSON_Python_ee.md
+      - Working with Functions: programming/06.Functions.md
+      - Using Loops Efficiently: programming/08.map() function.md
+  - Core Concepts:
+      - Best Practices: gee/modern_best_practices.md
+      - JavaScript vs Python Examples: gee/code_examples.md
+      - Syntax Guide: gee/gee_syntax.md
+      - Scale & Projection Explained: gee/scale_projection.md
+      - Fixing Errors: gee/Debugging.md
+  - Working with Data:
+      - Satellite Images (Raster): gee/5. Working with Raster Data/README.md
+      - Maps & Boundaries (Vector): gee/6. Working with Vector Data/README.md
+      - Machine Learning Basics: gee/7. Machine Learning/README.md
+  - Real-World Projects:
+      - Water Body Mapping:
+          - Understanding Water Data: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
+          - Creating Water Charts: gee/Projects/1.Water Body Mapping/3. Water Surface Area Charting.md
+          - Mapping Floods: gee/Projects/1.Water Body Mapping/4. Flood Mapping.md
+      - Land Classification: lulc/Supervised LULC Classification GEE.md
+      - Spatial Analysis Tools: lulc/Spatial-Analyst.md
+      - Advanced Sampling: gee/Advance Analysis/1. Random Sample.md
+  - Quick Reference:
+      - Keyboard Shortcuts: gee/0. Supplementary/1. Keyboard Shortcuts for Google Earth Engine.md
+      - Projection Guide: gee/0. Supplementary/reprojection.md
