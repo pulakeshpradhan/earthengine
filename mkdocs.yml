@@ -90,7 +90,8 @@ nav:
           - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
           - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
   - Real-World Projects:
-      - Water Body Mapping: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
+      - Water Body Mapping:
+          - Understanding Water Data: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
           - Creating Water Charts: gee/Projects/1.Water Body Mapping/3. Water Surface Area Charting.md
           - Mapping Floods: gee/Projects/1.Water Body Mapping/4. Flood Mapping.md
       - Land Classification: lulc/Supervised LULC Classification GEE.md
