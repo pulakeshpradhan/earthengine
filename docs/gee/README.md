@@ -56,11 +56,11 @@ Here's what you'll master, organized by topic:
 | **Introduction to GEE** | What it is, why it's useful, how to navigate |
 | **Account Setup** | Creating your account, getting access |
 | **Basic Programming** | Simple coding concepts (don't worry, we explain everything!) |
-| **Understanding Images** | How satellite images work, what the colors mean |
-| **Working with Maps** | Using boundaries, shapes, and geographic features |
+| **[Understanding Images](5. Working with Raster Data/README.md)** | How satellite images work, what the colors mean |
+| **[Working with Maps](6. Working with Vector Data/README.md)** | Using boundaries, shapes, and geographic features |
 | **Projections** | How flat maps represent our round Earth |
 | **Drawing Shapes** | Creating points, lines, and areas on maps |
-| **Satellite Images** | Working with different types of satellite data |
+| **[Satellite Images](5. Working with Raster Data/README.md)** | Working with different types of satellite data |
 | **Map Features** | Filtering and organizing geographic information |
 | **Visualization** | Making your data look good with colors and legends |
 | **Image Cleanup** | Removing clouds and improving image quality |
