@@ -228,10 +228,10 @@ Instead of one image, let's work with many images over time:
 
 Now that you've seen the basics, here's where to go next:
 
-1. **[Set up your account](gee/1. Code Editor/0. Registration.md)** - Create a free GEE account
-2. **[Learn the interface](gee/1. Code Editor/1. User Interface of Code Editor.md)** - Understand the Code Editor
-3. **[JavaScript vs Python](gee/1. Code Editor/3. Javascipt vs python.md)** - Detailed comparison
-4. **[More examples](gee/code_examples.md)** - Comprehensive code reference
+1. **[Set up your account](1. Code Editor/0. Registration.md)** - Create a free GEE account
+2. **[Learn the interface](1. Code Editor/1. User Interface of Code Editor.md)** - Understand the Code Editor
+3. **[JavaScript vs Python](1. Code Editor/3. Javascipt vs python.md)** - Detailed comparison
+4. **[More examples](code_examples.md)** - Comprehensive code reference
 
 ---
 
@@ -251,4 +251,4 @@ Now that you've seen the basics, here's where to go next:
 
 **Ready to dive deeper? Continue to the full guide!**
 
-[Continue Learning →](gee/README.md){ .md-button .md-button--primary }
+[Continue Learning →](README.md){ .md-button .md-button--primary }
