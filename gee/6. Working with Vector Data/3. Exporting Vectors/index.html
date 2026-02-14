@@ -12,9 +12,13 @@
         <meta name="author" content="Pulak">
       
       
-        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Export%20Feature%20Collection/">
+        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/">
       
       
+        <link rel="prev" href="../2.%20Feature%20Collections/">
+      
+      
+        <link rel="next" href="../../Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>3. Export Feature Collection - Google Earth Engine - A Beginner's Guide</title>
+        <title>Exporting Vectors - Google Earth Engine - A Beginner's Guide</title>
       
     
     
@@ -77,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#exporting-vectors-boundaries-shapes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Export Feature Collection
+              Exporting Vectors
             
           </span>
         </div>
@@ -249,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../programming/01.What%20is%20Programming/" class="md-tabs__link">
+        <a href="../../../programming/1.%20What%20is%20Programming/" class="md-tabs__link">
           
   
   
@@ -285,10 +294,21 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../5.%20Working%20with%20Raster%20Data/" class="md-tabs__link">
           
   
@@ -297,6 +317,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -584,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.%20Code%20Editor/3.%20Javascipt%20vs%20python/" class="md-nav__link">
+      <a href="../../1. Code Editor/3. Javascipt vs python.md" class="md-nav__link">
         
   
   
@@ -673,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/01.What%20is%20Programming/" class="md-nav__link">
+      <a href="../../../programming/1.%20What%20is%20Programming/" class="md-nav__link">
         
   
   
@@ -701,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/05.JSON_Python_ee/" class="md-nav__link">
+      <a href="../../../programming/2.%20Data%20Types/" class="md-nav__link">
         
   
   
@@ -729,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/06.Functions/" class="md-nav__link">
+      <a href="../../../programming/3.%20Functions/" class="md-nav__link">
         
   
   
@@ -757,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/08.map%28%29%20function/" class="md-nav__link">
+      <a href="../../../programming/4.%20Loops/" class="md-nav__link">
         
   
   
@@ -874,14 +897,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code_examples/" class="md-nav__link">
+      <a href="../../1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JavaScript vs Python Examples
+    JavaScript vs Python
   
 
     
@@ -937,7 +960,7 @@
   <span class="md-ellipsis">
     
   
-    Scale & Projection Explained
+    Scale & Projection
   
 
     
@@ -990,28 +1013,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1029,12 +1055,69 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
     Working with Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Satellite Images (Raster)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Satellite Images (Raster)
   
 
           </label>
@@ -1054,7 +1137,7 @@
   <span class="md-ellipsis">
     
   
-    Satellite Images (Raster)
+    Overview
   
 
     
@@ -1067,6 +1150,211 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/1.%20Single%20Band%20Images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Band Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/2.%20Multi%20Band%20Images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi Band Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/3.%20Calculating%20Indices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculating Indices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/4.%20Time%20Series%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Time Series Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/5.%20Exporting%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maps & Boundaries (Vector)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maps & Boundaries (Vector)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1082,7 +1370,7 @@
   <span class="md-ellipsis">
     
   
-    Maps & Boundaries (Vector)
+    Overview
   
 
     
@@ -1103,14 +1391,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7. Machine Learning/README.md" class="md-nav__link">
+      <a href="../1.%20Overview%20of%20Features/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Machine Learning Basics
+    Understanding Features
   
 
     
@@ -1119,6 +1407,139 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.%20Feature%20Collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Vectors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-export-as-shapefile-shp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Export as Shapefile (SHP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-export-as-csv-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Export as CSV (Table)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1556,6 +1977,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-export-as-shapefile-shp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Export as Shapefile (SHP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-export-as-csv-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Export as CSV (Table)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1572,54 +2025,60 @@
 
 
 
-  <h1>3. Export Feature Collection</h1>
+<h1 id="exporting-vectors-boundaries-shapes">Exporting Vectors (Boundaries &amp; Shapes)<a class="headerlink" href="#exporting-vectors-boundaries-shapes" title="Permanent link">&para;</a></h1>
+<p>Once you have filtered or processed your features, you can download them.</p>
+<h2 id="1-export-as-shapefile-shp">1. Export as Shapefile (SHP)<a class="headerlink" href="#1-export-as-shapefile-shp" title="Permanent link">&para;</a></h2>
+<p>To save your vector data for use in ArcGIS or QGIS, export as a <strong>Shapefile</strong>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="c1">// Define the collection to export</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">france</span><span class="p">;</span><span class="w"> </span><span class="c1">// From previous example</span>
 
-<p>```javascript
-var GAULLevel2 = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2");</p>
-<p>//Filter by Country Name
-var indiaAdm2Map = GAULLevel2.filter(ee.Filter.eq('ADM0_NAME', 'India'));</p>
-<p>//Filter by State Name 
-var maharashraAdm2Map = indiaAdm2Map.filter(ee.Filter.eq('ADM1_NAME', 'Maharashtra'));</p>
-<p>//Filter by District Name</p>
-<p>var puneDistrictFromGAUL = maharashraAdm2Map.filter(ee.Filter.eq('ADM2_NAME', 'Pune'));</p>
-<p>//Filtering by District Name can be done directly from original filter collection
-//var puneDistrictFromGAUL = GAULLevel2.filter(ee.Filter.eq('ADM2_NAME', 'Pune'));</p>
-<p>//A subset of Feature Collection would still be Feature Collection even if it contains a single feature
-//Check the filtered district by printing to the console
-print(puneDistrictFromGAUL);</p>
-<p>//Export Feature Collection as an Asset
-//-------------------------------------</p>
-<p>// Export.table.toAsset(maharashraAdm2Map, 'MaharashtraDistrictsGAUL');
-// Export.table.toAsset(puneDistrictFromGAUL, 'PuneDistrictGAUL');
-// Export.table.toAsset(GAULLevel2, 'GAULAdminLayersLevel2'); 
-//Last task will take more time to run as the feature collection has many features covering entire world </p>
-<p>// Import your newly created asset into the script and check it by printing or adding as Map Layer</p>
-<p>// print(MaharashtraDistAssetGAUL);
-// Map.addLayer(MaharashtraDistAssetGAUL);
-// Map.addLayer(AdminLayersL2AssetGAUL);</p>
-<p>//Now you can filter for any Administrative Layer from your newly created asset</p>
-<p>var MaharashtraDistAssetGAUL = ee.FeatureCollection("users/chaitanyaks/MaharashtraDistricts"),
-    AdminLayersL2AssetGAUL = ee.FeatureCollection("users/chaitanyaks/GAULAdminLayersLevel2");
-//(You have to replace the above assets with your newly created asset IDs)</p>
-<p>var karnatakaAdm2Map = AdminLayersL2AssetGAUL.filter(ee.Filter.eq('ADM1_NAME', 'Karnataka'));
-Map.addLayer(karnatakaAdm2Map,{color:'blue'});</p>
-<p>//Export Feature Collection as a shapefile to Google Drive
-//------------------------------------------------------
-/<em>You may not be able to export maharashtraAdm2Map as Shapefile to Drive even though you can 
-export it to your assets. That's because coastal districts of Maharashtra have more than one
-geometry type - not just polygon but even points and linear rings for representing small 
-islands whereas shapefile cannot contain multiple geometry types. It has to be single geometry 
-type such as a polygon eg. Pune District which has only geometry type.You can check that by 
-printing isolated features onto the console and check the metadata</em>/</p>
-<p>Export.table.toDrive({
-  collection : puneDistrictFromGAUL, 
-  description : 'Pune_GAUL',
-  folder : 'GEEExports',
-  fileFormat : 'SHP' 
-  });</p>
-<p>/<em>After submitting the task in the task tab and its completion, check your Google Drive 
-for the folder, download the zip file of shapefile, extract file and open 
-the shapefile in any GIS software </em>/</p>
+<span class="c1">// Export it</span>
+<span class="nx">Export</span><span class="p">.</span><span class="nx">table</span><span class="p">.</span><span class="nx">toDrive</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">myCollection</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;France_Boundary&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">fileFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SHP&#39;</span>
+<span class="p">});</span>
+</code></pre></div>
+<em>If exporting a large collection, it will be split into part files.</em></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">geemap</span>
+
+<span class="c1"># Export as Shapefile</span>
+<span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_vector_to_drive</span><span class="p">(</span>
+    <span class="n">france</span><span class="p">,</span> 
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;France_Boundary&#39;</span><span class="p">,</span> 
+    <span class="n">fileFormat</span><span class="o">=</span><span class="s1">&#39;SHP&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="2-export-as-csv-table">2. Export as CSV (Table)<a class="headerlink" href="#2-export-as-csv-table" title="Permanent link">&para;</a></h2>
+<p>If your features are points or just data (like a list of cities), you can export as a spreadsheet.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nx">Export</span><span class="p">.</span><span class="nx">table</span><span class="p">.</span><span class="nx">toDrive</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">myCollection</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;City_List&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">fileFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;CSV&#39;</span>
+<span class="p">});</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_vector_to_drive</span><span class="p">(</span>
+    <span class="n">myCollection</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;City_List&#39;</span><span class="p">,</span>
+    <span class="n">fileFormat</span><span class="o">=</span><span class="s1">&#39;CSV&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 

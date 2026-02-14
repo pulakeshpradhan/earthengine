@@ -12,9 +12,13 @@
         <meta name="author" content="Pulak">
       
       
-        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/2.%20Working%20with%20Feature%20Collection/">
+        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/3.%20Calculating%20Indices/">
       
       
+        <link rel="prev" href="../2.%20Multi%20Band%20Images/">
+      
+      
+        <link rel="next" href="../4.%20Time%20Series%20Analysis/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>2. Working with Feature Collection - Google Earth Engine - A Beginner's Guide</title>
+        <title>Calculating Indices - Google Earth Engine - A Beginner's Guide</title>
       
     
     
@@ -77,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#calculating-indices-like-ndvi" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Working with Feature Collection
+              Calculating Indices
             
           </span>
         </div>
@@ -249,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../programming/01.What%20is%20Programming/" class="md-tabs__link">
+        <a href="../../../programming/1.%20What%20is%20Programming/" class="md-tabs__link">
           
   
   
@@ -285,11 +294,22 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../5.%20Working%20with%20Raster%20Data/" class="md-tabs__link">
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -297,6 +317,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -584,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.%20Code%20Editor/3.%20Javascipt%20vs%20python/" class="md-nav__link">
+      <a href="../../1. Code Editor/3. Javascipt vs python.md" class="md-nav__link">
         
   
   
@@ -673,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/01.What%20is%20Programming/" class="md-nav__link">
+      <a href="../../../programming/1.%20What%20is%20Programming/" class="md-nav__link">
         
   
   
@@ -701,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/05.JSON_Python_ee/" class="md-nav__link">
+      <a href="../../../programming/2.%20Data%20Types/" class="md-nav__link">
         
   
   
@@ -729,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/06.Functions/" class="md-nav__link">
+      <a href="../../../programming/3.%20Functions/" class="md-nav__link">
         
   
   
@@ -757,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming/08.map%28%29%20function/" class="md-nav__link">
+      <a href="../../../programming/4.%20Loops/" class="md-nav__link">
         
   
   
@@ -874,14 +897,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code_examples/" class="md-nav__link">
+      <a href="../../1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JavaScript vs Python Examples
+    JavaScript vs Python
   
 
     
@@ -937,7 +960,7 @@
   <span class="md-ellipsis">
     
   
-    Scale & Projection Explained
+    Scale & Projection
   
 
     
@@ -990,28 +1013,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1029,7 +1055,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1044,11 +1070,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../5.%20Working%20with%20Raster%20Data/" class="md-nav__link">
+  
+    
+    
+    
+    
+      
+      
         
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -1062,11 +1109,19 @@
   
   
 
-      </a>
-    </li>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Satellite Images (Raster)
   
 
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1082,7 +1137,7 @@
   <span class="md-ellipsis">
     
   
-    Maps & Boundaries (Vector)
+    Overview
   
 
     
@@ -1103,14 +1158,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7. Machine Learning/README.md" class="md-nav__link">
+      <a href="../1.%20Single%20Band%20Images/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Machine Learning Basics
+    Single Band Images
   
 
     
@@ -1119,6 +1174,394 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.%20Multi%20Band%20Images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi Band Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculating Indices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculating Indices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is NDVI?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-ndvi-in-earth-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating NDVI in Earth Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the Result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-common-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Common Indices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.%20Time%20Series%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Time Series Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.%20Exporting%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maps & Boundaries (Vector)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maps & Boundaries (Vector)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Working%20with%20Vector%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Working%20with%20Vector%20Data/1.%20Overview%20of%20Features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Working%20with%20Vector%20Data/2.%20Feature%20Collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Collections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1556,6 +1999,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is NDVI?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-ndvi-in-earth-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating NDVI in Earth Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the Result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-common-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Common Indices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1572,81 +2069,98 @@
 
 
 
-  <h1>2. Working with Feature Collection</h1>
+<h1 id="calculating-indices-like-ndvi">Calculating Indices (Like NDVI)<a class="headerlink" href="#calculating-indices-like-ndvi" title="Permanent link">&para;</a></h1>
+<p>Satellite images contain hidden information. By doing math on the different bands (colors), we can uncover things like plant health or water content.</p>
+<p>The most famous index is <strong>NDVI</strong> (Normalized Difference Vegetation Index).</p>
+<h2 id="what-is-ndvi">What is NDVI?<a class="headerlink" href="#what-is-ndvi" title="Permanent link">&para;</a></h2>
+<p>Plants absorb <strong>Red light</strong> (for photosynthesis) and reflect <strong>Infrared light</strong>.
+Dead plants or soil reflect both equally.</p>
+<p><strong>Formula:</strong>
+$$ NDVI = \frac{(NIR - Red)}{(NIR + Red)} $$</p>
+<p>Don't worry about the math - Earth Engine does it for you!</p>
+<h2 id="calculating-ndvi-in-earth-engine">Calculating NDVI in Earth Engine<a class="headerlink" href="#calculating-ndvi-in-earth-engine" title="Permanent link">&para;</a></h2>
+<p>Let's calculate NDVI for a Landsat 8 image.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
-<p>```javascript
-// Search for WWF Hydrosheds Basins Feature Collection in the DataCatalog</p>
-<p>/<em>HydroSHEDS is a mapping product that provides hydrographic information for regional and 
-global-scale applications. It offers a suite of geo-referenced datasets
-(vector and raster) at various scales, including river networks, watershed boundaries, drainage
-directions, and flow accumulations. HydroSHEDS is based on elevation data obtained in 2000 by 
-NASA's Shuttle Radar Topography Mission (SRTM). This dataset provides polygons of nested, 
-hierarchical watersheds. The watersheds range from level 1 (coarse) to level 12 (detailed) </em>/</p>
-<p>var HydroshedsLevel6 = ee.FeatureCollection("WWF/HydroSHEDS/v1/Basins/hybas_12");
-Map.addLayer(HydroshedsLevel6);</p>
-<p>// // Inspect the Feature Collection using Inspector tab
-// //Select any sub-basin using its 'HYBAS_ID' property and add it onto Map Display</p>
-<p>// var mulaMutha = ee.Feature(HydroshedsLevel6.filter(ee.Filter.eq('HYBAS_ID', 4061067580)).first());
-// print(mulaMutha);
-// Map.centerObject(mulaMutha,8);
-// Map.addLayer(mulaMutha, {color:'blue'},'Mula Mutha sub-Basin');</p>
-<p>// var subBasinArea = mulaMutha.geometry().area().divide(1e6);
-// print('Sub-basin Area in Sq. kms. :', subBasinArea);</p>
-<p>// /<em>-----------------------------------------------------------------------------------------------</em>/</p>
-<p>// var GaulLevel2 = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2");</p>
-<p>// //Filter by Country Name 
-// var indiaAdm2Map = GaulLevel2.filter(ee.Filter.eq('ADM0_NAME', 'India'));
-// print(indiaAdm2Map.size());
-// Map.addLayer(indiaAdm2Map, {},'India Admin Map level 2');</p>
-<p>// //Filter by State Name 
-// var maharashtraAdm2Map = indiaAdm2Map.filter(ee.Filter.eq('ADM1_NAME', 'Maharashtra'));
-// var mystyle = {color:'blue',fillColor:'ffffffff', width:1}; 
-// Map.addLayer(maharashtraAdm2Map.style(mystyle), {},'Maharashtra');</p>
-<p>// //Mapping function to be map over featurecollection
-// var addArea = function(feature){
-//     var area = feature.geometry().area().divide(1000000);
-//     return feature.set({areaSqKm:area});
-// }</p>
-<p>// var maharashtraAdm2MapWithArea = maharashtraAdm2Map.map(addArea);
-// // print(maharashtraAdm2Map.size());
-// // print(maharashtraAdm2MapWithArea.size());</p>
-<p>// print(maharashtraAdm2Map);
-// print(maharashtraAdm2MapWithArea);</p>
-<p>// // Compute sum of specified properties( District Area) using reduceColumns() method</p>
-<p>// var maharashtraTotalArea = maharashtraAdm2MapWithArea
-//     .reduceColumns({
-//       reducer: ee.Reducer.sum(),
-//       selectors: ['areaSqKm']
-//     });</p>
-<p>// print('Total Area of Maharashtra as per GAUL dataset (in Sq.km) :',maharashtraTotalArea.get('sum'));</p>
-<p>// /<em>
-// CALCULATE RAINFALL STATISTICS IN MULTIPLE REGIONS AND EXPORT THE RESULTS TO GDRIVE
-// ----------------------------------------------------------------------------------
-// </em>/</p>
-<p>// var chirps = ee.ImageCollection("UCSB-CHG/CHIRPS/DAILY");</p>
-<p>// var GAULLevel2 = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2");</p>
-<p>// //Filter by Country Name
-// var indiaAdm2Map = GAULLevel2.filter(ee.Filter.eq('ADM0_NAME', 'India'));</p>
-<p>// //Filter by State Name 
-// var maharashtraAdm2Map = indiaAdm2Map.filter(ee.Filter.eq('ADM1_NAME', 'Maharashtra'));</p>
-<p>// // Filter Chirps Daily Data for the  year 2022
-// var chirpsFiltered = chirps.filterDate('2022-01-01','2023-01-01');</p>
-<p>// //Calculate cumulative rainfall for the year 2022
-// var totalRF = chirpsFiltered.sum();</p>
-<p>// //Calculate Average Rainfall for all districts of Mahrashtra for the year 2022</p>
-<p>// var DistrictWiseAvgRF = totalRF.reduceRegions({
-//   collection: maharashtraAdm2Map,
-//   reducer: ee.Reducer.mean(),
-//   scale: 5000
-// });</p>
-<p>// // print(maharashtraAdm2Map);
-// print(DistrictWiseAvgRF);//redueRegions() returns a FeatureCollection with added band</p>
-<p>// //Export computed rainfall statistics to the Drive</p>
-<p>// Export.table.toDrive({
-//   collection : DistrictWiseAvgRF,
-//   description: 'DistrictWiseAvgRFin2020',
-//   selectors :['ADM2_NAME', 'mean']
-// });</p>
+<span class="c1">// Method 1: Using the formula directly (harder)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">expression</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;(NIR - RED) / (NIR + RED)&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">&#39;NIR&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="s1">&#39;RED&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="c1">// Method 2: Using the built-in function (easier!)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">easyNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+
+<span class="c1">// Visualization: Blue (Water) -&gt; White (Bare) -&gt; Green (Healthy Plants)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndviVis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]};</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">easyNDVI</span><span class="p">,</span><span class="w"> </span><span class="nx">ndviVis</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Load a Landsat 8 image</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2/LC08_044034_20140318&#39;</span><span class="p">)</span>
+
+<span class="c1"># Method 2: Using the built-in function (easier!)</span>
+<span class="c1"># We select bands 5 (NIR) and 4 (Red)</span>
+<span class="n">easy_ndvi</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+
+<span class="c1"># Visualization: Blue (Water) -&gt; White (Bare) -&gt; Green (Healthy Plants)</span>
+<span class="n">ndvi_vis</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;palette&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]}</span>
+
+<span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">centerObject</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">easy_ndvi</span><span class="p">,</span> <span class="n">ndvi_vis</span><span class="p">,</span> <span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+<span class="n">Map</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="interpreting-the-result">Interpreting the Result<a class="headerlink" href="#interpreting-the-result" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Values close to +1</strong> (Dark Green): Dense, healthy forest.</li>
+<li><strong>Values around 0.2 - 0.5</strong> (Light Green): Grass or sparse vegetation.</li>
+<li><strong>Values near 0</strong> (White/Brown): Urban areas, bare soil, rock.</li>
+<li><strong>Negative Values</strong> (Blue): Water bodies.</li>
+</ul>
+<h2 id="other-common-indices">Other Common Indices<a class="headerlink" href="#other-common-indices" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Index</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>NDWI</strong></td>
+<td style="text-align: left;">Normalized Difference Water Index</td>
+<td style="text-align: left;">(Green - NIR) / (Green + NIR)</td>
+<td style="text-align: left;">Detecting water bodies</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NBR</strong></td>
+<td style="text-align: left;">Normalized Burn Ratio</td>
+<td style="text-align: left;">(NIR - SWIR) / (NIR + SWIR)</td>
+<td style="text-align: left;">Detecting burnt areas after fire</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EVI</strong></td>
+<td style="text-align: left;">Enhanced Vegetation Index</td>
+<td style="text-align: left;">Complex Formula</td>
+<td style="text-align: left;">Better vegetation monitoring in dense forests</td>
+</tr>
+</tbody>
+</table>
+<p>You can calculate any of these using <code>.normalizedDifference()</code> or <code>.expression()</code>!</p>
 
 
 
