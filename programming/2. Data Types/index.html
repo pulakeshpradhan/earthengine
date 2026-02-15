@@ -9,7 +9,7 @@
         <meta name="description" content="Learn Google Earth Engine from scratch - A simple, clear guide to satellite imagery and geospatial analysis for everyone.">
       
       
-        <meta name="author" content="Pulak">
+        <meta name="author" content="Pulakesh Pradhan">
       
       
         <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/programming/2.%20Data%20Types/">
@@ -2045,6 +2045,27 @@ A computer cannot act on "flour" unless it knows it's a "Powder".</p>
 </ol>
 <hr />
 <h2 id="earth-engine-types-geospatial">Earth Engine Types (Geospatial)<a class="headerlink" href="#earth-engine-types-geospatial" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    subgraph Client-Side [Standard Information]
+        A[String]
+        B[Number]
+        C[List]
+        D[Dictionary]
+    end
+
+    subgraph Server-Side [Earth Engine Objects]
+        E[ee.Image]
+        F[ee.ImageCollection]
+        G[ee.Feature]
+        H[ee.FeatureCollection]
+    end
+
+    A -.-&gt; E
+    B -.-&gt; E
+    C -.-&gt; F
+    D -.-&gt; G
+    style Client-Side fill:#f9f,stroke:#333
+    style Server-Side fill:#bfb,stroke:#333</code></pre>
 <p>These are the special containers Google created for satellite data.</p>
 <ol>
 <li><strong>Image (<code>ee.Image</code>)</strong></li>
@@ -2114,6 +2135,10 @@ A computer cannot act on "flour" unless it knows it's a "Powder".</p>
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Made by <a href="https://pulakeshpradhan.github.io/" target="_blank">Pulakesh Pradhan</a>
+    </div>
   
   
     Made with
