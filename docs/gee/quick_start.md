@@ -26,7 +26,7 @@ graph LR
     A[Cloud Data Catalog] --> B(Your Script)
     B --> C[Google Servers]
     C --> D[Processed Map]
-    C --> E[Charts / Stats]
+    C --> E["Charts / Stats"]
     style C fill:#f96,stroke:#333
 ```
 
