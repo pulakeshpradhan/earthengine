@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#flood-mapping-with-sentinel-1-radar" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -233,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../quick_start/" class="md-tabs__link">
           
   
   
@@ -482,34 +487,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1652,6 +1629,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapping Floods
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1669,6 +1666,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-sentinel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ Why use Sentinel-1?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-flood-detection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ The Flood Detection Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 Code Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-radar-backscatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📉 Interpreting Radar Backscatter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Important Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1908,6 +1979,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-sentinel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ Why use Sentinel-1?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-flood-detection-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ The Flood Detection Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 Code Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-radar-backscatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📉 Interpreting Radar Backscatter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Important Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1924,35 +2060,99 @@
 
 
 
-  <h1>Mapping Floods</h1>
+<h1 id="flood-mapping-with-sentinel-1-radar">Flood Mapping with Sentinel-1 Radar<a class="headerlink" href="#flood-mapping-with-sentinel-1-radar" title="Permanent link">&para;</a></h1>
+<p>Radar data (SAR) from Sentinel-1 is the primary tool for flood mapping because it can "see" through clouds and works even at night.</p>
+<hr />
+<h2 id="why-use-sentinel-1">🛰️ Why use Sentinel-1?<a class="headerlink" href="#why-use-sentinel-1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Advantage for Floods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Active Sensor</strong></td>
+<td style="text-align: left;">Operates at night</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C-Band Radar</strong></td>
+<td style="text-align: left;">Penetrates clouds and smoke</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backscatter</strong></td>
+<td style="text-align: left;">Water reflects radar away (looks black)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>High Frequency</strong></td>
+<td style="text-align: left;">6-12 day revisit time</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-flood-detection-workflow">🛠️ The Flood Detection Workflow<a class="headerlink" href="#the-flood-detection-workflow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph LR
+    A[Before Flood Image] -- min --&gt; B[Reference Map]
+    C[After Flood Image] -- min --&gt; D[Flood Map]
+    B &amp; D -- Thresholding --&gt; E[Change Detection]
+    E -- mask --&gt; F[Final Flood Inundation]
+    style F fill:#f66,stroke:#333</code></pre>
+<hr />
+<h2 id="code-implementation">💻 Code Implementation<a class="headerlink" href="#code-implementation" title="Permanent link">&para;</a></h2>
+<p>We compare radar backscatter between a "dry" date and a "wet" date.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Define Dates</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">preFloodDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;2023-05-15&#39;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">postFloodDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;2023-07-09&#39;</span><span class="p">);</span>
 
-<p>```javascript
-/<strong><em>* Start of imports. If edited, may not auto-convert in the playground. </em></strong><em>/
-var geometry = /</em> color: #d63000 <em>/ee.Geometry.MultiPoint();
-/</em><strong><em>* End of imports. If edited, may not auto-convert in the playground. </em></strong>**/
-var date1 = ee.Date('2023-05-15');
-var date2 = ee.Date('2023-07-09');</p>
-<p>var polarization = 'VV';</p>
-<p>var date1image = ee.ImageCollection('COPERNICUS/S1_GRD')
-                      .filterDate(date1, date1.advance(1, 'week'))
-                      .filter(ee.Filter.listContains(
-                          'transmitterReceiverPolarisation', polarization))
-                      .filter(ee.Filter.eq('instrumentMode', 'IW'))
-                      .select(polarization)
-                      .min();</p>
-<p>var date2image = ee.ImageCollection('COPERNICUS/S1_GRD')
-                      .filterDate(date2, date2.advance(1, 'week'))
-                      .filter(ee.Filter.listContains(
-                          'transmitterReceiverPolarisation', polarization))
-                      .filter(ee.Filter.eq('instrumentMode', 'IW'))
-                      .select(polarization)
-                      .min();                      </p>
-<p>var nonwatermask = ee.ImageCollection('GLCF/GLS_WATER').select('water').mean().neq(2);</p>
-<p>var date1image = date1image.updateMask(nonwatermask);
-var date2image = date2image.updateMask(nonwatermask);</p>
-<p>Map.addLayer(date1image, {min: -30, max: -5, palette: ['aqua','blue','red','brown']},"No Flood");
-Map.addLayer(date2image, {min: -30, max: -5, palette: ['aqua','blue','red','brown']},"Flood");</p>
-<p>Map.setCenter(77.2, 28.7, 12);</p>
+<span class="c1">// 2. Select polarization (VV is best for water)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">polarization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;VV&#39;</span><span class="p">;</span>
+
+<span class="c1">// 3. Load Images</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">preFlood</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S1_GRD&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="nx">preFloodDate</span><span class="p">,</span><span class="w"> </span><span class="nx">preFloodDate</span><span class="p">.</span><span class="nx">advance</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;week&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">listContains</span><span class="p">(</span><span class="s1">&#39;transmitterReceiverPolarisation&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">polarization</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;instrumentMode&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IW&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">polarization</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">min</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">postFlood</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S1_GRD&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="nx">postFloodDate</span><span class="p">,</span><span class="w"> </span><span class="nx">postFloodDate</span><span class="p">.</span><span class="nx">advance</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;week&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">listContains</span><span class="p">(</span><span class="s1">&#39;transmitterReceiverPolarisation&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">polarization</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;instrumentMode&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IW&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">polarization</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">min</span><span class="p">();</span>
+
+<span class="c1">// 4. Remove permanent water to find NEW floods</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">permanentWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;GLCF/GLS_WATER&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">mean</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">neq</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">preFloodMasked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">preFlood</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">permanentWater</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">postFloodMasked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">postFlood</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">permanentWater</span><span class="p">);</span>
+
+<span class="c1">// 5. Visualize</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">77.2</span><span class="p">,</span><span class="w"> </span><span class="mf">28.7</span><span class="p">]),</span><span class="w"> </span><span class="mf">12</span><span class="p">);</span><span class="w"> </span><span class="c1">// Delhi Region</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">preFloodMasked</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">5</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Pre-Flood (Dry)&#39;</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">postFloodMasked</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">5</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Post-Flood (Wet)&#39;</span><span class="p">);</span>
+
+<span class="c1">// 6. Simple Threshold Change Detection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">flooded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">postFloodMasked</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="o">-</span><span class="mf">18</span><span class="p">).</span><span class="nx">and</span><span class="p">(</span><span class="nx">preFloodMasked</span><span class="p">.</span><span class="nx">gt</span><span class="p">(</span><span class="o">-</span><span class="mf">18</span><span class="p">));</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">flooded</span><span class="p">.</span><span class="nx">selfMask</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Potential Flood Area&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="interpreting-radar-backscatter">📉 Interpreting Radar Backscatter<a class="headerlink" href="#interpreting-radar-backscatter" title="Permanent link">&para;</a></h2>
+<p>In radar imagery, smooth surfaces (like calm water) act like a mirror, reflecting signals away from the satellite. This results in <strong>very low backscatter (dark pixels)</strong>. When a dry field becomes flooded, its backscatter value drops significantly (e.g., from -10dB to -20dB).</p>
+<hr />
+<h2 id="important-considerations">⚠️ Important Considerations<a class="headerlink" href="#important-considerations" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Urban Floods</strong>: Radar often struggles in cities due to "double-bounce" reflections off buildings.</li>
+<li><strong>Wind/Waves</strong>: Rough water surfaces can look "bright" on radar, potentially hiding floods.</li>
+<li><strong>Vegetation</strong>: Flooded forests can actually look brighter due to the interaction between the water and tree trunks.</li>
+</ol>
+<hr />
 
 
 

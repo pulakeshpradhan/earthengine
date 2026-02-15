@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#water-surface-area-charting" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -233,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../quick_start/" class="md-tabs__link">
           
   
   
@@ -482,34 +487,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1624,6 +1601,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Water Charts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1641,6 +1638,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ The Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-setup-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ 1. Setup and Filtering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-calculating-ndwi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💧 2. Calculating NDWI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-calculating-water-area-km2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 3. Calculating Water Area (km²)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-visualizing-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 4. Visualizing the Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Pro Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1908,6 +1990,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ The Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-setup-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ 1. Setup and Filtering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-calculating-ndwi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💧 2. Calculating NDWI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-calculating-water-area-km2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 3. Calculating Water Area (km²)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-visualizing-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 4. Visualizing the Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Pro Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1924,58 +2082,107 @@
 
 
 
-  <h1>Creating Water Charts</h1>
+<h1 id="water-surface-area-charting">Water Surface Area Charting<a class="headerlink" href="#water-surface-area-charting" title="Permanent link">&para;</a></h1>
+<p>Learn how to calculate the total surface area of water bodies over time using Sentinel-2 satellite imagery and NDWI (Normalized Difference Water Index).</p>
+<hr />
+<h2 id="the-analysis-workflow">🛠️ The Analysis Workflow<a class="headerlink" href="#the-analysis-workflow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    A[Sentinel-2 Collection] --&gt; B[Filter: Date, Bounds, Clouds]
+    B --&gt; C[Calculate NDWI Band]
+    C --&gt; D[Apply Threshold &gt; 0.15]
+    D --&gt; E[Calculate Area per Pixel]
+    E --&gt; F[Sum Area via reduceRegion]
+    F --&gt; G[Generate Time-Series Chart]
+    style G fill:#6bf,stroke:#333</code></pre>
+<hr />
+<h2 id="1-setup-and-filtering">🛰️ 1. Setup and Filtering<a class="headerlink" href="#1-setup-and-filtering" title="Permanent link">&para;</a></h2>
+<p>We start by loading the Sentinel-2 collection and filtering for a specific study area and time range.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Define Study Area (Polygon)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">studyArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Polygon</span><span class="p">([</span>
+<span class="w">  </span><span class="p">[[</span><span class="mf">85.76</span><span class="p">,</span><span class="w"> </span><span class="mf">20.52</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">85.76</span><span class="p">,</span><span class="w"> </span><span class="mf">20.41</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">85.95</span><span class="p">,</span><span class="w"> </span><span class="mf">20.41</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">85.95</span><span class="p">,</span><span class="w"> </span><span class="mf">20.52</span><span class="p">]]</span>
+<span class="p">]);</span>
 
-<p>```javascript
-/<strong><em>* Start of imports. If edited, may not auto-convert in the playground. </em></strong><em>/
-var studyArea = 
-    ee.Geometry.Polygon(
-        [[[85.76361517120263, 20.52393128133101],
-          [85.76361517120263, 20.41553715846105],
-          [85.95621923614404, 20.41553715846105],
-          [85.95621923614404, 20.52393128133101]]], null, false);
-var S2 = ee.ImageCollection("COPERNICUS/S2_SR");
-/</em><strong><em>* End of imports. If edited, may not auto-convert in the playground. </em></strong>**/
-//Filter cloud free Images from 01-01-2020 to 31-12-2020 for roi
-var S2filtered = S2.filterDate('2020-10-01', '2021-06-01')
-                   .filterBounds(studyArea)
-                   .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',30));</p>
-<p>Map.centerObject(studyArea,12);</p>
-<p>var ndwiThreshold = 0.15;
-//User defined function to calculate NDWI for an image and add it as a band
-var addNDWI = function(inputImage) {
-  var ndwi = inputImage.normalizedDifference(['B3','B8']).rename('ndwi');
-  return inputImage.addBands(ndwi); 
-   };</p>
-<p>var imagesWithNDWI = S2filtered.map(addNDWI);
-print(imagesWithNDWI);
-//User defined function to calculate water pixel area for an image and roi
-var waterAr = function(inputImage) {
-  var waterMask = inputImage.select('ndwi').gte(ndwiThreshold);
-  var pixelArea = ee.Image.pixelArea();
-  var waterpixels = pixelArea.updateMask(waterMask);
-  var waterArea = waterpixels.reduceRegion({
-    reducer: ee.Reducer.sum(),
-    geometry: studyArea,
-    crs: inputImage.select('B3').projection(),<br />
-    //crsTransform: inputImage.select('B3').projection().getInfo().transform,<br />
-    maxPixels: 1e8,
-    bestEffort: true
-      });
-  var areaImage = ee.Image(waterArea.getNumber('area').divide(1e6)).rename('waterspreadarea'); 
-  return inputImage.addBands(areaImage);
-  };
-var areaSeries = imagesWithNDWI.map(waterAr);
-var title = {
-  title: 'Water Spread Area in StudyArea (Sq.km)',
-  hAxis: {title: 'Time'},
-  vAxis: {title: 'Water Spread Area'},
-};
-var chart = ui.Chart.image.seriesByRegion(areaSeries,studyArea, ee.Reducer.mean(), 'waterspreadarea', 10, 'system:time_start',' ')
-.setChartType('ColumnChart') //set chart type
- .setOptions(title); //set chart options
-print(chart);
-// // Due to cloudcover especially during monsoon period water spread area values may not be representative</p>
+<span class="c1">// Load Sentinel-2 Collection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">S2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;COPERNICUS/S2_SR&quot;</span><span class="p">);</span>
+
+<span class="c1">// Filter for 2020-2021, Study Area, and &lt;30% Clouds</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">filtered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">S2</span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2020-10-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-06-01&#39;</span><span class="p">)</span>
+<span class="w">                 </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">studyArea</span><span class="p">)</span>
+<span class="w">                 </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">));</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">studyArea</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="2-calculating-ndwi">💧 2. Calculating NDWI<a class="headerlink" href="#2-calculating-ndwi" title="Permanent link">&para;</a></h2>
+<p>NDWI is calculated using the Green (<code>B3</code>) and NIR (<code>B8</code>) bands. It highlights water bodies by exploiting their high reflectance in green and high absorption in NIR.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Function to add NDWI band</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">addNDWI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ndwi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B8&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;ndwi&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">addBands</span><span class="p">(</span><span class="nx">ndwi</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">withNDWI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filtered</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDWI</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="3-calculating-water-area-km2">📏 3. Calculating Water Area (km²)<a class="headerlink" href="#3-calculating-water-area-km2" title="Permanent link">&para;</a></h2>
+<p>We iterate through the collection, masking out non-water pixels and summing the area of the remaining water pixels.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">ndwiThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.15</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">calculateArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Create water mask</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">waterMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;ndwi&#39;</span><span class="p">).</span><span class="nx">gte</span><span class="p">(</span><span class="nx">ndwiThreshold</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Calculate area of each pixel in sq. meters</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pixelArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">waterPixels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pixelArea</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">waterMask</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Sum pixels in the study area</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">waterPixels</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">bestEffort</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Convert to km² and add as a property</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">areaKm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">stats</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">)).</span><span class="nx">divide</span><span class="p">(</span><span class="mf">1e6</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;waterspreadarea&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">areaKm2</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">areaSeries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">withNDWI</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">calculateArea</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="4-visualizing-the-results">📊 4. Visualizing the Results<a class="headerlink" href="#4-visualizing-the-results" title="Permanent link">&para;</a></h2>
+<p>Finally, we print a chart showing the water area fluctuation over time.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">chart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">Chart</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">series</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">imageCollection</span><span class="o">:</span><span class="w"> </span><span class="nx">areaSeries</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">region</span><span class="o">:</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">xProperty</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;system:time_start&#39;</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">setSeriesNames</span><span class="p">([</span><span class="s1">&#39;Area (km²)&#39;</span><span class="p">])</span>
+<span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Water Spread Area Trend&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hAxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Date&#39;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">vAxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Area (sq. km)&#39;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">lineWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">pointSize</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">series</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="mf">0</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="p">}}</span>
+<span class="p">});</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="pro-tips">💡 Pro Tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Cloud Masks</strong>: For better accuracy during monsoon seasons, implement an automated cloud masking function (using the <code>QA60</code> band).</li>
+<li><strong>Thresholding</strong>: The threshold <code>0.15</code> is a starting point. Adjust it based on the turbidity and depth of the water in your specific region.</li>
+<li><strong>Visualization</strong>: Always add a layer to the map to visually verify that your <code>waterMask</code> is correctly capturing the water bodies.</li>
+</ol>
+<hr />
+<p><a class="md-button md-button--primary" href="https://code.earthengine.google.co.in/9e82406b1579173e08c89a7996133dba">View Code in GEE Editor</a></p>
 
 
 

@@ -238,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../" class="md-tabs__link">
+        <a href="../quick_start/" class="md-tabs__link">
           
   
   
@@ -487,34 +487,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1194,6 +1166,17 @@
     <span class="md-ellipsis">
       
         Popular Datasets Explained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-raster-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Raster Workflow
       
     </span>
   </a>
@@ -2048,6 +2031,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-raster-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Raster Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-load-a-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2167,6 +2161,14 @@
 </tbody>
 </table>
 <hr />
+<h2 id="the-raster-workflow">The Raster Workflow<a class="headerlink" href="#the-raster-workflow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph LR
+    A[Catalog] -- Search --&gt; B[ImageCollection]
+    B -- filter --&gt; C[Filtered Collection]
+    C -- composite/reduce --&gt; D[Single Image]
+    D -- process --&gt; E[Analysis Result]
+    E -- Map --&gt; F[Visualization]
+    style D fill:#f96,stroke:#333,stroke-width:2px</code></pre>
 <h2 id="how-to-load-a-dataset">How to Load a Dataset<a class="headerlink" href="#how-to-load-a-dataset" title="Permanent link">&para;</a></h2>
 <p>To use these images, you need to "call" them from the catalog.</p>
 <h3 id="1-loading-landsat-8">1. Loading Landsat 8<a class="headerlink" href="#1-loading-landsat-8" title="Permanent link">&para;</a></h3>

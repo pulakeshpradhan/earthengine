@@ -25,7 +25,7 @@
     
     
       
-        <title>1. Landslide - Google Earth Engine - A Beginner's Guide</title>
+        <title>🌋 Landslide Susceptibility Mapping - Google Earth Engine - A Beginner's Guide</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#landslide-susceptibility-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Landslide
+              🌋 Landslide Susceptibility Mapping
             
           </span>
         </div>
@@ -229,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../quick_start/" class="md-tabs__link">
           
   
   
@@ -474,34 +479,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1886,6 +1863,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#factors-for-susceptibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Factors for Susceptibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-terrain-analysis-the-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 1. Terrain Analysis (The Fundamentals)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-integrating-vegetation-ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 2. Integrating Vegetation (NDVI)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Summary of Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1902,9 +1933,82 @@
 
 
 
-  <h1>1. Landslide</h1>
+<h1 id="landslide-susceptibility-mapping">🌋 Landslide Susceptibility Mapping<a class="headerlink" href="#landslide-susceptibility-mapping" title="Permanent link">&para;</a></h1>
+<p>Using Digital Elevation Models (DEM) and multi-spectral data to identify areas prone to landslides.</p>
+<hr />
+<h2 id="factors-for-susceptibility">🏗️ Factors for Susceptibility<a class="headerlink" href="#factors-for-susceptibility" title="Permanent link">&para;</a></h2>
+<p>A landslide isn't caused by one thing, but a combination of factors:</p>
+<pre class="mermaid"><code>graph TD
+    A[Elevation/Slope] --&gt; D[Susceptibility Model]
+    B[Aspect/Topographic Wetness] --&gt; D
+    C[Land Cover/NDVI] --&gt; D
+    D --&gt; E[Risk Map]
+    style E fill:#f96,stroke:#333</code></pre>
+<hr />
+<h2 id="1-terrain-analysis-the-fundamentals">💻 1. Terrain Analysis (The Fundamentals)<a class="headerlink" href="#1-terrain-analysis-the-fundamentals" title="Permanent link">&para;</a></h2>
+<p>The most important factor is <strong>Slope</strong>. If the land is steep, it's more likely to slide.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Load SRTM Elevation Data</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">srtm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s2">&quot;USGS/SRTMGL1_003&quot;</span><span class="p">);</span>
 
+<span class="c1">// 2. Calculate Slope and Aspect</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Terrain</span><span class="p">.</span><span class="nx">slope</span><span class="p">(</span><span class="nx">srtm</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">aspect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Terrain</span><span class="p">.</span><span class="nx">aspect</span><span class="p">(</span><span class="nx">srtm</span><span class="p">);</span>
 
+<span class="c1">// 3. Select High-Risk Slopes (&gt;30 degrees)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">highRiskSlope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slope</span><span class="p">.</span><span class="nx">gt</span><span class="p">(</span><span class="mf">30</span><span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Slope Intensity&#39;</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">highRiskSlope</span><span class="p">.</span><span class="nx">selfMask</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;darkred&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;High Slope Risk (&gt;30°)&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="2-integrating-vegetation-ndvi">💻 2. Integrating Vegetation (NDVI)<a class="headerlink" href="#2-integrating-vegetation-ndvi" title="Permanent link">&para;</a></h2>
+<p>Vegetation roots stabilize the soil. Areas with steep slopes AND low vegetation are the most dangerous.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 4. Load Sentinel-2 for Vegetation</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;COPERNICUS/S2_SR_HARMONIZED&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s2</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B8&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B4&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+
+<span class="c1">// 5. Combined Risk: High Slope AND Low NDVI</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">riskMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slope</span><span class="p">.</span><span class="nx">gt</span><span class="p">(</span><span class="mf">25</span><span class="p">).</span><span class="nx">and</span><span class="p">(</span><span class="nx">ndvi</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="mf">0.3</span><span class="p">));</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">riskMap</span><span class="p">.</span><span class="nx">selfMask</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;purple&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Combined Landslide Risk&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="summary-of-factors">📊 Summary of Factors<a class="headerlink" href="#summary-of-factors" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">High Risk Condition</th>
+<th style="text-align: left;">Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Slope</strong></td>
+<td style="text-align: left;">&gt; 25 degrees</td>
+<td style="text-align: left;">Gravity pulls soil down steep inclines</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vegetation</strong></td>
+<td style="text-align: left;">NDVI &lt; 0.2</td>
+<td style="text-align: left;">Lack of roots to hold soil together</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hydrology</strong></td>
+<td style="text-align: left;">High TWI</td>
+<td style="text-align: left;">Saturated soil is heavier and more fluid</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lithology</strong></td>
+<td style="text-align: left;">Weathered Rock</td>
+<td style="text-align: left;">Soft material slides easier than bedrock</td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 
