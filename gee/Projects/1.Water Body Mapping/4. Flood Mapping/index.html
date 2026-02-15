@@ -2095,7 +2095,8 @@
 <pre class="mermaid"><code>graph LR
     A[Before Flood Image] -- min --&gt; B[Reference Map]
     C[After Flood Image] -- min --&gt; D[Flood Map]
-    B &amp; D -- Thresholding --&gt; E[Change Detection]
+    B -- Thresholding --&gt; E[Change Detection]
+    D -- Thresholding --&gt; E
     E -- mask --&gt; F[Final Flood Inundation]
     style F fill:#f66,stroke:#333</code></pre>
 <hr />

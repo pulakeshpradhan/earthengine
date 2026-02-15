@@ -1952,8 +1952,9 @@
 <pre class="mermaid"><code>graph LR
     A[DEM/Elevation] -- Low --&gt; C[Accumulation]
     B[Distance to River] -- Short --&gt; C
-    D[Land Cover/Built-up] -- Impervious --&gt; E[Runoff]
-    C &amp; E --&gt; F[Flood Risk Score]
+    D["Land Cover/Built-up"] -- Impervious --&gt; E[Runoff]
+    C --&gt; F[Flood Risk Score]
+    E --&gt; F
     style F fill:#6af,stroke:#333</code></pre>
 <hr />
 <h2 id="1-distance-from-rivers">💻 1. Distance from Rivers<a class="headerlink" href="#1-distance-from-rivers" title="Permanent link">&para;</a></h2>
