@@ -60,7 +60,6 @@ plugins:
 nav:
   - Home: index.md
   - Getting Started:
-      - What is Google Earth Engine?: gee/README.md
       - Quick Start (Try It Now!): gee/quick_start.md
       - Sign Up & Setup: gee/1. Code Editor/0. Registration.md
       - Understanding the Interface: gee/1. Code Editor/1. User Interface of Code Editor.md

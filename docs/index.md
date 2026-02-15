@@ -1,102 +1,94 @@
-# Welcome to Google Earth Engine
+# What is Google Earth Engine?
 
-![Earth from Space](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1200px-The_Earth_seen_from_Apollo_17.jpg)
+Google Earth Engine (GEE) is like having a supercomputer that can analyze satellite images of Earth. It's completely free and runs in your web browser.
 
-## What is This?
-
-**Google Earth Engine** is a free tool that lets you analyze satellite images of our planet. Think of it as having access to thousands of satellite photos taken over the past 40+ years, all in one place.
-
-You don't need to be a programmer or scientist to get started. This guide will teach you everything step by step.
+!!! info "Up-to-Date Information"
+    This guide uses the latest satellite data and best practices, so you're learning the most current methods.
 
 ---
 
-## What Can You Do With It?
+## What You'll Learn
 
-With Google Earth Engine, you can:
+This course takes you from complete beginner to someone who can analyze Earth from space. Here's what we'll cover:
 
-- **Track changes over time** - See how forests, cities, or rivers have changed over decades
-- **Monitor water bodies** - Find lakes, rivers, and track floods
-- **Study land use** - Identify farmland, forests, urban areas, and more
-- **Analyze climate patterns** - Look at rainfall, temperature, and vegetation health
-- **Create maps** - Make professional maps for research or presentations
+### **Getting Started (Modules 1-2)**
 
-All of this runs in your web browser - no special software needed!
+| What You'll Do | Topics Covered |
+| :--- | :--- |
+| **Set Up Your Account** | Creating a free GEE account, understanding the interface |
+| **Your First Analysis** | Viewing satellite images, filtering by date and location |
+| **Basic Operations** | Combining images, cutting them to your area of interest |
+| **Time-Series Charts** | Creating charts that show changes over time |
 
----
+### **Understanding Data (Modules 3-5)**
 
-## How to Use This Guide
+| What You'll Do | Topics Covered |
+| :--- | :--- |
+| **Image Charts** | Histograms (data distribution), scatter plots, area calculations |
+| **Map Charts** | Pie charts and column charts for geographic data |
+| **Advanced Visualization** | Creating professional charts and exporting your results |
 
-This website is organized to take you from zero to confident. Here's the path:
+### **Real-World Applications (Modules 6-10)**
 
-### **Step 1: Getting Started**
+| What You'll Do | Topics Covered |
+| :--- | :--- |
+| **Water Mapping** | Finding water bodies, tracking changes, converting images to maps |
+| **Rainfall Analysis** | Calculating precipitation, finding trends over time |
+| **Land Classification** | Identifying forests, cities, farmland automatically |
+| **Flood Mapping** | Using radar data to map flooded areas |
+| **Drought Monitoring** | Tracking vegetation health and drought conditions |
 
-Learn what Google Earth Engine is, create your free account, and understand the basic interface.
+### **Advanced Skills (Modules 11-12)**
 
-👉 [Start Here: What is Google Earth Engine?](gee/README.md)
-
-### **Step 2: Programming Basics**
-
-Don't worry if you've never coded before! We'll teach you the basics of programming in simple terms.
-
-👉 [Learn: What is Programming?](programming/01.What is Programming.md)
-
-### **Step 3: Core Concepts**
-
-Understand the key ideas behind working with satellite data - explained in plain English.
-
-👉 [Explore: Best Practices](gee/modern_best_practices.md)
-
-### **Step 4: Working with Data**
-
-Learn how to work with two main types of data:
-
-- **Satellite Images** (like photos from space)
-- **Maps and Boundaries** (like country borders or city limits)
-
-👉 [Start with: Satellite Images](gee/5. Working with Raster Data/README.md)
-
-### **Step 5: Real-World Projects**
-
-Apply what you've learned to actual projects like mapping water bodies or tracking land changes.
-
-👉 [Try a Project: Water Body Mapping](gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md)
+| What You'll Do | Topics Covered |
+| :--- | :--- |
+| **Creating Apps** | Building interactive web apps others can use |
+| **Statistical Analysis** | Calculating averages, totals, and statistics for regions |
 
 ---
 
-## Why Learn This?
+## Key Topics Explained Simply
 
-Google Earth Engine is used by:
+Here's what you'll master, organized by topic:
 
-- **Researchers** studying climate change and environmental issues
-- **Government agencies** monitoring natural disasters
-- **Conservation groups** protecting forests and wildlife
-- **Students and educators** learning about our planet
-- **Anyone curious** about how Earth is changing
-
-The best part? It's completely **free** to use.
-
----
-
-## Need Help?
-
-- Use the **search bar** at the top to find specific topics
-- Each page has **code examples** you can copy and try
-- Start with **Getting Started** if you're completely new
-- Jump to **Real-World Projects** if you want to see what's possible
-
----
-
-## Learn in Your Preferred Language
-
-All code examples are available in **both JavaScript and Python**!
-
-- **JavaScript**: Use the Google Earth Engine Code Editor (web-based, no installation)
-- **Python**: Use Jupyter notebooks or Python scripts (requires installation)
-
-Simply click the tabs above each code example to switch between languages. The functionality is the same - choose whichever you're more comfortable with!
+| **Topic** | **What It Means** |
+| :--- | :--- |
+| **Introduction to GEE** | What it is, why it's useful, how to navigate |
+| **Account Setup** | Creating your account, getting access |
+| **Basic Programming** | Simple coding concepts (don't worry, we explain everything!) |
+| **[Understanding Images](gee/5. Working with Raster Data/README.md)** | How satellite images work, what the colors mean |
+| **[Working with Maps](gee/6. Working with Vector Data/README.md)** | Using boundaries, shapes, and geographic features |
+| **Projections** | How flat maps represent our round Earth |
+| **Drawing Shapes** | Creating points, lines, and areas on maps |
+| **[Satellite Images](gee/5. Working with Raster Data/README.md)** | Working with different types of satellite data |
+| **Map Features** | Filtering and organizing geographic information |
+| **Visualization** | Making your data look good with colors and legends |
+| **Image Cleanup** | Removing clouds and improving image quality |
+| **Time Analysis** | Combining images from different dates |
+| **Vegetation Indices** | Measuring plant health and water content |
+| **Advanced Analysis** | Professional techniques for complex projects |
+| **Change Detection** | Seeing how places have changed over time |
+| **Spatial Operations** | Measuring distances, combining datasets |
+| **Statistics** | Calculating averages and patterns |
+| **Classification** | Automatically identifying land types |
+| **Water Studies** | Detecting water, mapping floods |
+| **Agriculture** | Monitoring crops and farmland |
+| **Disasters** | Assessing damage from floods, fires, storms |
+| **Python Integration** | Using Python instead of JavaScript (optional) |
+| **App Building** | Creating tools others can use |
 
 ---
 
-**Ready to explore the planet from space? Let's begin!**
+## What Makes This Different?
 
-[Get Started →](gee/README.md){ .md-button .md-button--primary }
+- **Plain English** - We avoid jargon and explain everything clearly
+- **Step-by-Step** - Each lesson builds on the previous one
+- **Real Examples** - Every concept includes working code you can try
+- **Modern Tools** - We use the latest satellite data and techniques
+- **Free Forever** - Google Earth Engine is completely free to use
+
+---
+
+**Ready to start? Let's set up your account!**
+
+[Next: Sign Up & Setup →](gee/1. Code Editor/0. Registration.md){ .md-button .md-button--primary }
