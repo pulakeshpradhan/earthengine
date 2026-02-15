@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#exploring-the-global-surface-water-gsw-dataset" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -233,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../quick_start/" class="md-tabs__link">
           
   
   
@@ -482,34 +487,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1596,6 +1573,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Water Data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1613,6 +1610,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-loading-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ 1. Loading the Dataset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualizing-occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💧 2. Visualizing Occurrence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creating-a-permanent-water-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 3. Creating a Permanent Water Mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-analyzing-absolute-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 4. Analyzing Absolute Change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-surface-water-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 5. Surface Water Transitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-of-gsw-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Summary Table of GSW Bands
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1908,6 +1990,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-loading-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ 1. Loading the Dataset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualizing-occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💧 2. Visualizing Occurrence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creating-a-permanent-water-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 3. Creating a Permanent Water Mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-analyzing-absolute-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 4. Analyzing Absolute Change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-surface-water-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 5. Surface Water Transitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-of-gsw-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Summary Table of GSW Bands
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1924,68 +2082,131 @@
 
 
 
-  <h1>Understanding Water Data</h1>
+<h1 id="exploring-the-global-surface-water-gsw-dataset">Exploring the Global Surface Water (GSW) Dataset<a class="headerlink" href="#exploring-the-global-surface-water-gsw-dataset" title="Permanent link">&para;</a></h1>
+<p>The Global Surface Water (GSW) dataset, created by the European Commission's Joint Research Centre (JRC), contains maps of the location and temporal distribution of surface water over 35 years.</p>
+<hr />
+<h2 id="1-loading-the-dataset">🛰️ 1. Loading the Dataset<a class="headerlink" href="#1-loading-the-dataset" title="Permanent link">&para;</a></h2>
+<p>The GSW dataset is available in Earth Engine as a single multi-band image.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Import the Global Surface Water dataset</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">gsw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;JRC/GSW1_4/GlobalSurfaceWater&#39;</span><span class="p">);</span>
 
-<p>```javascript
-/<em> Refer :https://developers.google.com/earth-engine/tutorials/tutorial_global_surface_water_01
-https://global-surface-water.appspot.com/
-</em>/</p>
-<p>//Import Global Surface Water(GSW) dataset
-var gsw = ee.Image('JRC/GSW1_3/GlobalSurfaceWater');</p>
-<p>// Check the image bands and values by printing onto console and using Inspector
-print(gsw);</p>
-<p>// Define Visualisation parameters for occurrence band of gsw</p>
-<p>var visualization = {
-  min: 0.0,
-  max: 100.0,
-  palette: ['ffffff', 'ffbbbb', '0000ff']
-};</p>
-<p>// set you rmap view centered over Pune region </p>
-<p>Map.setCenter(73.8, 18.45, 11);</p>
-<p>//Display occurrence band of gsw in the Mapview
-/<em>Occurrence value at any pixel is the average of each of the monthly surface water occurrence
-values,which normalizes against seasonal variation </em>/</p>
-<p>Map.addLayer(gsw.select('occurrence'), visualization, 'Occurrence');</p>
-<p>/<em>--------------------------------------------------------------------------------------</em>/</p>
-<p>//Create a threshold layer of water bodies using occurrence band values</p>
-<p>var WaterMaskVisParams = {
-  palette: ['white', 'blue']
-};</p>
-<p>// Create a water mask layer, and set the image mask so that non-water areas are opaque.
-var occurrence = gsw.select('occurrence');
-var waterMask = occurrence.gt(90).unmask(0);</p>
-<p>Map.addLayer({
-  eeObject: waterMask,
-  visParams: WaterMaskVisParams,
-  name: '90% occurrence water mask'
-});</p>
-<p>// /<em>--------------------------------------------------------------------------------------</em>/</p>
-<p>var change = gsw.select("change_abs");
-var changeVisParams = {
-    min:-50,
-    max:50,
-    palette: ['red', 'black', 'limegreen']
-};</p>
-<p>Map.setCenter(78.5, 30.5, 10);  // Tehri Reservoir
-//Map.setCenter(86.5, 26.0, 8);  // Kosi River
-//Map.setCenter(92.5, 26.5, 8);  // Brahmaputra valley
-//Map.setCenter(81.4, 16.5, 12);  // Aquaculture in Coastal AP
-// Map.setCenter(78.9, 10.0, 12);  // Filling up of chain of tanks in Tamil Nadu
-//Map.setCenter(75.4, 22.0, 9);  // Indirasagar and Sardar Sarovar Reservoirs</p>
-<p>Map.addLayer(change, changeVisParams,'occurrence change intensity');</p>
-<p>/<em>--------------------------------------------------------------------------------------</em>/</p>
-<p>//Select the band of max-extent and display maximum extent of water bodies in the map view
-var maximumExtent = gsw.select('max_extent');
-// Map.addLayer(maximumExtent);</p>
-<p>var masked = maximumExtent.updateMask(maximumExtent);
-Map.addLayer(masked,{palette:'blue'}, 'Maximum extent of Water Bodies');</p>
-<p>/<em>--------------------------------------------------------------------------------------</em>/</p>
-<p>var transition = gsw.select('transition');</p>
-<p>/<em>Define pallette of colors for 10 transition classes as defined in the documentation
-of gsw layer using layer manager and then import your pallette and copy the cose 
-ito the script </em>/</p>
-<p>var imageVisParam = {"opacity":1,"bands":["transition"],"min":0,"max":10,"palette":["ffffff","0000ff","22b14c","d1102d","99d9ea","b5e61d","e6a1aa","ff7f27","ffc90e","7f7f7f","c3c3c3"]};</p>
-<p>Map.addLayer(transition,imageVisParam,'Transition classes');</p>
+<span class="c1">// Print metadata to the console</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;GSW Metadata:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">gsw</span><span class="p">);</span>
+
+<span class="c1">// Set map center over a region (e.g., Pune, India)</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">73.85</span><span class="p">,</span><span class="w"> </span><span class="mf">18.52</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="2-visualizing-occurrence">💧 2. Visualizing Occurrence<a class="headerlink" href="#2-visualizing-occurrence" title="Permanent link">&para;</a></h2>
+<p>The <code>occurrence</code> band shows the frequency with which water was present on the surface.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Define visualization for water occurrence (0-100%)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">occVis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;ffffff&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ffbbbb&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;0000ff&#39;</span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="c1">// Add the occurrence layer</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">gsw</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;occurrence&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">occVis</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Water Occurrence&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="3-creating-a-permanent-water-mask">🛡️ 3. Creating a Permanent Water Mask<a class="headerlink" href="#3-creating-a-permanent-water-mask" title="Permanent link">&para;</a></h2>
+<p>To identify "permanent" water bodies, we can filter for pixels that have water more than 90% of the time.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Select the occurrence band</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">occurrence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gsw</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;occurrence&#39;</span><span class="p">);</span>
+
+<span class="c1">// Create a mask for pixels with &gt;90% water occurrence</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">permanentWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">occurrence</span><span class="p">.</span><span class="nx">gt</span><span class="p">(</span><span class="mf">90</span><span class="p">).</span><span class="nx">unmask</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">permanentWater</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;darkblue&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Permanent Water (&gt;90% Occ)&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="4-analyzing-absolute-change">📈 4. Analyzing Absolute Change<a class="headerlink" href="#4-analyzing-absolute-change" title="Permanent link">&para;</a></h2>
+<p>The <code>change_abs</code> band shows the absolute change in water occurrence between two periods (1984-1999 and 2000-2021).</p>
+<pre class="mermaid"><code>graph LR
+    A[Raw Bands] --&gt; B[Subtract Periods]
+    B --&gt; C[Change Intensity]
+    C -- Red --&gt; D[Loss of Water]
+    C -- Green --&gt; E[Gain of Water]
+    style D fill:#f66
+    style E fill:#6f6</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">change</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gsw</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s2">&quot;change_abs&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">changeVis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;limegreen&#39;</span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="c1">// Center over a reservoir (Tehri Reservoir)</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">78.48</span><span class="p">,</span><span class="w"> </span><span class="mf">30.38</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">change</span><span class="p">,</span><span class="w"> </span><span class="nx">changeVis</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Occurrence Change Intensity&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="5-surface-water-transitions">🔀 5. Surface Water Transitions<a class="headerlink" href="#5-surface-water-transitions" title="Permanent link">&para;</a></h2>
+<p>This band detects transitions between states (e.g., permanent to seasonal, seasonal to lost).</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">transition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gsw</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;transition&#39;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">transVis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;ffffff&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// No water</span>
+<span class="w">    </span><span class="s2">&quot;0000ff&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Permanent</span>
+<span class="w">    </span><span class="s2">&quot;22b14c&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// New permanent</span>
+<span class="w">    </span><span class="s2">&quot;d1102d&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Lost permanent</span>
+<span class="w">    </span><span class="s2">&quot;99d9ea&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Seasonal</span>
+<span class="w">    </span><span class="s2">&quot;b5e61d&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// New seasonal</span>
+<span class="w">    </span><span class="s2">&quot;e6a1aa&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Lost seasonal</span>
+<span class="w">    </span><span class="s2">&quot;ff7f27&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Seasonal to permanent</span>
+<span class="w">    </span><span class="s2">&quot;ffc90e&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Permanent to seasonal</span>
+<span class="w">    </span><span class="s2">&quot;7f7f7f&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ephemeral</span>
+<span class="w">    </span><span class="s2">&quot;c3c3c3&quot;</span><span class="w">  </span><span class="c1">// Other</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">transition</span><span class="p">,</span><span class="w"> </span><span class="nx">transVis</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Water Transitions&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="summary-table-of-gsw-bands">📚 Summary Table of GSW Bands<a class="headerlink" href="#summary-table-of-gsw-bands" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Band Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>occurrence</code></td>
+<td style="text-align: left;">Water presence frequency</td>
+<td style="text-align: left;">0 - 100 (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>change_abs</code></td>
+<td style="text-align: left;">Change in occurrence intensity</td>
+<td style="text-align: left;">-100 to 100</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>seasonality</code></td>
+<td style="text-align: left;">Number of months water is present</td>
+<td style="text-align: left;">0 - 12</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_extent</code></td>
+<td style="text-align: left;">Any pixel ever detected as water</td>
+<td style="text-align: left;">0 (no) or 1 (yes)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>transition</code></td>
+<td style="text-align: left;">Changes in water class types</td>
+<td style="text-align: left;">Categorical (0-10)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>Data Source: <a href="https://global-surface-water.appspot.com/">JRC Global Surface Water</a></p>
+</blockquote>
 
 
 

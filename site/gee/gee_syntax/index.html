@@ -238,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../" class="md-tabs__link">
+        <a href="../quick_start/" class="md-tabs__link">
           
   
   
@@ -485,34 +485,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What is Google Earth Engine?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1501,6 +1473,45 @@
     <span class="md-ellipsis">
       
         Projection and Scale Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-real-world-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Real-World Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Real-World Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-land-use-land-cover-lulc-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Land Use / Land Cover (LULC) Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-time-series-change-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Time-Series Change Detection
       
     </span>
   </a>
@@ -3010,6 +3021,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-real-world-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Real-World Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Real-World Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-land-use-land-cover-lulc-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Land Use / Land Cover (LULC) Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-time-series-change-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Time-Series Change Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3028,7 +3078,7 @@
 
 
 <h1 id="commonly-used-gee-syntax-reference">Commonly Used GEE Syntax Reference<a class="headerlink" href="#commonly-used-gee-syntax-reference" title="Permanent link">&para;</a></h1>
-<h2 id="goto-online-version-for-copy-the-codes-click-here"><a href="https://github.com/pulakeshpradhan/Datasets/blob/main/gee_syntex.md">Goto Online Version for Copy the Codes Click Here </a><a class="headerlink" href="#goto-online-version-for-copy-the-codes-click-here" title="Permanent link">&para;</a></h2>
+<h2 id="goto-online-version-for-copy-the-codes-click-here"><a href="https://github.com/pulakeshpradhan/Datasets/blob/main/gee_syntex.md">Goto Online Version for Copy the Codes Click Here</a><a class="headerlink" href="#goto-online-version-for-copy-the-codes-click-here" title="Permanent link">&para;</a></h2>
 <p>This document provides a comprehensive reference for commonly used Google Earth Engine (GEE) syntax and functions, organized by category with detailed examples.</p>
 <h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
@@ -3078,7 +3128,7 @@
 <p><em>Functions for visualizing data and controlling the map display</em></p>
 <h3 id="mapaddlayerimage-visparams-name">Map.addLayer(image, visParams, name)<a class="headerlink" href="#mapaddlayerimage-visparams-name" title="Permanent link">&para;</a></h3>
 <p>Adds an image/layer to the map.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3097,10 +3147,10 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">landsat</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;B5&#39;</span><span class="p">),</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.4</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">]},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;NIR Band&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="mapcenterobjectobject-zoom">Map.centerObject(object, zoom)<a class="headerlink" href="#mapcenterobjectobject-zoom" title="Permanent link">&para;</a></h3>
 <p>Centers the map on a feature/geometry/image.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a point for San Francisco</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sanFrancisco</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4193</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7749</span><span class="p">]);</span>
 
@@ -3111,10 +3161,10 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">countries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;USDOS/LSIB_SIMPLE/2017&#39;</span><span class="p">);</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">brazil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">countries</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;country_na&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Brazil&#39;</span><span class="p">));</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">brazil</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="printvariable">print(variable)<a class="headerlink" href="#printvariable" title="Permanent link">&para;</a></h3>
 <p>Prints a variable to the Console.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Print a simple message</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Hello Earth Engine!&#39;</span><span class="p">);</span>
 
@@ -3129,19 +3179,19 @@
 <span class="c1">// Print a dictionary</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="nx">mean</span><span class="o">:</span><span class="w"> </span><span class="mf">127.5</span><span class="p">};</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Statistics:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">stats</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="mapsetcenterlon-lat-zoom">Map.setCenter(lon, lat, zoom)<a class="headerlink" href="#mapsetcenterlon-lat-zoom" title="Permanent link">&para;</a></h3>
 <p>Centers the map at a specific latitude and longitude.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Center the map on Tokyo, Japan with zoom level 8</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">139.6917</span><span class="p">,</span><span class="w"> </span><span class="mf">35.6895</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span>
 
 <span class="c1">// Center on the Amazon Rainforest with a closer zoom</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">60.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="mapadduilabeltext">Map.add(ui.Label('Text'))<a class="headerlink" href="#mapadduilabeltext" title="Permanent link">&para;</a></h3>
 <p>Adds a UI label to the map.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a simple label</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">simpleLabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">Label</span><span class="p">(</span><span class="s1">&#39;This is a map label&#39;</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">simpleLabel</span><span class="p">);</span>
@@ -3170,13 +3220,13 @@
 <span class="nx">panel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">ui</span><span class="p">.</span><span class="nx">Label</span><span class="p">(</span><span class="s1">&#39;Vegetation Analysis&#39;</span><span class="p">));</span>
 <span class="nx">panel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">ui</span><span class="p">.</span><span class="nx">Label</span><span class="p">(</span><span class="s1">&#39;Data source: Landsat 8&#39;</span><span class="p">));</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">panel</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="loading-datasets">Loading Datasets<a class="headerlink" href="#loading-datasets" title="Permanent link">&para;</a></h2>
 <p><em>Functions for loading satellite imagery, collections, and vector data</em></p>
 <h3 id="var-image-eeimagecopernicuss2_sr20220101t000000_20220101t000000">var image = ee.Image('COPERNICUS/S2_SR/20220101T000000_20220101T000000')<a class="headerlink" href="#var-image-eeimagecopernicuss2_sr20220101t000000_20220101t000000" title="Permanent link">&para;</a></h3>
 <p>Loads a satellite image.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a specific Sentinel-2 surface reflectance image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sentinel2Image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR/20220101T104429_20220101T104426_T31TFJ&#39;</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Sentinel-2 Image:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Image</span><span class="p">);</span>
@@ -3192,10 +3242,10 @@
 <span class="c1">// Access image properties</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Acquisition date:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Image</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;system:time_start&#39;</span><span class="p">));</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Cloud cover percentage:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Image</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">));</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-collection-eeimagecollectioncopernicuss2">var collection = ee.ImageCollection('COPERNICUS/S2')<a class="headerlink" href="#var-collection-eeimagecollectioncopernicuss2" title="Permanent link">&para;</a></h3>
 <p>Loads an image collection.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load the Sentinel-2 image collection</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sentinel2Collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2&#39;</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Sentinel-2 Collection:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Collection</span><span class="p">);</span>
@@ -3211,10 +3261,10 @@
 <span class="c1">// Get collection metadata</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Number of images in collection:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Collection date range:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sentinel2Collection</span><span class="p">.</span><span class="nx">date</span><span class="p">());</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-feature-eefeaturecollectionfaogaul2015level1">var feature = ee.FeatureCollection('FAO/GAUL/2015/level1')<a class="headerlink" href="#var-feature-eefeaturecollectionfaogaul2015level1" title="Permanent link">&para;</a></h3>
 <p>Loads a feature collection (vector data).</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load country boundaries</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">countries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;USDOS/LSIB_SIMPLE/2017&#39;</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Countries:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">countries</span><span class="p">);</span>
@@ -3233,10 +3283,10 @@
 <span class="w">  </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;ADM1_NAME&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;California&#39;</span><span class="p">)</span>
 <span class="p">));</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;California:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">california</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-dem-eeimageusgssrtmgl1_003">var dem = ee.Image('USGS/SRTMGL1_003')<a class="headerlink" href="#var-dem-eeimageusgssrtmgl1_003" title="Permanent link">&para;</a></h3>
 <p>Loads a Digital Elevation Model (DEM).</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load SRTM 30m global DEM</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">srtm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;SRTM DEM:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">srtm</span><span class="p">);</span>
@@ -3254,13 +3304,20 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">aspect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Terrain</span><span class="p">.</span><span class="nx">aspect</span><span class="p">(</span><span class="nx">srtm</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">60</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Slope (degrees)&#39;</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">aspect</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">360</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Aspect (degrees)&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="filtering-data">Filtering Data<a class="headerlink" href="#filtering-data" title="Permanent link">&para;</a></h2>
 <p><em>Functions for subsetting and filtering image collections and feature collections</em></p>
+<pre class="mermaid"><code>graph LR
+    A[ImageCollection] --&gt; B{Filter}
+    B -- filterDate --&gt; C[Time Period]
+    B -- filterBounds --&gt; D[Area of Interest]
+    B -- filter(ee.Filter.lt) --&gt; E[Cloud Cover]
+    C &amp; D &amp; E --&gt; F[Filtered Subset]
+    style F fill:#f9f,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="collectionfilterdate2023-01-01-2023-12-31">collection.filterDate('2023-01-01', '2023-12-31')<a class="headerlink" href="#collectionfilterdate2023-01-01-2023-12-31" title="Permanent link">&para;</a></h3>
 <p>Filters images by date.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load Sentinel-2 collection</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sentinel2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR&#39;</span><span class="p">);</span>
 
@@ -3285,10 +3342,10 @@
 <span class="w">  </span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="s1">&#39;system:time_start&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="c1">// Sort in descending order</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Most recent image:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">recentImage</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="collectionfilterboundsgeometry">collection.filterBounds(geometry)<a class="headerlink" href="#collectionfilterboundsgeometry" title="Permanent link">&para;</a></h3>
 <p>Filters images by geographic region.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Define a region of interest (ROI)</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="o">-</span><span class="mf">122.5</span><span class="p">,</span><span class="w"> </span><span class="mf">37.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">122.0</span><span class="p">,</span><span class="w"> </span><span class="mf">38.0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// San Francisco area</span>
 
@@ -3319,10 +3376,10 @@
 <span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">japan</span><span class="p">.</span><span class="nx">geometry</span><span class="p">())</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-01-31&#39;</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;January 2023 images covering Japan:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">landsatJapan</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="collectionfiltereefiltereqcloud_cover-0">collection.filter(ee.Filter.eq('CLOUD_COVER', 0))<a class="headerlink" href="#collectionfiltereefiltereqcloud_cover-0" title="Permanent link">&para;</a></h3>
 <p>Filters images based on metadata properties.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load Landsat 8 collection</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA&#39;</span><span class="p">);</span>
 
@@ -3352,13 +3409,19 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">pathList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="mf">44</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">46</span><span class="p">]);</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">multiPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat8</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">inList</span><span class="p">(</span><span class="s1">&#39;WRS_PATH&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">pathList</span><span class="p">));</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Images from multiple paths:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">multiPath</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="mathematical-band-operations">Mathematical &amp; Band Operations<a class="headerlink" href="#mathematical-band-operations" title="Permanent link">&para;</a></h2>
 <p><em>Functions for performing calculations and manipulating image bands</em></p>
+<pre class="mermaid"><code>graph LR
+    A[Raw Image] -- select --&gt; B[Specific Bands]
+    B -- normalizedDifference --&gt; C[NDVI / NDWI]
+    A -- add / subtract --&gt; D[Change Detection]
+    A -- multiply / divide --&gt; E[Scaling / Unit Conversion]
+    style C fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="var-ndvi-imagenormalizeddifferenceb5-b4">var ndvi = image.normalizedDifference(['B5', 'B4'])<a class="headerlink" href="#var-ndvi-imagenormalizeddifferenceb5-b4" title="Permanent link">&para;</a></h3>
 <p>Calculates NDVI (or any other index).</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3385,10 +3448,10 @@
 <span class="c1">// Create a mask for high vegetation areas</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">vegetationMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndvi</span><span class="p">.</span><span class="nx">gt</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">vegetationMask</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Vegetation Mask&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-image2-imageselectb4-b3-b2">var image2 = image.select(['B4', 'B3', 'B2'])<a class="headerlink" href="#var-image2-imageselectb4-b3-b2" title="Permanent link">&para;</a></h3>
 <p>Selects specific bands.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Sentinel-2 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sentinel2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR/20210701T101559_20210701T101554_T33UUP&#39;</span><span class="p">);</span>
 
@@ -3413,10 +3476,10 @@
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">selectedBands</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sentinel2</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;B.*&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Select all bands starting with &#39;B&#39;</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Bands starting with B:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedBands</span><span class="p">.</span><span class="nx">bandNames</span><span class="p">());</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-newimage-imageaddimage2">var newImage = image.add(image2)<a class="headerlink" href="#var-newimage-imageaddimage2" title="Permanent link">&para;</a></h3>
 <p>Adds two images.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load two Landsat 8 images from different dates</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">image1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">image2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20150321&#39;</span><span class="p">);</span>
@@ -3443,10 +3506,10 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ndviDiff</span><span class="p">,</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;NDVI Change&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-newimage-imagemultiply2">var newImage = image.multiply(2)<a class="headerlink" href="#var-newimage-imagemultiply2" title="Permanent link">&para;</a></h3>
 <p>Multiplies an image by a constant.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3477,13 +3540,13 @@
 <span class="c1">// Calculate percent reflectance</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">percentReflectance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat</span><span class="p">.</span><span class="nx">select</span><span class="p">([</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">]).</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">percentReflectance</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Percent Reflectance&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="geometry-feature-collection-operations">Geometry &amp; Feature Collection Operations<a class="headerlink" href="#geometry-feature-collection-operations" title="Permanent link">&para;</a></h2>
 <p><em>Functions for creating and manipulating vector geometries and feature collections</em></p>
 <h3 id="var-point-eegeometrypointlon-lat">var point = ee.Geometry.Point([lon, lat])<a class="headerlink" href="#var-point-eegeometrypointlon-lat" title="Permanent link">&para;</a></h3>
 <p>Creates a point geometry.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a point for New York City</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">nyc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">74.0060</span><span class="p">,</span><span class="w"> </span><span class="mf">40.7128</span><span class="p">]);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;NYC Point:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nyc</span><span class="p">);</span>
@@ -3506,10 +3569,10 @@
 <span class="c1">// Buffer a point to create a circle</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">bufferedPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nyc</span><span class="p">.</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">10000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10km buffer</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">bufferedPoint</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;NYC 10km Buffer&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-polygon-eegeometrypolygonlon1-lat1-lon2-lat2">var polygon = ee.Geometry.Polygon([[[lon1, lat1], [lon2, lat2], ...]])<a class="headerlink" href="#var-polygon-eegeometrypolygonlon1-lat1-lon2-lat2" title="Permanent link">&para;</a></h3>
 <p>Creates a polygon.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a polygon for Yellowstone National Park (approximate)</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">yellowstone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Polygon</span><span class="p">([</span>
 <span class="w">  </span><span class="p">[[</span><span class="o">-</span><span class="mf">111.2</span><span class="p">,</span><span class="w"> </span><span class="mf">44.6</span><span class="p">],</span>
@@ -3541,10 +3604,10 @@
 <span class="c1">// Check if a point is inside a polygon</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">testPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">110.5</span><span class="p">,</span><span class="w"> </span><span class="mf">44.8</span><span class="p">]);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Is point inside Yellowstone?&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">yellowstone</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">testPoint</span><span class="p">));</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-fc-eefeaturecollectionfeature1-feature2">var fc = ee.FeatureCollection([feature1, feature2])<a class="headerlink" href="#var-fc-eefeaturecollectionfeature1-feature2" title="Permanent link">&para;</a></h3>
 <p>Creates a Feature Collection.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create features with properties</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">city1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Feature</span><span class="p">(</span>
 <span class="w">  </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4194</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7749</span><span class="p">]),</span><span class="w"> </span><span class="c1">// San Francisco</span>
@@ -3584,10 +3647,10 @@
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">city</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;density&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">city</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)).</span><span class="nx">divide</span><span class="p">(</span><span class="mf">100</span><span class="p">));</span>
 <span class="p">});</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Cities with density:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">citiesWithDensity</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="fcfilterboundspoint">fc.filterBounds(point)<a class="headerlink" href="#fcfilterboundspoint" title="Permanent link">&para;</a></h3>
 <p>Filters features based on location.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load country boundaries</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">countries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;USDOS/LSIB_SIMPLE/2017&#39;</span><span class="p">);</span>
 
@@ -3619,13 +3682,20 @@
 <span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;continent&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Europe&#39;</span><span class="p">))</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">bufferZone</span><span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;European countries near Paris:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">europeanCountriesNearParis</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="reducing-statistics">Reducing &amp; Statistics<a class="headerlink" href="#reducing-statistics" title="Permanent link">&para;</a></h2>
 <p><em>Functions for computing statistics and aggregating data across collections and regions</em></p>
+<pre class="mermaid"><code>graph LR
+    A[ImageCollection] -- reduce --&gt; B(ee.Reducer)
+    B -- mean/median --&gt; C[Single Composite Image]
+    D[Image + Region] -- reduceRegion --&gt; E(ee.Reducer)
+    E -- mean/sum/histogram --&gt; F[Dictionary of Stats]
+    style C fill:#ffd,stroke:#333,stroke-width:2px
+    style F fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="var-mean-collectionreduceeereducermean">var mean = collection.reduce(ee.Reducer.mean())<a class="headerlink" href="#var-mean-collectionreduceeereducermean" title="Permanent link">&para;</a></h3>
 <p>Computes the mean of an image collection.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 collection for a specific area and time</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.3578</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7726</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">50000</span><span class="p">);</span><span class="w"> </span><span class="c1">// San Francisco area</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA&#39;</span><span class="p">)</span>
@@ -3659,10 +3729,10 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">summerMean</span><span class="p">,</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4_mean&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3_mean&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2_mean&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;Summer Mean&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-minmax-collectionreduceeereducerminmax">var minMax = collection.reduce(ee.Reducer.minMax())<a class="headerlink" href="#var-minmax-collectionreduceeereducerminmax" title="Permanent link">&para;</a></h3>
 <p>Computes min and max values.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 collection for a specific area and time</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.3578</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7726</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">50000</span><span class="p">);</span><span class="w"> </span><span class="c1">// San Francisco area</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA&#39;</span><span class="p">)</span>
@@ -3705,10 +3775,10 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ndviMinMax</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;NDVI_max&#39;</span><span class="p">),</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;Max NDVI&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-sum-collectionreduceeereducersum">var sum = collection.reduce(ee.Reducer.sum())<a class="headerlink" href="#var-sum-collectionreduceeereducersum" title="Permanent link">&para;</a></h3>
 <p>Computes the sum of pixel values.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a MODIS precipitation collection</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">precipitation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;UCSB-CHG/CHIRPS/PENTAD&#39;</span><span class="p">)</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-12-31&#39;</span><span class="p">);</span>
@@ -3759,10 +3829,10 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">cumulativePrecip</span><span class="p">),</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;purple&#39;</span><span class="p">]},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;Cumulative Precipitation&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="var-histogram-imagereduceregion-reducer-eereducerhistogram-geometry-region">var histogram = image.reduceRegion({ reducer: ee.Reducer.histogram(), geometry: region })<a class="headerlink" href="#var-histogram-imagereduceregion-reducer-eereducerhistogram-geometry-region" title="Permanent link">&para;</a></h3>
 <p>Computes a histogram of pixel values.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3814,13 +3884,20 @@
 <span class="w">  </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e9</span>
 <span class="p">});</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;NDVI Statistics:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">ndviStats</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="exporting-data">Exporting Data<a class="headerlink" href="#exporting-data" title="Permanent link">&para;</a></h2>
 <p><em>Functions for exporting images and feature collections to Google Drive and Earth Engine assets</em></p>
+<pre class="mermaid"><code>graph LR
+    A[Analysis Result] --&gt; B{Export To}
+    B -- .toDrive --&gt; C[Google Drive (.tif, .csv, .shp)]
+    B -- .toAsset --&gt; D[Cloud Asset (Stay in GEE)]
+    B -- .toCloudStorage --&gt; E[Google Cloud Bucket]
+    style C fill:#6bf,stroke:#333,stroke-width:2px
+    style D fill:#6bf,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="exportimagetodriveimage-img-description-export-scale-30-region-geometry">Export.image.toDrive({image: img, description: 'export', scale: 30, region: geometry})<a class="headerlink" href="#exportimagetodriveimage-img-description-export-scale-30-region-geometry" title="Permanent link">&para;</a></h3>
 <p>Exports an image to Google Drive.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3875,10 +3952,10 @@
 <span class="w">  </span><span class="nx">region</span><span class="o">:</span><span class="w"> </span><span class="nx">roi</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">fileFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GeoTIFF&#39;</span>
 <span class="p">});</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="exporttabletodrivecollection-fc-description-export_fc">Export.table.toDrive({collection: fc, description: 'export_fc'})<a class="headerlink" href="#exporttabletodrivecollection-fc-description-export_fc" title="Permanent link">&para;</a></h3>
 <p>Exports a feature collection to Google Drive.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load country boundaries</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">countries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;USDOS/LSIB_SIMPLE/2017&#39;</span><span class="p">);</span>
 
@@ -3925,10 +4002,10 @@
 <span class="w">  </span><span class="nx">fileFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;CSV&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">selectors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;country_na&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;area_km2&#39;</span><span class="p">]</span>
 <span class="p">});</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="exportimagetoassetimage-img-description-export_asset">Export.image.toAsset({image: img, description: 'export_asset'})<a class="headerlink" href="#exportimagetoassetimage-img-description-export_asset" title="Permanent link">&para;</a></h3>
 <p>Exports an image to an Earth Engine asset.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -3981,13 +4058,13 @@
 <span class="w">  </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e9</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">pyramidingPolicy</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;.default&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mean&#39;</span><span class="p">}</span><span class="w">  </span><span class="c1">// Use mean for pyramiding</span>
 <span class="p">});</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
 <p><em>Additional useful functions for various operations in Earth Engine</em></p>
 <h3 id="eealgorithmsifcondition-truevalue-falsevalue">ee.Algorithms.If(condition, trueValue, falseValue)<a class="headerlink" href="#eealgorithmsifcondition-truevalue-falsevalue" title="Permanent link">&para;</a></h3>
 <p>Conditional statement.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a simple condition</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
@@ -4038,10 +4115,10 @@
 <span class="w">  </span><span class="p">)</span>
 <span class="p">);</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Image quality:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">qualityCategory</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="imageclipregion">image.clip(region)<a class="headerlink" href="#imageclipregion" title="Permanent link">&para;</a></h3>
 <p>Clips an image to a specified region.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 image</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318&#39;</span><span class="p">);</span>
 
@@ -4080,10 +4157,10 @@
 <span class="c1">// Display the first image from the clipped collection</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">firstImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">clippedCollection</span><span class="p">.</span><span class="nx">first</span><span class="p">());</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">firstImage</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;First Clipped Image&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="collectionmedian">collection.median()<a class="headerlink" href="#collectionmedian" title="Permanent link">&para;</a></h3>
 <p>Computes the median of an image collection.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 collection for a specific area and time</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.3578</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7726</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">50000</span><span class="p">);</span><span class="w"> </span><span class="c1">// San Francisco area</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA&#39;</span><span class="p">)</span>
@@ -4117,10 +4194,10 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">summer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;month&#39;</span><span class="p">)).</span><span class="nx">median</span><span class="p">();</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">winter</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Winter Median&#39;</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">summer</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Summer Median&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="collectiontolistngeti">collection.toList(n).get(i)<a class="headerlink" href="#collectiontolistngeti" title="Permanent link">&para;</a></h3>
 <p>Converts an image collection to a list and retrieves the i-th element.</p>
-<p><strong>Example:</strong>
+<p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load a Landsat 8 collection for a specific area and time</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.3578</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7726</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">50000</span><span class="p">);</span><span class="w"> </span><span class="c1">// San Francisco area</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_TOA&#39;</span><span class="p">)</span>
@@ -4173,7 +4250,7 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">processedImages</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">)),</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span>
 <span class="w">  </span><span class="s1">&#39;NDVI of First Image&#39;</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <p><em>Recommended approaches for efficient and accurate geospatial analysis in Earth Engine</em></p>
@@ -4268,6 +4345,67 @@
 
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Original Resolution&#39;</span><span class="p">);</span>
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">coarseImage</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Aggregated Resolution&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="common-real-world-workflows">Common Real-World Workflows<a class="headerlink" href="#common-real-world-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="1-land-use-land-cover-lulc-classification">1. Land Use / Land Cover (LULC) Classification<a class="headerlink" href="#1-land-use-land-cover-lulc-classification" title="Permanent link">&para;</a></h3>
+<p>Automated mapping of land types using machine learning.</p>
+<pre class="mermaid"><code>graph LR
+    A[Satellite Image Collection] -- filter &amp; median --&gt; B[Cloud-free Composite]
+    C[Training Points] -- sampleRegions --&gt; D[Training Data]
+    D -- ee.Classifier.smileRandomForest --&gt; E[Trained Classifier]
+    B -- .classify --&gt; F[LULC Map]
+    F -- .clip --&gt; G[Final Result]
+    style F fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
+<p><strong>Example Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Prepare Data</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">10000</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">landsat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;LANDSAT/LC08/C02/T1_L2&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">roi</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+
+<span class="c1">// 2. Training Data (Example points)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">trainingPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">([</span>
+<span class="w">  </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Feature</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.43</span><span class="p">,</span><span class="w"> </span><span class="mf">37.75</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="kd">class</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;urban&#39;</span><span class="p">}),</span>
+<span class="w">  </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Feature</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.45</span><span class="p">,</span><span class="w"> </span><span class="mf">37.78</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="kd">class</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;water&#39;</span><span class="p">})</span>
+<span class="p">]);</span>
+
+<span class="c1">// 3. Train and Classify</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">training</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat</span><span class="p">.</span><span class="nx">sampleRegions</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">trainingPoints</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">properties</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span>
+<span class="p">});</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">classifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Classifier</span><span class="p">.</span><span class="nx">smileRandomForest</span><span class="p">(</span><span class="mf">10</span><span class="p">).</span><span class="nx">train</span><span class="p">(</span><span class="nx">training</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;label&#39;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">classified</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat</span><span class="p">.</span><span class="nx">classify</span><span class="p">(</span><span class="nx">classifier</span><span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">classified</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;LULC Classification&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="2-time-series-change-detection">2. Time-Series Change Detection<a class="headerlink" href="#2-time-series-change-detection" title="Permanent link">&para;</a></h3>
+<p>Detecting how an area changed between two time periods.</p>
+<pre class="mermaid"><code>graph LR
+    A[Year 2015 Image] -- calculate --&gt; B[NDVI 2015]
+    C[Year 2023 Image] -- calculate --&gt; D[NDVI 2023]
+    D -- subtract --&gt; E[NDVI Difference]
+    E -- threshold --&gt; F[Significant Change Map]
+    style F fill:#f66,stroke:#333,stroke-width:2px</code></pre>
+<p><strong>Example Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
+
+<span class="c1">// Load images for two years</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">img1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;LANDSAT/LC08/C02/T1_L2&quot;</span><span class="p">).</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">roi</span><span class="p">).</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2015-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2015-12-31&#39;</span><span class="p">).</span><span class="nx">median</span><span class="p">();</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">img2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;LANDSAT/LC08/C02/T1_L2&quot;</span><span class="p">).</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">roi</span><span class="p">).</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">).</span><span class="nx">median</span><span class="p">();</span>
+
+<span class="c1">// Calculate NDVI for both</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndvi1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">img1</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B4&#39;</span><span class="p">]);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndvi2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">img2</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B4&#39;</span><span class="p">]);</span>
+
+<span class="c1">// Find difference</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndvi2</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="nx">ndvi1</span><span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">diff</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;Vegetation Change&#39;</span><span class="p">);</span>
 </code></pre></div>
 
 

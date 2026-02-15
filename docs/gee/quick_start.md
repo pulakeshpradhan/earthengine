@@ -17,6 +17,19 @@ Google Earth Engine works with both **JavaScript** and **Python**. Pick whicheve
 
 ---
 
+## The GEE Workflow
+
+Before we write code, here is how Earth Engine works conceptually:
+
+```mermaid
+graph LR
+    A[Cloud Data Catalog] --> B(Your Script)
+    B --> C[Google Servers]
+    C --> D[Processed Map]
+    C --> E[Charts / Stats]
+    style C fill:#f96,stroke:#333
+```
+
 ## Your First GEE Script
 
 Let's load and display a satellite image. Click the tabs to see the code in your preferred language:
