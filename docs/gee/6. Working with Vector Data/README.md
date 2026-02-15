@@ -26,6 +26,17 @@ You don't always have to draw your own shapes. GEE has many ready-to-use vector 
 
 ---
 
+## The Vector Workflow
+
+```mermaid
+graph LR
+    A[Geometry / Point] -- .buffer --> B[Area of Interest]
+    C[FeatureCollection] -- .filter --> D[Selected Features]
+    B & D -- .clip --> E[Clipped Raster]
+    E -- .reduceRegion --> F[Zonal Statistics]
+    style F fill:#f96,stroke:#333,stroke-width:2px
+```
+
 ## How to Load Vector Data
 
 ### 1. Filtering World Countries

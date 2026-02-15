@@ -17,6 +17,18 @@ Here are the most common "cameras" (satellites) you'll use:
 
 ---
 
+## The Raster Workflow
+
+```mermaid
+graph LR
+    A[Catalog] -- Search --> B[ImageCollection]
+    B -- filter --> C[Filtered Collection]
+    C -- composite/reduce --> D[Single Image]
+    D -- process --> E[Analysis Result]
+    E -- Map --> F[Visualization]
+    style D fill:#f96,stroke:#333,stroke-width:2px
+```
+
 ## How to Load a Dataset
 
 To use these images, you need to "call" them from the catalog.

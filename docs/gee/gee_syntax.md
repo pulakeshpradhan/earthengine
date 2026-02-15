@@ -1,8 +1,11 @@
 # Commonly Used GEE Syntax Reference
-## [Goto Online Version for Copy the Codes Click Here ](https://github.com/pulakeshpradhan/Datasets/blob/main/gee_syntex.md)
+
+## [Goto Online Version for Copy the Codes Click Here](https://github.com/pulakeshpradhan/Datasets/blob/main/gee_syntex.md)
+
 This document provides a comprehensive reference for commonly used Google Earth Engine (GEE) syntax and functions, organized by category with detailed examples.
 
 ## Table of Contents
+
 1. [Basic Display & Visualization](#basic-display--visualization)
    - [Map.addLayer()](#mapaddlayerimage-visparams-name)
    - [Map.centerObject()](#mapcenterobjectobject-zoom)
@@ -46,12 +49,15 @@ This document provides a comprehensive reference for commonly used Google Earth 
    - [Projection and Scale Best Practices](#projection-and-scale-best-practices)
 
 ## Basic Display & Visualization
+
 *Functions for visualizing data and controlling the map display*
 
 ### Map.addLayer(image, visParams, name)
+
 Adds an image/layer to the map.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -74,9 +80,11 @@ Map.addLayer(landsat.select('B5'),
 ```
 
 ### Map.centerObject(object, zoom)
+
 Centers the map on a feature/geometry/image.
 
 **Example:**
+
 ```javascript
 // Create a point for San Francisco
 var sanFrancisco = ee.Geometry.Point([-122.4193, 37.7749]);
@@ -91,9 +99,11 @@ Map.centerObject(brazil);
 ```
 
 ### print(variable)
+
 Prints a variable to the Console.
 
 **Example:**
+
 ```javascript
 // Print a simple message
 print('Hello Earth Engine!');
@@ -112,9 +122,11 @@ print('Statistics:', stats);
 ```
 
 ### Map.setCenter(lon, lat, zoom)
+
 Centers the map at a specific latitude and longitude.
 
 **Example:**
+
 ```javascript
 // Center the map on Tokyo, Japan with zoom level 8
 Map.setCenter(139.6917, 35.6895, 8);
@@ -124,9 +136,11 @@ Map.setCenter(-60.5, -3.0, 6);
 ```
 
 ### Map.add(ui.Label('Text'))
+
 Adds a UI label to the map.
 
 **Example:**
+
 ```javascript
 // Create a simple label
 var simpleLabel = ui.Label('This is a map label');
@@ -161,12 +175,15 @@ Map.add(panel);
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Loading Datasets
+
 *Functions for loading satellite imagery, collections, and vector data*
 
 ### var image = ee.Image('COPERNICUS/S2_SR/20220101T000000_20220101T000000')
+
 Loads a satellite image.
 
 **Example:**
+
 ```javascript
 // Load a specific Sentinel-2 surface reflectance image
 var sentinel2Image = ee.Image('COPERNICUS/S2_SR/20220101T104429_20220101T104426_T31TFJ');
@@ -186,9 +203,11 @@ print('Cloud cover percentage:', sentinel2Image.get('CLOUDY_PIXEL_PERCENTAGE'));
 ```
 
 ### var collection = ee.ImageCollection('COPERNICUS/S2')
+
 Loads an image collection.
 
 **Example:**
+
 ```javascript
 // Load the Sentinel-2 image collection
 var sentinel2Collection = ee.ImageCollection('COPERNICUS/S2');
@@ -208,9 +227,11 @@ print('Collection date range:', sentinel2Collection.date());
 ```
 
 ### var feature = ee.FeatureCollection('FAO/GAUL/2015/level1')
+
 Loads a feature collection (vector data).
 
 **Example:**
+
 ```javascript
 // Load country boundaries
 var countries = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017');
@@ -233,9 +254,11 @@ print('California:', california);
 ```
 
 ### var dem = ee.Image('USGS/SRTMGL1_003')
+
 Loads a Digital Elevation Model (DEM).
 
 **Example:**
+
 ```javascript
 // Load SRTM 30m global DEM
 var srtm = ee.Image('USGS/SRTMGL1_003');
@@ -259,12 +282,25 @@ Map.addLayer(aspect, {min: 0, max: 360, palette: ['blue', 'green', 'yellow', 'or
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Filtering Data
+
 *Functions for subsetting and filtering image collections and feature collections*
 
+```mermaid
+graph LR
+    A[ImageCollection] --> B{Filter}
+    B -- filterDate --> C[Time Period]
+    B -- filterBounds --> D[Area of Interest]
+    B -- filter(ee.Filter.lt) --> E[Cloud Cover]
+    C & D & E --> F[Filtered Subset]
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+```
+
 ### collection.filterDate('2023-01-01', '2023-12-31')
+
 Filters images by date.
 
 **Example:**
+
 ```javascript
 // Load Sentinel-2 collection
 var sentinel2 = ee.ImageCollection('COPERNICUS/S2_SR');
@@ -293,9 +329,11 @@ print('Most recent image:', recentImage);
 ```
 
 ### collection.filterBounds(geometry)
+
 Filters images by geographic region.
 
 **Example:**
+
 ```javascript
 // Define a region of interest (ROI)
 var roi = ee.Geometry.Rectangle([-122.5, 37.5, -122.0, 38.0]); // San Francisco area
@@ -330,9 +368,11 @@ print('January 2023 images covering Japan:', landsatJapan.size());
 ```
 
 ### collection.filter(ee.Filter.eq('CLOUD_COVER', 0))
+
 Filters images based on metadata properties.
 
 **Example:**
+
 ```javascript
 // Load Landsat 8 collection
 var landsat8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_TOA');
@@ -368,12 +408,24 @@ print('Images from multiple paths:', multiPath.size());
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Mathematical & Band Operations
+
 *Functions for performing calculations and manipulating image bands*
 
+```mermaid
+graph LR
+    A[Raw Image] -- select --> B[Specific Bands]
+    B -- normalizedDifference --> C[NDVI / NDWI]
+    A -- add / subtract --> D[Change Detection]
+    A -- multiply / divide --> E[Scaling / Unit Conversion]
+    style C fill:#9f9,stroke:#333,stroke-width:2px
+```
+
 ### var ndvi = image.normalizedDifference(['B5', 'B4'])
+
 Calculates NDVI (or any other index).
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -404,9 +456,11 @@ Map.addLayer(vegetationMask, {palette: ['white', 'green']}, 'Vegetation Mask');
 ```
 
 ### var image2 = image.select(['B4', 'B3', 'B2'])
+
 Selects specific bands.
 
 **Example:**
+
 ```javascript
 // Load a Sentinel-2 image
 var sentinel2 = ee.Image('COPERNICUS/S2_SR/20210701T101559_20210701T101554_T33UUP');
@@ -435,9 +489,11 @@ print('Bands starting with B:', selectedBands.bandNames());
 ```
 
 ### var newImage = image.add(image2)
+
 Adds two images.
 
 **Example:**
+
 ```javascript
 // Load two Landsat 8 images from different dates
 var image1 = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -468,9 +524,11 @@ Map.addLayer(ndviDiff,
 ```
 
 ### var newImage = image.multiply(2)
+
 Multiplies an image by a constant.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -507,12 +565,15 @@ Map.addLayer(percentReflectance, {min: 0, max: 30}, 'Percent Reflectance');
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Geometry & Feature Collection Operations
+
 *Functions for creating and manipulating vector geometries and feature collections*
 
 ### var point = ee.Geometry.Point([lon, lat])
+
 Creates a point geometry.
 
 **Example:**
+
 ```javascript
 // Create a point for New York City
 var nyc = ee.Geometry.Point([-74.0060, 40.7128]);
@@ -539,9 +600,11 @@ Map.addLayer(bufferedPoint, {color: 'yellow'}, 'NYC 10km Buffer');
 ```
 
 ### var polygon = ee.Geometry.Polygon([[[lon1, lat1], [lon2, lat2], ...]])
+
 Creates a polygon.
 
 **Example:**
+
 ```javascript
 // Create a polygon for Yellowstone National Park (approximate)
 var yellowstone = ee.Geometry.Polygon([
@@ -577,9 +640,11 @@ print('Is point inside Yellowstone?', yellowstone.contains(testPoint));
 ```
 
 ### var fc = ee.FeatureCollection([feature1, feature2])
+
 Creates a Feature Collection.
 
 **Example:**
+
 ```javascript
 // Create features with properties
 var city1 = ee.Feature(
@@ -623,9 +688,11 @@ print('Cities with density:', citiesWithDensity);
 ```
 
 ### fc.filterBounds(point)
+
 Filters features based on location.
 
 **Example:**
+
 ```javascript
 // Load country boundaries
 var countries = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017');
@@ -663,12 +730,25 @@ print('European countries near Paris:', europeanCountriesNearParis);
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Reducing & Statistics
+
 *Functions for computing statistics and aggregating data across collections and regions*
 
+```mermaid
+graph LR
+    A[ImageCollection] -- reduce --> B(ee.Reducer)
+    B -- mean/median --> C[Single Composite Image]
+    D[Image + Region] -- reduceRegion --> E(ee.Reducer)
+    E -- mean/sum/histogram --> F[Dictionary of Stats]
+    style C fill:#ffd,stroke:#333,stroke-width:2px
+    style F fill:#ffd,stroke:#333,stroke-width:2px
+```
+
 ### var mean = collection.reduce(ee.Reducer.mean())
+
 Computes the mean of an image collection.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 collection for a specific area and time
 var roi = ee.Geometry.Point([-122.3578, 37.7726]).buffer(50000); // San Francisco area
@@ -706,9 +786,11 @@ Map.addLayer(summerMean,
 ```
 
 ### var minMax = collection.reduce(ee.Reducer.minMax())
+
 Computes min and max values.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 collection for a specific area and time
 var roi = ee.Geometry.Point([-122.3578, 37.7726]).buffer(50000); // San Francisco area
@@ -755,9 +837,11 @@ Map.addLayer(ndviMinMax.select('NDVI_max'),
 ```
 
 ### var sum = collection.reduce(ee.Reducer.sum())
+
 Computes the sum of pixel values.
 
 **Example:**
+
 ```javascript
 // Load a MODIS precipitation collection
 var precipitation = ee.ImageCollection('UCSB-CHG/CHIRPS/PENTAD')
@@ -812,9 +896,11 @@ Map.addLayer(ee.Image(cumulativePrecip),
 ```
 
 ### var histogram = image.reduceRegion({ reducer: ee.Reducer.histogram(), geometry: region })
+
 Computes a histogram of pixel values.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -872,12 +958,25 @@ print('NDVI Statistics:', ndviStats);
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Exporting Data
+
 *Functions for exporting images and feature collections to Google Drive and Earth Engine assets*
 
+```mermaid
+graph LR
+    A[Analysis Result] --> B{Export To}
+    B -- .toDrive --> C[Google Drive (.tif, .csv, .shp)]
+    B -- .toAsset --> D[Cloud Asset (Stay in GEE)]
+    B -- .toCloudStorage --> E[Google Cloud Bucket]
+    style C fill:#6bf,stroke:#333,stroke-width:2px
+    style D fill:#6bf,stroke:#333,stroke-width:2px
+```
+
 ### Export.image.toDrive({image: img, description: 'export', scale: 30, region: geometry})
+
 Exports an image to Google Drive.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -936,9 +1035,11 @@ Export.image.toDrive({
 ```
 
 ### Export.table.toDrive({collection: fc, description: 'export_fc'})
+
 Exports a feature collection to Google Drive.
 
 **Example:**
+
 ```javascript
 // Load country boundaries
 var countries = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017');
@@ -989,9 +1090,11 @@ Export.table.toDrive({
 ```
 
 ### Export.image.toAsset({image: img, description: 'export_asset'})
+
 Exports an image to an Earth Engine asset.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -1050,12 +1153,15 @@ Export.image.toAsset({
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Miscellaneous
+
 *Additional useful functions for various operations in Earth Engine*
 
 ### ee.Algorithms.If(condition, trueValue, falseValue)
+
 Conditional statement.
 
 **Example:**
+
 ```javascript
 // Create a simple condition
 var x = 10;
@@ -1110,9 +1216,11 @@ print('Image quality:', qualityCategory);
 ```
 
 ### image.clip(region)
+
 Clips an image to a specified region.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 image
 var landsat = ee.Image('LANDSAT/LC08/C02/T1_TOA/LC08_044034_20140318');
@@ -1155,9 +1263,11 @@ Map.addLayer(firstImage, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'First C
 ```
 
 ### collection.median()
+
 Computes the median of an image collection.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 collection for a specific area and time
 var roi = ee.Geometry.Point([-122.3578, 37.7726]).buffer(50000); // San Francisco area
@@ -1195,9 +1305,11 @@ Map.addLayer(summer, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Summer Medi
 ```
 
 ### collection.toList(n).get(i)
+
 Converts an image collection to a list and retrieves the i-th element.
 
 **Example:**
+
 ```javascript
 // Load a Landsat 8 collection for a specific area and time
 var roi = ee.Geometry.Point([-122.3578, 37.7726]).buffer(50000); // San Francisco area
@@ -1256,6 +1368,7 @@ Map.addLayer(ee.Image(processedImages.get(0)),
 [Back to top](#comprehensive-google-earth-engine-gee-syntax-reference)
 
 ## Best Practices
+
 *Recommended approaches for efficient and accurate geospatial analysis in Earth Engine*
 
 ### Projection and Scale Best Practices
@@ -1273,7 +1386,7 @@ Map.addLayer(landsat, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Landsat Im
 print('Image projection:', landsat.projection());
 ```
 
-2. **Use .projection() to check an image's native projection before applying operations**
+1. **Use .projection() to check an image's native projection before applying operations**
 
 ```javascript
 // Check projection before operations
@@ -1286,7 +1399,7 @@ var scale = image.projection().nominalScale();
 print('Native scale in meters:', scale);
 ```
 
-3. **For area calculations, use an equal-area projection like EPSG:6933**
+1. **For area calculations, use an equal-area projection like EPSG:6933**
 
 ```javascript
 // Calculate area using equal-area projection
@@ -1301,7 +1414,7 @@ var areaEqualArea = roiReprojected.area();
 print('Area with equal-area projection (m²):', areaEqualArea);
 ```
 
-4. **Specify projection and scale only when exporting or performing specific analyses**
+1. **Specify projection and scale only when exporting or performing specific analyses**
 
 ```javascript
 // Specify scale and projection when exporting
@@ -1317,7 +1430,7 @@ Export.image.toDrive({
 });
 ```
 
-5. **Avoid reproject() unless necessary for small-scale analysis**
+1. **Avoid reproject() unless necessary for small-scale analysis**
 
 ```javascript
 // Avoid unnecessary reprojection
@@ -1336,7 +1449,7 @@ var result = image.reduceRegion({
 });
 ```
 
-6. **Use reduceResolution() instead of reproject() to aggregate data at a coarser scale**
+1. **Use reduceResolution() instead of reproject() to aggregate data at a coarser scale**
 
 ```javascript
 // Aggregate to coarser resolution using reduceResolution
@@ -1356,4 +1469,83 @@ coarseImage = coarseImage.reproject({
 
 Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Original Resolution');
 Map.addLayer(coarseImage, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Aggregated Resolution');
+```
+
+---
+
+## Common Real-World Workflows
+
+### 1. Land Use / Land Cover (LULC) Classification
+
+Automated mapping of land types using machine learning.
+
+```mermaid
+graph LR
+    A[Satellite Image Collection] -- filter & median --> B[Cloud-free Composite]
+    C[Training Points] -- sampleRegions --> D[Training Data]
+    D -- ee.Classifier.smileRandomForest --> E[Trained Classifier]
+    B -- .classify --> F[LULC Map]
+    F -- .clip --> G[Final Result]
+    style F fill:#9f9,stroke:#333,stroke-width:2px
+```
+
+**Example Code:**
+
+```javascript
+// 1. Prepare Data
+var roi = ee.Geometry.Point([-122.4, 37.7]).buffer(10000);
+var landsat = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+  .filterBounds(roi)
+  .filterDate('2023-01-01', '2023-12-31')
+  .median();
+
+// 2. Training Data (Example points)
+var trainingPoints = ee.FeatureCollection([
+  ee.Feature(ee.Geometry.Point([-122.43, 37.75]), {label: 0, class: 'urban'}),
+  ee.Feature(ee.Geometry.Point([-122.45, 37.78]), {label: 1, class: 'water'})
+]);
+
+// 3. Train and Classify
+var training = landsat.sampleRegions({
+  collection: trainingPoints,
+  properties: ['label'],
+  scale: 30
+});
+
+var classifier = ee.Classifier.smileRandomForest(10).train(training, 'label');
+var classified = landsat.classify(classifier);
+
+Map.addLayer(classified, {min: 0, max: 1, palette: ['red', 'blue']}, 'LULC Classification');
+```
+
+### 2. Time-Series Change Detection
+
+Detecting how an area changed between two time periods.
+
+```mermaid
+graph LR
+    A[Year 2015 Image] -- calculate --> B[NDVI 2015]
+    C[Year 2023 Image] -- calculate --> D[NDVI 2023]
+    D -- subtract --> E[NDVI Difference]
+    E -- threshold --> F[Significant Change Map]
+    style F fill:#f66,stroke:#333,stroke-width:2px
+```
+
+**Example Code:**
+
+```javascript
+var roi = ee.Geometry.Point([-122.4, 37.7]).buffer(5000);
+
+// Load images for two years
+var img1 = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2").filterBounds(roi).filterDate('2015-01-01', '2015-12-31').median();
+var img2 = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2").filterBounds(roi).filterDate('2023-01-01', '2023-12-31').median();
+
+// Calculate NDVI for both
+var ndvi1 = img1.normalizedDifference(['B5', 'B4']);
+var ndvi2 = img2.normalizedDifference(['B5', 'B4']);
+
+// Find difference
+var diff = ndvi2.subtract(ndvi1);
+
+Map.addLayer(diff, {min: -0.5, max: 0.5, palette: ['red', 'white', 'green']}, 'Vegetation Change');
 ```

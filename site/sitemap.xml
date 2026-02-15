@@ -69,7 +69,7 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/1.%20Code%20Editor/3.%20Javascipt%20vs%20python/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
@@ -133,23 +133,23 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/1%20.Working%20with%20Single%20Band%20Images/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/1.%20Single%20Band%20Images/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/2.%20Working%20with%20Multi%20Band%20Images/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/2.%20Multi%20Band%20Images/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/3.%20Computing%20NDVI/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/3.%20Calculating%20Indices/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/4.%20Mapping%20NDVI%20over%20time/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/4.%20Time%20Series%20Analysis/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/5.%20Downloading%20and%20Exporting%20an%20Image/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/5.%20Exporting%20Data/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
@@ -157,15 +157,15 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/1.%20Overview%20of%20Feature%20and%20Feature%20Collections/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/1.%20Overview%20of%20Features/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/2.%20Working%20with%20Feature%20Collection/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/2.%20Feature%20Collections/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Export%20Feature%20Collection/</loc>
+         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
@@ -293,10 +293,6 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/programming/01.What%20is%20Programming/</loc>
-         <lastmod>2026-02-14</lastmod>
-    </url>
-    <url>
          <loc>https://pulakeshpradhan.github.io/earthengine/programming/02.Where%20to%20write%20code/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
@@ -309,19 +305,7 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/programming/05.JSON_Python_ee/</loc>
-         <lastmod>2026-02-14</lastmod>
-    </url>
-    <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/programming/06.Functions/</loc>
-         <lastmod>2026-02-14</lastmod>
-    </url>
-    <url>
          <loc>https://pulakeshpradhan.github.io/earthengine/programming/07.Dictionaries/</loc>
-         <lastmod>2026-02-14</lastmod>
-    </url>
-    <url>
-         <loc>https://pulakeshpradhan.github.io/earthengine/programming/08.map%28%29%20function/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
@@ -329,7 +313,23 @@
          <lastmod>2026-02-14</lastmod>
     </url>
     <url>
+         <loc>https://pulakeshpradhan.github.io/earthengine/programming/1.%20What%20is%20Programming/</loc>
+         <lastmod>2026-02-14</lastmod>
+    </url>
+    <url>
          <loc>https://pulakeshpradhan.github.io/earthengine/programming/10.ImageCollection/</loc>
+         <lastmod>2026-02-14</lastmod>
+    </url>
+    <url>
+         <loc>https://pulakeshpradhan.github.io/earthengine/programming/2.%20Data%20Types/</loc>
+         <lastmod>2026-02-14</lastmod>
+    </url>
+    <url>
+         <loc>https://pulakeshpradhan.github.io/earthengine/programming/3.%20Functions/</loc>
+         <lastmod>2026-02-14</lastmod>
+    </url>
+    <url>
+         <loc>https://pulakeshpradhan.github.io/earthengine/programming/4.%20Loops/</loc>
          <lastmod>2026-02-14</lastmod>
     </url>
 </urlset>

@@ -12,31 +12,31 @@
         <meta name="author" content="Pulak">
       
       
-        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/programming/06.Functions/">
+        <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/1.%20Overview%20of%20Features/">
       
       
-        <link rel="prev" href="../05.JSON_Python_ee/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../08.map%28%29%20function/">
+        <link rel="next" href="../2.%20Feature%20Collections/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Working with Functions - Google Earth Engine - A Beginner's Guide</title>
+        <title>Understanding Features - Google Earth Engine - A Beginner's Guide</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functions-in-google-earth-engine" class="md-skip">
+        <a href="#features-points-lines-polygons" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Google Earth Engine - A Beginner&#39;s Guide" class="md-header__button md-logo" aria-label="Google Earth Engine - A Beginner's Guide" data-md-component="logo">
+    <a href="../../.." title="Google Earth Engine - A Beginner&#39;s Guide" class="md-header__button md-logo" aria-label="Google Earth Engine - A Beginner's Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Functions
+              Understanding Features
             
           </span>
         </div>
@@ -217,7 +217,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -238,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../gee/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -254,13 +254,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../01.What%20is%20Programming/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../programming/1.%20What%20is%20Programming/" class="md-tabs__link">
           
   
   
@@ -280,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../gee/modern_best_practices/" class="md-tabs__link">
+        <a href="../../modern_best_practices/" class="md-tabs__link">
           
   
   
@@ -296,11 +294,22 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../gee/5.%20Working%20with%20Raster%20Data/" class="md-tabs__link">
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../5.%20Working%20with%20Raster%20Data/" class="md-tabs__link">
           
   
   
@@ -308,6 +317,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -327,7 +339,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../gee/Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/" class="md-tabs__link">
+        <a href="../../Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/" class="md-tabs__link">
           
   
   
@@ -350,7 +362,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../gee/0.%20Supplementary/1.%20Keyboard%20Shortcuts%20for%20Google%20Earth%20Engine/" class="md-tabs__link">
+        <a href="../../0.%20Supplementary/1.%20Keyboard%20Shortcuts%20for%20Google%20Earth%20Engine/" class="md-tabs__link">
           
   
   
@@ -384,7 +396,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Google Earth Engine - A Beginner&#39;s Guide" class="md-nav__button md-logo" aria-label="Google Earth Engine - A Beginner's Guide" data-md-component="logo">
+    <a href="../../.." title="Google Earth Engine - A Beginner&#39;s Guide" class="md-nav__button md-logo" aria-label="Google Earth Engine - A Beginner's Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -402,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -483,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -511,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/quick_start/" class="md-nav__link">
+      <a href="../../quick_start/" class="md-nav__link">
         
   
   
@@ -539,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/1.%20Code%20Editor/0.%20Registration/" class="md-nav__link">
+      <a href="../../1.%20Code%20Editor/0.%20Registration/" class="md-nav__link">
         
   
   
@@ -567,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/1.%20Code%20Editor/1.%20User%20Interface%20of%20Code%20Editor/" class="md-nav__link">
+      <a href="../../1.%20Code%20Editor/1.%20User%20Interface%20of%20Code%20Editor/" class="md-nav__link">
         
   
   
@@ -595,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/1.%20Code%20Editor/3.%20Javascipt%20vs%20python/" class="md-nav__link">
+      <a href="../../1. Code Editor/3. Javascipt vs python.md" class="md-nav__link">
         
   
   
@@ -627,31 +639,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -669,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -687,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.What%20is%20Programming/" class="md-nav__link">
+      <a href="../../../programming/1.%20What%20is%20Programming/" class="md-nav__link">
         
   
   
@@ -715,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05.JSON_Python_ee/" class="md-nav__link">
+      <a href="../../../programming/2.%20Data%20Types/" class="md-nav__link">
         
   
   
@@ -740,37 +749,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Working with Functions
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../programming/3.%20Functions/" class="md-nav__link">
         
   
   
@@ -786,182 +768,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-functions-in-gee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of Functions in GEE
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of Functions in GEE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-built-in-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Built-in Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-user-defined-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. User-defined Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-and-using-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating and Using Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Using Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#functions-with-multiple-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Functions with Multiple Arguments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions-lambda-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anonymous Functions (Lambda Functions)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#earth-engine-algorithms-as-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Earth Engine Algorithms as Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Earth Engine Algorithms as Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#many-earth-engine-algorithms-can-be-used-as-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Many Earth Engine algorithms can be used as functions:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#higher-order-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Higher-Order Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Higher-Order Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gee-supports-higher-order-functions-like-map-reduce-and-iterate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GEE supports higher-order functions like map(), reduce(), and iterate():
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -974,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08.map%28%29%20function/" class="md-nav__link">
+      <a href="../../../programming/4.%20Loops/" class="md-nav__link">
         
   
   
@@ -1063,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/modern_best_practices/" class="md-nav__link">
+      <a href="../../modern_best_practices/" class="md-nav__link">
         
   
   
@@ -1091,14 +897,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/code_examples/" class="md-nav__link">
+      <a href="../../1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JavaScript vs Python Examples
+    JavaScript vs Python
   
 
     
@@ -1119,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/gee_syntax/" class="md-nav__link">
+      <a href="../../gee_syntax/" class="md-nav__link">
         
   
   
@@ -1147,14 +953,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/scale_projection/" class="md-nav__link">
+      <a href="../../scale_projection/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scale & Projection Explained
+    Scale & Projection
   
 
     
@@ -1175,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/Debugging/" class="md-nav__link">
+      <a href="../../Debugging/" class="md-nav__link">
         
   
   
@@ -1207,28 +1013,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1246,7 +1055,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1263,9 +1072,30 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../gee/5.%20Working%20with%20Raster%20Data/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -1279,6 +1109,42 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Satellite Images (Raster)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -1292,8 +1158,177 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/6.%20Working%20with%20Vector%20Data/" class="md-nav__link">
+      <a href="../../5.%20Working%20with%20Raster%20Data/1.%20Single%20Band%20Images/" class="md-nav__link">
         
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Band Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/2.%20Multi%20Band%20Images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi Band Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/3.%20Calculating%20Indices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculating Indices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/4.%20Time%20Series%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Time Series Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Working%20with%20Raster%20Data/5.%20Exporting%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -1307,6 +1342,195 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maps & Boundaries (Vector)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Features
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Point
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linestring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. LineString
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Polygon
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.%20Feature%20Collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Collections
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -1320,14 +1544,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/7. Machine Learning/README.md" class="md-nav__link">
+      <a href="../3.%20Exporting%20Vectors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Machine Learning Basics
+    Exporting Vectors
   
 
     
@@ -1336,6 +1560,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1463,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/" class="md-nav__link">
+      <a href="../../Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/" class="md-nav__link">
         
   
   
@@ -1491,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/Projects/1.Water%20Body%20Mapping/3.%20Water%20Surface%20Area%20Charting/" class="md-nav__link">
+      <a href="../../Projects/1.Water%20Body%20Mapping/3.%20Water%20Surface%20Area%20Charting/" class="md-nav__link">
         
   
   
@@ -1519,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/Projects/1.Water%20Body%20Mapping/4.%20Flood%20Mapping/" class="md-nav__link">
+      <a href="../../Projects/1.Water%20Body%20Mapping/4.%20Flood%20Mapping/" class="md-nav__link">
         
   
   
@@ -1555,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lulc/Supervised%20LULC%20Classification%20GEE/" class="md-nav__link">
+      <a href="../../../lulc/Supervised%20LULC%20Classification%20GEE/" class="md-nav__link">
         
   
   
@@ -1583,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lulc/Spatial-Analyst/" class="md-nav__link">
+      <a href="../../../lulc/Spatial-Analyst/" class="md-nav__link">
         
   
   
@@ -1611,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/Advance%20Analysis/1.%20Random%20Sample/" class="md-nav__link">
+      <a href="../../Advance%20Analysis/1.%20Random%20Sample/" class="md-nav__link">
         
   
   
@@ -1700,7 +1932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/0.%20Supplementary/1.%20Keyboard%20Shortcuts%20for%20Google%20Earth%20Engine/" class="md-nav__link">
+      <a href="../../0.%20Supplementary/1.%20Keyboard%20Shortcuts%20for%20Google%20Earth%20Engine/" class="md-nav__link">
         
   
   
@@ -1728,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gee/0.%20Supplementary/reprojection/" class="md-nav__link">
+      <a href="../../0.%20Supplementary/reprojection/" class="md-nav__link">
         
   
   
@@ -1783,22 +2015,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-of-functions-in-gee" class="md-nav__link">
+  <a href="#creating-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types of Functions in GEE
+        Creating Features
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Types of Functions in GEE">
+    <nav class="md-nav" aria-label="Creating Features">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-built-in-functions" class="md-nav__link">
+  <a href="#1-point" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Built-in Functions
+        1. Point
       
     </span>
   </a>
@@ -1806,38 +2038,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-user-defined-functions" class="md-nav__link">
+  <a href="#2-linestring" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. User-defined Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-and-using-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating and Using Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Using Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic Function
+        2. LineString
       
     </span>
   </a>
@@ -1845,88 +2049,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions-with-multiple-arguments" class="md-nav__link">
+  <a href="#3-polygon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Functions with Multiple Arguments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions-lambda-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anonymous Functions (Lambda Functions)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#earth-engine-algorithms-as-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Earth Engine Algorithms as Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Earth Engine Algorithms as Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#many-earth-engine-algorithms-can-be-used-as-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Many Earth Engine algorithms can be used as functions:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#higher-order-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Higher-Order Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Higher-Order Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gee-supports-higher-order-functions-like-map-reduce-and-iterate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GEE supports higher-order functions like map(), reduce(), and iterate():
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
+        3. Polygon
       
     </span>
   </a>
@@ -1955,78 +2081,75 @@
 
 
 
-<h1 id="functions-in-google-earth-engine">Functions in Google Earth Engine<a class="headerlink" href="#functions-in-google-earth-engine" title="Permanent link">&para;</a></h1>
-<p>=====================================</p>
-<p>Functions in Google Earth Engine (GEE) are essential for creating reusable code and performing complex operations. They can be used to manipulate images, features, and other Earth Engine objects.</p>
-<h2 id="types-of-functions-in-gee">Types of Functions in GEE<a class="headerlink" href="#types-of-functions-in-gee" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="1-built-in-functions">1. Built-in Functions<a class="headerlink" href="#1-built-in-functions" title="Permanent link">&para;</a></h3>
-<p>Provided by the Earth Engine API.</p>
-<h3 id="2-user-defined-functions">2. User-defined Functions<a class="headerlink" href="#2-user-defined-functions" title="Permanent link">&para;</a></h3>
-<p>Created by users for custom operations.</p>
-<h2 id="creating-and-using-functions">Creating and Using Functions<a class="headerlink" href="#creating-and-using-functions" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="basic-function">Basic Function<a class="headerlink" href="#basic-function" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// Define a function to calculate NDVI</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">calculateNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;NIR&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RED&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
-<span class="p">};</span>
+<h1 id="features-points-lines-polygons">Features (Points, Lines, Polygons)<a class="headerlink" href="#features-points-lines-polygons" title="Permanent link">&para;</a></h1>
+<p>In Earth Engine, a single shape is called a <strong>Feature</strong>.
+It can be a point (like a city), a line (like a road), or a polygon (like a field).</p>
+<h2 id="creating-features">Creating Features<a class="headerlink" href="#creating-features" title="Permanent link">&para;</a></h2>
+<h3 id="1-point">1. Point<a class="headerlink" href="#1-point" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// A point at [longitude, latitude]</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.2</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7</span><span class="p">]);</span>
 
-<span class="c1">// Use the function</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">landsat8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
-<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-12-31&#39;</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">ndviCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat8</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">calculateNDVI</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">point</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;My Point&#39;</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="functions-with-multiple-arguments">Functions with Multiple Arguments<a class="headerlink" href="#functions-with-multiple-arguments" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// Function to calculate a custom index</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">calculateIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span><span class="w"> </span><span class="nx">band1</span><span class="p">,</span><span class="w"> </span><span class="nx">band2</span><span class="p">,</span><span class="w"> </span><span class="nx">newName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="nx">band1</span><span class="p">,</span><span class="w"> </span><span class="nx">band2</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="nx">newName</span><span class="p">);</span>
-<span class="p">};</span>
-</code></pre></div>
-// Use the function
-var customIndex = landsat8.map(function(image) {
-  return calculateIndex(image, 'SR_B5', 'SR_B4', 'CustomIndex');
-});</p>
-<h3 id="anonymous-functions-lambda-functions">Anonymous Functions (Lambda Functions)<a class="headerlink" href="#anonymous-functions-lambda-functions" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// Use an anonymous function directly in map()</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">ndviCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">landsat8</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div>
-<h3 id="earth-engine-algorithms-as-functions">Earth Engine Algorithms as Functions<a class="headerlink" href="#earth-engine-algorithms-as-functions" title="Permanent link">&para;</a></h3>
-<h4 id="many-earth-engine-algorithms-can-be-used-as-functions">Many Earth Engine algorithms can be used as functions:<a class="headerlink" href="#many-earth-engine-algorithms-can-be-used-as-functions" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Use ee.Algorithms.Landsat.simpleComposite() as a function</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Algorithms</span><span class="p">.</span><span class="nx">Landsat</span><span class="p">.</span><span class="nx">simpleComposite</span><span class="p">({</span>
-<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">landsat8</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">asFloat</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="p">});</span>
-</code></pre></div>
-<h3 id="higher-order-functions">Higher-Order Functions<a class="headerlink" href="#higher-order-functions" title="Permanent link">&para;</a></h3>
-<h4 id="gee-supports-higher-order-functions-like-map-reduce-and-iterate">GEE supports higher-order functions like map(), reduce(), and iterate():<a class="headerlink" href="#gee-supports-higher-order-functions-like-map-reduce-and-iterate" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Using reduce() to get the mean NDVI</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">meanNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndviCollection</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">).</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">());</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># A point at [longitude, latitude]</span>
+<span class="n">point</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.2</span><span class="p">,</span> <span class="mf">37.7</span><span class="p">])</span>
 
-<span class="c1">// Using iterate() to accumulate area</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;TIGER/2018/States&#39;</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">totalArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">features</span><span class="p">.</span><span class="nx">iterate</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">feature</span><span class="p">,</span><span class="w"> </span><span class="nx">sum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">sum</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">feature</span><span class="p">.</span><span class="nx">geometry</span><span class="p">().</span><span class="nx">area</span><span class="p">());</span>
-<span class="p">},</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mf">0</span><span class="p">));</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span> <span class="s1">&#39;My Point&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
-<hr />
-<ol>
-<li>Focus on a Single Task
-Keep functions focused on a single task.</li>
-<li>Use Descriptive Names
-Use descriptive names for functions and arguments.</li>
-<li>Comment Your Code
-Comment your code to explain complex operations.</li>
-<li>Reuse Functions
-Reuse functions to keep your code DRY (Don't Repeat Yourself).
-Conclusion</li>
-</ol>
-<hr />
-<p>Functions in Google Earth Engine are powerful tools for creating efficient, reusable, and maintainable code for geospatial analysis and remote sensing tasks. By mastering functions, you can streamline your workflows, simplify complex operations, and focus on extracting valuable insights from Earth observation data.</p>
+</div>
+</div>
+</div>
+<h3 id="2-linestring">2. LineString<a class="headerlink" href="#2-linestring" title="Permanent link">&para;</a></h3>
+<p>A line connects multiple points.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">river</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">LineString</span><span class="p">([</span>
+<span class="w">  </span><span class="p">[</span><span class="o">-</span><span class="mf">122.0</span><span class="p">,</span><span class="w"> </span><span class="mf">37.0</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[</span><span class="o">-</span><span class="mf">122.1</span><span class="p">,</span><span class="w"> </span><span class="mf">37.1</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[</span><span class="o">-</span><span class="mf">122.2</span><span class="p">,</span><span class="w"> </span><span class="mf">37.2</span><span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">river</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;My River&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">river</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">LineString</span><span class="p">([</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">122.0</span><span class="p">,</span> <span class="mf">37.0</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">122.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">122.2</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">river</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">},</span> <span class="s1">&#39;My River&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="3-polygon">3. Polygon<a class="headerlink" href="#3-polygon" title="Permanent link">&para;</a></h3>
+<p>A polygon is a closed shape (like a rectangle or custom drawing).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// A rectangle defined by [minLon, minLat, maxLon, maxLat]</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">farm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="o">-</span><span class="mf">122.5</span><span class="p">,</span><span class="w"> </span><span class="mf">37.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">122.4</span><span class="p">,</span><span class="w"> </span><span class="mf">37.6</span><span class="p">]);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">farm</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;My Farm&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># A rectangle defined by [minLon, minLat, maxLon, maxLat]</span>
+<span class="n">farm</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span><span class="o">-</span><span class="mf">122.5</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.4</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">])</span>
+
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">farm</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">},</span> <span class="s1">&#39;My Farm&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 
@@ -2082,10 +2205,10 @@ Conclusion</li>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
