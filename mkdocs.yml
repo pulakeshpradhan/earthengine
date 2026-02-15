@@ -1,7 +1,8 @@
 site_name: Google Earth Engine - A Beginner's Guide
 site_url: https://pulakeshpradhan.github.io/earthengine/
-site_author: Pulak
+site_author: Pulakesh Pradhan
 site_description: Learn Google Earth Engine from scratch - A simple, clear guide to satellite imagery and geospatial analysis for everyone.
+copyright: Made by <a href="https://pulakeshpradhan.github.io/" target="_blank">Pulakesh Pradhan</a>
 
 extra_css:
   - stylesheets/extra.css
