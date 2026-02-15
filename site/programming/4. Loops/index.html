@@ -9,7 +9,7 @@
         <meta name="description" content="Learn Google Earth Engine from scratch - A simple, clear guide to satellite imagery and geospatial analysis for everyone.">
       
       
-        <meta name="author" content="Pulak">
+        <meta name="author" content="Pulakesh Pradhan">
       
       
         <link rel="canonical" href="https://pulakeshpradhan.github.io/earthengine/programming/4.%20Loops/">
@@ -2023,6 +2023,16 @@ Think of it as an <strong>Assembly Line</strong>.</p>
 <li>You feed a collection of items (Images) into the line.</li>
 <li>The computer applies the instruction to every item <strong>at the same time</strong>.</li>
 </ol>
+<pre class="mermaid"><code>graph TD
+    subgraph Serial_Loop [Standard For-Loop]
+        A[Start] --&gt; B[Item 1] --&gt; C[Item 2] --&gt; D[Item 3] --&gt; E[Finish]
+    end
+
+    subgraph Parallel_Map [GEE .map Function]
+        F[Start] --&gt; G[Item 1] &amp; H[Item 2] &amp; I[Item 3]
+        G &amp; H &amp; I --&gt; J[Finish]
+    end
+    style Parallel_Map fill:#bfb,stroke:#333</code></pre>
 <h2 id="example-the-assembly-line">Example: The Assembly Line<a class="headerlink" href="#example-the-assembly-line" title="Permanent link">&para;</a></h2>
 <p>Let's assume we have a box of 10 apples (<code>ImageCollection</code>) and we want to peel them (<code>Function</code>).</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
@@ -2090,6 +2100,10 @@ Think of it as an <strong>Assembly Line</strong>.</p>
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Made by <a href="https://pulakeshpradhan.github.io/" target="_blank">Pulakesh Pradhan</a>
+    </div>
   
   
     Made with
