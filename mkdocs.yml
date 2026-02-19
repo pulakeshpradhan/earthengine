@@ -14,6 +14,7 @@ extra_javascript:
 
 theme:
   name: material
+  language: en # Change this to your preferred default (e.g., 'fr', 'es', 'hi')
   palette:
     - scheme: default
       primary: teal
@@ -39,6 +40,14 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+# This section allows you to override default theme text (Instructions/Labels)
+extra:
+  alternate:
+    - name: English
+      link: ./
+      lang: en
+  # You can customize more text in the theme overrides if needed
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -61,35 +70,36 @@ plugins:
   - search
 
 nav:
-  - Home:
-      - Home: index.md
-      - Sign Up & Setup: gee/1. Code Editor/0. Registration.md
-      - Understanding the Interface: gee/1. Code Editor/1. User Interface of Code Editor.md
-      - JavaScript vs Python: gee/1. Code Editor/3. Javascipt vs python.md
-  - Programming Basics:
-      - What is Programming?: programming/1. What is Programming.md
-      - Understanding Data Types: programming/2. Data Types.md
-      - Working with Functions: programming/3. Functions.md
-      - Using Loops Efficiently: programming/4. Loops.md
-  - Core Concepts:
-      - Best Practices: gee/modern_best_practices.md
-      - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
-      - Syntax Guide: gee/gee_syntax.md
-      - Scale & Projection: gee/scale_projection.md
-      - Fixing Errors: gee/Debugging.md
-  - Working with Data:
-      - Satellite Images (Raster): 
-          - Overview: gee/5. Working with Raster Data/README.md
-          - Single Band Images: gee/5. Working with Raster Data/1. Single Band Images.md
-          - Multi Band Images: gee/5. Working with Raster Data/2. Multi Band Images.md
-          - Calculating Indices: gee/5. Working with Raster Data/3. Calculating Indices.md
-          - Time Series Analysis: gee/5. Working with Raster Data/4. Time Series Analysis.md
-          - Exporting Data: gee/5. Working with Raster Data/5. Exporting Data.md
-      - Maps & Boundaries (Vector):
-          - Overview: gee/6. Working with Vector Data/README.md
-          - Understanding Features: gee/6. Working with Vector Data/1. Overview of Features.md
-          - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
-          - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
+  - Home: index.md
+  - Data Catalogs: gee/2. Data Catalogs/1. Earth Engine Data Catalog.md
+  - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
+  - Dive into Coding: programming/1. What is Programming.md
+  - The Basics: gee/basics.md
+  - Detailed Guide:
+      - Programming Basics:
+          - What is Programming?: programming/1. What is Programming.md
+          - Understanding Data Types: programming/2. Data Types.md
+          - Working with Functions: programming/3. Functions.md
+          - Using Loops Efficiently: programming/4. Loops.md
+      - Core Concepts:
+          - Best Practices: gee/modern_best_practices.md
+          - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
+          - Syntax Guide: gee/gee_syntax.md
+          - Scale & Projection: gee/scale_projection.md
+          - Fixing Errors: gee/Debugging.md
+      - Working with Data:
+          - Satellite Images (Raster): 
+              - Overview: gee/5. Working with Raster Data/README.md
+              - Single Band Images: gee/5. Working with Raster Data/1. Single Band Images.md
+              - Multi Band Images: gee/5. Working with Raster Data/2. Multi Band Images.md
+              - Calculating Indices: gee/5. Working with Raster Data/3. Calculating Indices.md
+              - Time Series Analysis: gee/5. Working with Raster Data/4. Time Series Analysis.md
+              - Exporting Data: gee/5. Working with Raster Data/5. Exporting Data.md
+          - Maps & Boundaries (Vector):
+              - Overview: gee/6. Working with Vector Data/README.md
+              - Understanding Features: gee/6. Working with Vector Data/1. Overview of Features.md
+              - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
+              - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
   - Real-World Projects:
       - Water Body Mapping:
           - Understanding Water Data: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
