@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#filtering-finding-what-you-need" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1112,6 +1117,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtering
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1129,6 +1154,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-essential-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Essential Filters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Essential Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-filterdate-filter-by-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. .filterDate() — Filter by Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filterbounds-filter-by-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. .filterBounds() — Filter by Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-filter-filter-by-any-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. .filter() — Filter by Any Property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-eefilter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ee.Filter Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-seasonal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example: Seasonal Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3347,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-essential-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Essential Filters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Essential Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-filterdate-filter-by-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. .filterDate() — Filter by Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filterbounds-filter-by-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. .filterBounds() — Filter by Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-filter-filter-by-any-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. .filter() — Filter by Any Property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-eefilter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ee.Filter Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-seasonal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example: Seasonal Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3456,226 @@
 
 
 
-  <h1>Filtering</h1>
+<h1 id="filtering-finding-what-you-need">Filtering — Finding What You Need<a class="headerlink" href="#filtering-finding-what-you-need" title="Permanent link">&para;</a></h1>
+<p>In Google Earth Engine, datasets often contain <strong>thousands of images</strong> spanning decades.
+A <strong>filter</strong> lets you zero in on exactly the data you need — by date, location, cloud cover, or any other property.</p>
+<p>Think of it like searching a library. The catalog has a million books, but you only want books from 1990, written in English, about geography.</p>
+<pre class="mermaid"><code>graph LR
+    A["Huge ImageCollection\n(1000s of images)"] --&gt;|.filterDate()| B["Date range subset"]
+    B --&gt;|.filterBounds()| C["Spatial subset"]
+    C --&gt;|.filter()| D["Property subset\n(cloud &lt; 10%)"]
+    D --&gt; E["✅ Clean, focused dataset"]
+    style A fill:#f9f,stroke:#333
+    style E fill:#9f9,stroke:#333</code></pre>
+<hr />
+<h2 id="the-three-essential-filters">The Three Essential Filters<a class="headerlink" href="#the-three-essential-filters" title="Permanent link">&para;</a></h2>
+<h3 id="1-filterdate-filter-by-time">1. <code>.filterDate()</code> — Filter by Time<a class="headerlink" href="#1-filterdate-filter-by-time" title="Permanent link">&para;</a></h3>
+<p>Selects images captured within a specific date range.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">);</span>
 
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Images in 2023:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Images in 2023:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="2-filterbounds-filter-by-location">2. <code>.filterBounds()</code> — Filter by Location<a class="headerlink" href="#2-filterbounds-filter-by-location" title="Permanent link">&para;</a></h3>
+<p>Selects only images that <strong>overlap</strong> with a geometry (point, polygon, or feature).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Define a study area — Bhubaneswar, Odisha</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Images over Bhubaneswar:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Define a study area — Bhubaneswar, Odisha</span>
+<span class="n">point</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">])</span>
+
+<span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Images over Bhubaneswar:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="3-filter-filter-by-any-property">3. <code>.filter()</code> — Filter by Any Property<a class="headerlink" href="#3-filter-filter-by-any-property" title="Permanent link">&para;</a></h3>
+<p>The most flexible filter. Uses <code>ee.Filter</code> to target any image metadata property.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">));</span><span class="w"> </span><span class="c1">// less than 10% clouds</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Low-cloud images:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Low-cloud images:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="common-eefilter-methods">Common <code>ee.Filter</code> Methods<a class="headerlink" href="#common-eefilter-methods" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Filter Method</th>
+<th style="text-align: left;">What it Does</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.lt(prop, val)</code></td>
+<td style="text-align: left;">Less than</td>
+<td style="text-align: left;">Cloud cover &lt; 20%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.gt(prop, val)</code></td>
+<td style="text-align: left;">Greater than</td>
+<td style="text-align: left;">NDVI &gt; 0.3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.eq(prop, val)</code></td>
+<td style="text-align: left;">Equal to</td>
+<td style="text-align: left;">WRS_PATH equals 142</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.bounds(geometry)</code></td>
+<td style="text-align: left;">Overlaps geometry</td>
+<td style="text-align: left;">Within your study area</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.date(start, end)</code></td>
+<td style="text-align: left;">Date range</td>
+<td style="text-align: left;">Between two dates</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.calendarRange(1,3,'month')</code></td>
+<td style="text-align: left;">By month/season</td>
+<td style="text-align: left;">January to March only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="combining-filters">Combining Filters<a class="headerlink" href="#combining-filters" title="Permanent link">&para;</a></h2>
+<p>You can chain filters (one after another) or combine them with logical <code>And</code>/<code>Or</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Chain: each .filter() narrows it further (AND logic)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">clean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-09-30&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+
+<span class="c1">// Combine with ee.Filter.and()</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">combined</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">and</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">date</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-09-30&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span>
+<span class="w">  </span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Monsoon Sentinel-2 (&lt; 5% clouds):&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">clean</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Chain: each .filter() narrows it further (AND logic)</span>
+<span class="n">clean</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-09-30&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Combine with ee.Filter.and_()</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">And</span><span class="p">(</span>
+        <span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-09-30&#39;</span><span class="p">),</span>
+        <span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Result:&#39;</span><span class="p">,</span> <span class="n">clean</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="real-world-example-seasonal-analysis">Real-World Example: Seasonal Analysis<a class="headerlink" href="#real-world-example-seasonal-analysis" title="Permanent link">&para;</a></h2>
+<p>Getting cloud-free Landsat images for the dry season (November–March) over a watershed:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">JavaScript</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">watershed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Polygon</span><span class="p">([</span>
+<span class="w">  </span><span class="p">[[</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">]]</span>
+<span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">drySeason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2022-11-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-03-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">watershed</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;month&#39;</span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Dry Season Images:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">drySeason</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">watershed</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">drySeason</span><span class="p">.</span><span class="nx">median</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">30000</span>
+<span class="p">},</span><span class="w"> </span><span class="s1">&#39;Dry Season Composite&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">watershed</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Polygon</span><span class="p">([[</span>
+    <span class="p">[</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">]</span>
+<span class="p">]])</span>
+
+<span class="n">dry_season</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2022-11-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-03-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">watershed</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">calendarRange</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dry Season Images:&#39;</span><span class="p">,</span> <span class="n">dry_season</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Always Filter First!</p>
+<p>Always apply <code>.filterDate()</code> and <code>.filterBounds()</code> <strong>before</strong> any computation. This limits the data Earth Engine needs to process and prevents memory or timeout errors.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Filter ≠ Clip</p>
+<p><code>.filterBounds()</code> selects images that <strong>overlap</strong> your area — the images still cover their full original extent. To cut images to your actual boundary, use <code>.clip()</code> <strong>after</strong> filtering.</p>
+</div>
 
 
 

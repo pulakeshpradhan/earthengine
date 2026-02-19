@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#custom-functions-writing-reusable-tools" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1140,6 +1145,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1157,6 +1182,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-write-custom-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Write Custom Functions?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Anatomy of a Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-gee-example-cloud-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real GEE Example: Cloud Masking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-adding-an-ndvi-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Adding an NDVI Band
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-both-mask-ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Both: Mask + NDVI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3319,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-write-custom-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Write Custom Functions?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Anatomy of a Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-gee-example-cloud-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real GEE Example: Cloud Masking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-adding-an-ndvi-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Adding an NDVI Band
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-both-mask-ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Both: Mask + NDVI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3400,224 @@
 
 
 
-  <h1>Custom Functions</h1>
+<h1 id="custom-functions-writing-reusable-tools">Custom Functions — Writing Reusable Tools<a class="headerlink" href="#custom-functions-writing-reusable-tools" title="Permanent link">&para;</a></h1>
+<p>A <strong>function</strong> is a named block of code that performs one specific task.
+Instead of copying and pasting the same logic 10 times, you write it once as a function and call it whenever you need it.</p>
+<pre class="mermaid"><code>graph LR
+    A[Write once] --&gt; B["maskClouds()"]
+    B --&gt; C[Use on Image 1]
+    B --&gt; D[Use on Image 2]
+    B --&gt; E[Use on Image 3]
+    style B fill:#4db6ac,color:#fff,stroke:#333</code></pre>
+<hr />
+<h2 id="why-write-custom-functions">Why Write Custom Functions?<a class="headerlink" href="#why-write-custom-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Without Functions</th>
+<th style="text-align: left;">With Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Copy-paste code repeatedly</td>
+<td style="text-align: left;">Write once, reuse everywhere</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hard to fix bugs (change in 10 places)</td>
+<td style="text-align: left;">Fix in one place, fixed everywhere</td>
+</tr>
+<tr>
+<td style="text-align: left;">Long, messy scripts</td>
+<td style="text-align: left;">Clean, readable code</td>
+</tr>
+<tr>
+<td style="text-align: left;">Can't use with <code>.map()</code> for collections</td>
+<td style="text-align: left;">Essential for processing collections</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-anatomy-of-a-function">The Anatomy of a Function<a class="headerlink" href="#the-anatomy-of-a-function" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Structure:</span>
+<span class="c1">// var functionName = function(input) {</span>
+<span class="c1">//   // do something with input</span>
+<span class="c1">//   return result;</span>
+<span class="c1">// };</span>
 
+<span class="kd">var</span><span class="w"> </span><span class="nx">addTen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
 
+<span class="c1">// Calling the function</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">addTen</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w">  </span><span class="c1">// Output: 15</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">addTen</span><span class="p">(</span><span class="mf">20</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 30</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Structure:</span>
+<span class="c1"># def function_name(input):</span>
+<span class="c1">#     # do something with input</span>
+<span class="c1">#     return result</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_ten</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Calling the function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_ten</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>   <span class="c1"># Output: 15</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_ten</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># Output: 30</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="real-gee-example-cloud-masking">Real GEE Example: Cloud Masking<a class="headerlink" href="#real-gee-example-cloud-masking" title="Permanent link">&para;</a></h2>
+<p>The most common custom function in Earth Engine — removing clouds from Landsat imagery.</p>
+<pre class="mermaid"><code>graph TD
+    A[Cloudy Landsat Image] --&gt; B[Select QA_PIXEL band]
+    B --&gt; C[Decode Cloud Bit]
+    C --&gt; D{Pixel cloudy?}
+    D -- Yes --&gt; E[Mask it out / hide]
+    D -- No --&gt; F[Keep it visible]
+    F --&gt; G[Clean Image]
+    style E fill:#f66,stroke:#333
+    style G fill:#6f6,stroke:#333</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Define the cloud masking function</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">maskLandsatClouds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// The QA_PIXEL band encodes cloud information as binary bits</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">qa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Bit 3 = Cloud shadow, Bit 4 = Cloud</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">cloudShadow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">qa</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">cloud</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nx">qa</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Only keep pixels where BOTH conditions are true</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">cloudShadow</span><span class="p">.</span><span class="nx">and</span><span class="p">(</span><span class="nx">cloud</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="c1">// Apply the function to a single image</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">rawImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">cleanImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">maskLandsatClouds</span><span class="p">(</span><span class="nx">rawImage</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">cleanImage</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">30000</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Clean Image&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Define the cloud masking function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mask_landsat_clouds</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="c1"># The QA_PIXEL band encodes cloud information as binary bits</span>
+    <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Bit 3 = Cloud shadow, Bit 4 = Cloud</span>
+    <span class="n">cloud_shadow</span> <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cloud</span>        <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Only keep pixels where BOTH conditions are true</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">cloud_shadow</span><span class="o">.</span><span class="n">And</span><span class="p">(</span><span class="n">cloud</span><span class="p">))</span>
+
+<span class="c1"># Apply to a single image</span>
+<span class="n">raw_image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">first</span><span class="p">()</span>
+
+<span class="n">clean_image</span> <span class="o">=</span> <span class="n">mask_landsat_clouds</span><span class="p">(</span><span class="n">raw_image</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="example-2-adding-an-ndvi-band">Example 2: Adding an NDVI Band<a class="headerlink" href="#example-2-adding-an-ndvi-band" title="Permanent link">&para;</a></h2>
+<p>A reusable function that calculates Normalized Difference Vegetation Index (NDVI) and appends it as a new band.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">addNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// NDVI = (NIR - Red) / (NIR + Red)</span>
+<span class="w">  </span><span class="c1">// Landsat 8: NIR = SR_B5, Red = SR_B4</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span>
+<span class="w">                  </span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">addBands</span><span class="p">(</span><span class="nx">ndvi</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Test on a single image</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">imageWithNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">addNDVI</span><span class="p">(</span><span class="nx">image</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Bands after adding NDVI:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">imageWithNDVI</span><span class="p">.</span><span class="nx">bandNames</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="c1"># NDVI = (NIR - Red) / (NIR + Red)</span>
+    <span class="c1"># Landsat 8: NIR = SR_B5, Red = SR_B4</span>
+    <span class="n">ndvi</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span> \
+                <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">addBands</span><span class="p">(</span><span class="n">ndvi</span><span class="p">)</span>
+
+<span class="c1"># Test on a single image</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">first</span><span class="p">()</span>
+
+<span class="n">image_with_ndvi</span> <span class="o">=</span> <span class="n">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bands:&#39;</span><span class="p">,</span> <span class="n">image_with_ndvi</span><span class="o">.</span><span class="n">bandNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="combining-both-mask-ndvi">Combining Both: Mask + NDVI<a class="headerlink" href="#combining-both-mask-ndvi" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">maskLandsatClouds</span><span class="p">)</span><span class="w">  </span><span class="c1">// Apply cloud mask to ALL images</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDVI</span><span class="p">);</span><span class="w">           </span><span class="c1">// Then add NDVI to ALL images</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Processed collection size:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">median</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">median</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mask_landsat_clouds</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_ndvi</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Processed size:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">One Function, One Job</p>
+<p>Keep each function focused on a single task. <code>maskClouds()</code> only masks clouds. <code>addNDVI()</code> only adds NDVI. This makes your code easy to read, test, and reuse.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Functions vs Built-in Methods</p>
+<p>GEE has many built-in methods like <code>.normalizedDifference()</code>, <code>.median()</code>, <code>.clip()</code>. You write <strong>custom functions</strong> whenever you need to combine or extend those built-ins with your own logic.</p>
+</div>
 
 
 

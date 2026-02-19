@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#custom-functions-writing-reusable-tools" class="md-skip">
+          কনটেন্টে যান
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1140,6 +1145,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1157,6 +1182,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="সূচি তালিকা">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      সূচি তালিকা
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-write-custom-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন কাস্টম ফাংশন লিখবেন? (Why Write Custom Functions?)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ফাংশনের গঠন (The Anatomy of a Function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gee-real-gee-example-cloud-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বাস্তব GEE উদাহরণ: ক্লাউড মাস্কিং (Real GEE Example: Cloud Masking)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndvi-example-2-adding-an-ndvi-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        উদাহরণ ২: NDVI ব্যান্ড যোগ করা (Example 2: Adding an NDVI Band)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndvi-combining-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দুটি একত্রিত করা: মাস্ক + NDVI (Combining Both)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3319,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      সূচি তালিকা
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-write-custom-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        কেন কাস্টম ফাংশন লিখবেন? (Why Write Custom Functions?)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ফাংশনের গঠন (The Anatomy of a Function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gee-real-gee-example-cloud-masking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বাস্তব GEE উদাহরণ: ক্লাউড মাস্কিং (Real GEE Example: Cloud Masking)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndvi-example-2-adding-an-ndvi-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        উদাহরণ ২: NDVI ব্যান্ড যোগ করা (Example 2: Adding an NDVI Band)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndvi-combining-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        দুটি একত্রিত করা: মাস্ক + NDVI (Combining Both)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3400,213 @@
 
 
 
-  <h1>Custom Functions</h1>
+<h1 id="custom-functions-writing-reusable-tools">কাস্টম ফাংশন — পুনঃব্যবহারযোগ্য সরঞ্জাম তৈরি করা (Custom Functions — Writing Reusable Tools)<a class="headerlink" href="#custom-functions-writing-reusable-tools" title="Permanent link">&para;</a></h1>
+<p>একটি <strong>ফাংশন (Function)</strong> হলো কোডের একটি নামযুক্ত ব্লক যা একটি নির্দিষ্ট কাজ করে।
+একই লজিক ১০ বার কপি-পেস্ট করার পরিবর্তে, আপনি এটি একবার ফাংশন হিসেবে লিখুন এবং যখনই দরকার হয় ডাকুন।</p>
+<pre class="mermaid"><code>graph LR
+    A[একবার লিখুন] --&gt; B["maskClouds()"]
+    B --&gt; C[ছবি ১-এ ব্যবহার]
+    B --&gt; D[ছবি ২-এ ব্যবহার]
+    B --&gt; E[ছবি ৩-এ ব্যবহার]
+    style B fill:#4db6ac,color:#fff,stroke:#333</code></pre>
+<hr />
+<h2 id="why-write-custom-functions">কেন কাস্টম ফাংশন লিখবেন? (Why Write Custom Functions?)<a class="headerlink" href="#why-write-custom-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ফাংশন ছাড়া</th>
+<th style="text-align: left;">ফাংশন দিয়ে</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">বারবার কোড কপি-পেস্ট করতে হয়</td>
+<td style="text-align: left;">একবার লিখুন, সব জায়গায় ব্যবহার করুন</td>
+</tr>
+<tr>
+<td style="text-align: left;">বাগ ঠিক করা কঠিন (১০ জায়গায় পরিবর্তন)</td>
+<td style="text-align: left;">এক জায়গায় ঠিক করলেই সব ঠিক হয়</td>
+</tr>
+<tr>
+<td style="text-align: left;">দীর্ঘ, জটিল স্ক্রিপ্ট</td>
+<td style="text-align: left;">পরিষ্কার, পঠনযোগ্য কোড</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.map()</code> দিয়ে কালেকশনে ব্যবহার করা যায় না</td>
+<td style="text-align: left;">কালেকশন প্রক্রিয়াকরণের জন্য অপরিহার্য</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-anatomy-of-a-function">ফাংশনের গঠন (The Anatomy of a Function)<a class="headerlink" href="#the-anatomy-of-a-function" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// গঠন:</span>
+<span class="c1">// var functionName = function(input) {</span>
+<span class="c1">//   // input দিয়ে যা করবেন</span>
+<span class="c1">//   return result;</span>
+<span class="c1">// };</span>
 
+<span class="kd">var</span><span class="w"> </span><span class="nx">addTen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
 
+<span class="c1">// ফাংশন কল করা</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">addTen</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w">  </span><span class="c1">// আউটপুট: 15</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">addTen</span><span class="p">(</span><span class="mf">20</span><span class="p">));</span><span class="w"> </span><span class="c1">// আউটপুট: 30</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># গঠন:</span>
+<span class="c1"># def function_name(input):</span>
+<span class="c1">#     # input দিয়ে যা করবেন</span>
+<span class="c1">#     return result</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_ten</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># ফাংশন কল করা</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_ten</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>   <span class="c1"># আউটপুট: 15</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_ten</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># আউটপুট: 30</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="gee-real-gee-example-cloud-masking">বাস্তব GEE উদাহরণ: ক্লাউড মাস্কিং (Real GEE Example: Cloud Masking)<a class="headerlink" href="#gee-real-gee-example-cloud-masking" title="Permanent link">&para;</a></h2>
+<p>আর্থ ইঞ্জিনে সবচেয়ে পরিচিত কাস্টম ফাংশন — ল্যান্ডস্যাট ছবি থেকে মেঘ সরানো।</p>
+<pre class="mermaid"><code>graph TD
+    A[মেঘযুক্ত ল্যান্ডস্যাট ছবি] --&gt; B[QA_PIXEL ব্যান্ড নির্বাচন]
+    B --&gt; C[মেঘের বিট ডিকোড করুন]
+    C --&gt; D{পিক্সেলে মেঘ আছে?}
+    D -- হ্যাঁ --&gt; E[লুকিয়ে দিন / মাস্ক করুন]
+    D -- না --&gt; F[দৃশ্যমান রাখুন]
+    F --&gt; G[পরিষ্কার ছবি]
+    style E fill:#f66,stroke:#333
+    style G fill:#6f6,stroke:#333</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// ক্লাউড মাস্কিং ফাংশন সংজ্ঞায়িত করুন</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">maskLandsatClouds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// QA_PIXEL ব্যান্ড মেঘের তথ্য বাইনারি বিট হিসেবে এনকোড করে</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">qa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// বিট ৩ = মেঘের ছায়া, বিট ৪ = মেঘ</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">cloudShadow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">qa</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">cloud</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nx">qa</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// শুধুমাত্র সেই পিক্সেলগুলো রাখুন যেখানে উভয় শর্ত সত্য</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">cloudShadow</span><span class="p">.</span><span class="nx">and</span><span class="p">(</span><span class="nx">cloud</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="c1">// একটি একক ছবিতে ফাংশনটি প্রয়োগ করুন</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">rawImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">cleanImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">maskLandsatClouds</span><span class="p">(</span><span class="nx">rawImage</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">cleanImage</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">30000</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;পরিষ্কার ছবি&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># ক্লাউড মাস্কিং ফাংশন সংজ্ঞায়িত করুন</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mask_landsat_clouds</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">)</span>
+    <span class="n">cloud_shadow</span> <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cloud</span>        <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">cloud_shadow</span><span class="o">.</span><span class="n">And</span><span class="p">(</span><span class="n">cloud</span><span class="p">))</span>
+
+<span class="n">raw_image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">first</span><span class="p">()</span>
+
+<span class="n">clean_image</span> <span class="o">=</span> <span class="n">mask_landsat_clouds</span><span class="p">(</span><span class="n">raw_image</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="ndvi-example-2-adding-an-ndvi-band">উদাহরণ ২: NDVI ব্যান্ড যোগ করা (Example 2: Adding an NDVI Band)<a class="headerlink" href="#ndvi-example-2-adding-an-ndvi-band" title="Permanent link">&para;</a></h2>
+<p>একটি পুনঃব্যবহারযোগ্য ফাংশন যা NDVI গণনা করে এবং একটি নতুন ব্যান্ড হিসেবে যুক্ত করে।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">addNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// NDVI = (NIR - লাল) / (NIR + লাল)</span>
+<span class="w">  </span><span class="c1">// ল্যান্ডস্যাট ৮: NIR = SR_B5, লাল = SR_B4</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span>
+<span class="w">                  </span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">addBands</span><span class="p">(</span><span class="nx">ndvi</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">imageWithNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">addNDVI</span><span class="p">(</span><span class="nx">image</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;NDVI যোগের পর ব্যান্ডগুলো:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">imageWithNDVI</span><span class="p">.</span><span class="nx">bandNames</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">ndvi</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span> \
+                <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">addBands</span><span class="p">(</span><span class="n">ndvi</span><span class="p">)</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">first</span><span class="p">()</span>
+
+<span class="n">image_with_ndvi</span> <span class="o">=</span> <span class="n">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ব্যান্ডসমূহ:&#39;</span><span class="p">,</span> <span class="n">image_with_ndvi</span><span class="o">.</span><span class="n">bandNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="ndvi-combining-both">দুটি একত্রিত করা: মাস্ক + NDVI (Combining Both)<a class="headerlink" href="#ndvi-combining-both" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">maskLandsatClouds</span><span class="p">)</span><span class="w">  </span><span class="c1">// সব ছবিতে ক্লাউড মাস্ক</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDVI</span><span class="p">);</span><span class="w">           </span><span class="c1">// তারপর সব ছবিতে NDVI যোগ</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">median</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">median</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">]},</span><span class="w"> </span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mask_landsat_clouds</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_ndvi</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;প্রক্রিয়াকৃত আকার:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">এক ফাংশন, এক কাজ (One Function, One Job)</p>
+<p>প্রতিটি ফাংশন একটি মাত্র কাজে মনোযোগ দিন। <code>maskClouds()</code> শুধু মেঘ সরাবে। <code>addNDVI()</code> শুধু NDVI যোগ করবে। এতে কোড পড়তে, পরীক্ষা করতে এবং পুনরায় ব্যবহার করতে সহজ হয়।</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">ফাংশন বনাম বিল্ট-ইন মেথড</p>
+<p>GEE-এ অনেক বিল্ট-ইন মেথড আছে যেমন <code>.normalizedDifference()</code>, <code>.median()</code>, <code>.clip()</code>। আপনি <strong>কাস্টম ফাংশন</strong> লিখবেন যখন আপনাকে সেই বিল্ট-ইনগুলো নিজের লজিক দিয়ে একত্রিত বা প্রসারিত করতে হবে।</p>
+</div>
 
 
 

@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#filtering-finding-what-you-need" class="md-skip">
+          কনটেন্টে যান
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1112,6 +1117,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtering
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1129,6 +1154,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="সূচি তালিকা">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      সূচি তালিকা
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-essential-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        তিনটি অপরিহার্য ফিল্টার (The Three Essential Filters)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="তিনটি অপরিহার্য ফিল্টার (The Three Essential Filters)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filterdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. .filterDate() — সময় অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filterbounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. .filterBounds() — স্থান অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. .filter() — যেকোনো বৈশিষ্ট্য অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eefilter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সাধারণ ee.Filter পদ্ধতিসমূহ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ফিল্টার একত্রিত করা (Combining Filters)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বাস্তব উদাহরণ: মৌসুমী বিশ্লেষণ (Real-World Example)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3347,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      সূচি তালিকা
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-essential-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        তিনটি অপরিহার্য ফিল্টার (The Three Essential Filters)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="তিনটি অপরিহার্য ফিল্টার (The Three Essential Filters)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filterdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ১. .filterDate() — সময় অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filterbounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ২. .filterBounds() — স্থান অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ৩. .filter() — যেকোনো বৈশিষ্ট্য অনুযায়ী ফিল্টার
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eefilter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        সাধারণ ee.Filter পদ্ধতিসমূহ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ফিল্টার একত্রিত করা (Combining Filters)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        বাস্তব উদাহরণ: মৌসুমী বিশ্লেষণ (Real-World Example)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3456,212 @@
 
 
 
-  <h1>Filtering</h1>
+<h1 id="filtering-finding-what-you-need">ফিল্টারিং — আপনার প্রয়োজনীয় ডেটা খুঁজে বের করা (Filtering — Finding What You Need)<a class="headerlink" href="#filtering-finding-what-you-need" title="Permanent link">&para;</a></h1>
+<p>গুগল আর্থ ইঞ্জিনে ডেটাসেটগুলোতে প্রায়ই <strong>হাজার হাজার ছবি</strong> থাকে, যা দশকের পর দশক ধরে সংগৃহীত।
+একটি <strong>ফিল্টার</strong> আপনাকে ঠিক যে ডেটা দরকার তা খুঁজে পেতে সাহায্য করে — তারিখ, স্থান, মেঘের পরিমাণ বা অন্য যেকোনো বৈশিষ্ট্য অনুযায়ী।</p>
+<p>একটি লাইব্রেরিতে বই খোঁজার মতো ভাবুন। ক্যাটালগে লক্ষ বই আছে, কিন্তু আপনি শুধু ১৯৯০ সালের, ইংরেজি ভাষার, ভূগোল বিষয়ক বই চান।</p>
+<pre class="mermaid"><code>graph LR
+    A["বিশাল ImageCollection\n(হাজার হাজার ছবি)"] --&gt;|.filterDate()| B["তারিখ অনুযায়ী সংকুচিত"]
+    B --&gt;|.filterBounds()| C["স্থান অনুযায়ী সংকুচিত"]
+    C --&gt;|.filter()| D["বৈশিষ্ট্য অনুযায়ী\n(মেঘ &lt; ১০%)"]
+    D --&gt; E["✅ পরিষ্কার, কার্যকর ডেটাসেট"]
+    style A fill:#f9f,stroke:#333
+    style E fill:#9f9,stroke:#333</code></pre>
+<hr />
+<h2 id="the-three-essential-filters">তিনটি অপরিহার্য ফিল্টার (The Three Essential Filters)<a class="headerlink" href="#the-three-essential-filters" title="Permanent link">&para;</a></h2>
+<h3 id="filterdate">১. <code>.filterDate()</code> — সময় অনুযায়ী ফিল্টার<a class="headerlink" href="#filterdate" title="Permanent link">&para;</a></h3>
+<p>একটি নির্দিষ্ট তারিখ পরিসরে তোলা ছবি নির্বাচন করে।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">);</span>
 
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;২০২৩ সালের ছবি:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;২০২৩ সালের ছবি:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="filterbounds">২. <code>.filterBounds()</code> — স্থান অনুযায়ী ফিল্টার<a class="headerlink" href="#filterbounds" title="Permanent link">&para;</a></h3>
+<p>শুধুমাত্র সেই ছবিগুলো নির্বাচন করে যা একটি নির্দিষ্ট জ্যামিতির (বিন্দু, বহুভুজ বা ফিচার) সাথে <strong>ওভারল্যাপ</strong> করে।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// অধ্যয়ন এলাকা — ভুবনেশ্বর, ওডিশা</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;ভুবনেশ্বরের উপর ছবি:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># অধ্যয়ন এলাকা — ভুবনেশ্বর, ওডিশা</span>
+<span class="n">point</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">])</span>
+
+<span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ভুবনেশ্বরের উপর ছবি:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="filter">৩. <code>.filter()</code> — যেকোনো বৈশিষ্ট্য অনুযায়ী ফিল্টার<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
+<p>সবচেয়ে নমনীয় ফিল্টার। যেকোনো ইমেজ মেটাডেটা বৈশিষ্ট্য লক্ষ্য করতে <code>ee.Filter</code> ব্যবহার করে।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">));</span><span class="w"> </span><span class="c1">// ১০%-এর কম মেঘ</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;কম মেঘের ছবি:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;কম মেঘের ছবি:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="eefilter">সাধারণ <code>ee.Filter</code> পদ্ধতিসমূহ<a class="headerlink" href="#eefilter" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ফিল্টার পদ্ধতি</th>
+<th style="text-align: left;">কী করে</th>
+<th style="text-align: left;">উদাহরণ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.lt(prop, val)</code></td>
+<td style="text-align: left;">এর চেয়ে কম</td>
+<td style="text-align: left;">মেঘের পরিমাণ &lt; ২০%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.gt(prop, val)</code></td>
+<td style="text-align: left;">এর চেয়ে বেশি</td>
+<td style="text-align: left;">NDVI &gt; ০.৩</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.eq(prop, val)</code></td>
+<td style="text-align: left;">সমান</td>
+<td style="text-align: left;">WRS_PATH = ১৪২</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.bounds(geometry)</code></td>
+<td style="text-align: left;">জ্যামিতির সাথে মিলে</td>
+<td style="text-align: left;">আপনার অধ্যয়ন এলাকার মধ্যে</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.date(start, end)</code></td>
+<td style="text-align: left;">তারিখের পরিসর</td>
+<td style="text-align: left;">দুটি তারিখের মধ্যে</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ee.Filter.calendarRange(1,3,'month')</code></td>
+<td style="text-align: left;">মাস/ঋতু অনুযায়ী</td>
+<td style="text-align: left;">জানুয়ারি থেকে মার্চ</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="combining-filters">ফিল্টার একত্রিত করা (Combining Filters)<a class="headerlink" href="#combining-filters" title="Permanent link">&para;</a></h2>
+<p>আপনি ফিল্টারগুলো পর পর চেইন করতে বা <code>And</code>/<code>Or</code> দিয়ে যৌগিক করতে পারেন।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// চেইন: প্রতিটি .filter() ডেটা আরও সংকুচিত করে (AND লজিক)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">clean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-09-30&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;মৌসুমী সেন্টিনেল-২ (&lt; ৫% মেঘ):&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">clean</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># চেইন: প্রতিটি .filter() ডেটা আরও সংকুচিত করে</span>
+<span class="n">clean</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-06-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-09-30&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ফলাফল:&#39;</span><span class="p">,</span> <span class="n">clean</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="real-world-example">বাস্তব উদাহরণ: মৌসুমী বিশ্লেষণ (Real-World Example)<a class="headerlink" href="#real-world-example" title="Permanent link">&para;</a></h2>
+<p>একটি জলাশয়ের শুষ্ক মৌসুমের (নভেম্বর–মার্চ) মেঘমুক্ত ল্যান্ডস্যাট ছবি পাওয়া:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">JavaScript</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">watershed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Polygon</span><span class="p">([</span>
+<span class="w">  </span><span class="p">[[</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">]]</span>
+<span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">drySeason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2022-11-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-03-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">watershed</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;month&#39;</span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;শুষ্ক মৌসুমের ছবি:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">drySeason</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">watershed</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">drySeason</span><span class="p">.</span><span class="nx">median</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">30000</span>
+<span class="p">},</span><span class="w"> </span><span class="s1">&#39;শুষ্ক মৌসুম কম্পোজিট&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">watershed</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Polygon</span><span class="p">([[</span>
+    <span class="p">[</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">]</span>
+<span class="p">]])</span>
+
+<span class="n">dry_season</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2022-11-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-03-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">watershed</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">calendarRange</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;শুষ্ক মৌসুমের ছবি:&#39;</span><span class="p">,</span> <span class="n">dry_season</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">সবসময় আগে ফিল্টার করুন!</p>
+<p>সবসময় যেকোনো গণনার <strong>আগে</strong> <code>.filterDate()</code> এবং <code>.filterBounds()</code> প্রয়োগ করুন। এতে আর্থ ইঞ্জিনকে কম ডেটা প্রক্রিয়া করতে হয় এবং মেমোরি বা টাইমআউট ত্রুটি এড়ানো যায়।</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">ফিল্টার ≠ ক্লিপ (Filter ≠ Clip)</p>
+<p><code>.filterBounds()</code> শুধু সেই ছবিগুলো নির্বাচন করে যা আপনার এলাকার সাথে <strong>ওভারল্যাপ</strong> করে — ছবিগুলো এখনও তাদের পূর্ণ আসল আকারেই থাকে। ছবিকে আপনার নির্দিষ্ট সীমানায় কাটতে, ফিল্টারের <strong>পরে</strong> <code>.clip()</code> ব্যবহার করুন।</p>
+</div>
 
 
 

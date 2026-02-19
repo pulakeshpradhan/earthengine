@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#the-map-function-earth-engines-assembly-line" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1168,6 +1173,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapping
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1185,6 +1210,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-map-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How .map() Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-1-cloud-masking-an-entire-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example 1: Cloud Masking an Entire Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-2-calculating-water-area-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example 2: Calculating Water Area Over Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaining-multiple-map-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaining Multiple .map() Calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-vs-for-loop-when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .map() vs for Loop — When to Use Which
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3319,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-map-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How .map() Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-1-cloud-masking-an-entire-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example 1: Cloud Masking an Entire Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-example-2-calculating-water-area-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Example 2: Calculating Water Area Over Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaining-multiple-map-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaining Multiple .map() Calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-vs-for-loop-when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .map() vs for Loop — When to Use Which
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3400,238 @@
 
 
 
-  <h1>Mapping</h1>
+<h1 id="the-map-function-earth-engines-assembly-line">The <code>.map()</code> Function — Earth Engine's Assembly Line<a class="headerlink" href="#the-map-function-earth-engines-assembly-line" title="Permanent link">&para;</a></h1>
+<p>In standard programming, a <code>for</code> loop processes items <strong>one by one, on your computer</strong>.
+In Google Earth Engine, <code>.map()</code> sends each item to <strong>Google's servers to be processed in parallel</strong>.</p>
+<p>This is the fundamental difference that makes Earth Engine powerful.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph for_loop ["❌ Standard For-Loop (Client-side, slow)"]
+        A1[Image 1] --&gt; A2[Image 2] --&gt; A3[Image 3] --&gt; A4[Image 4]
+    end
 
+    subgraph map_func ["✅ GEE .map() (Server-side, parallel)"]
+        B[All Images] --&gt; C1[Image 1]
+        B --&gt; C2[Image 2]
+        B --&gt; C3[Image 3]
+        B --&gt; C4[Image 4]
+        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D[Results Collection]
+    end
 
+    style map_func fill:#e8f5e9,stroke:#4caf50
+    style for_loop fill:#fce4ec,stroke:#e91e63</code></pre>
+<hr />
+<h2 id="how-map-works">How <code>.map()</code> Works<a class="headerlink" href="#how-map-works" title="Permanent link">&para;</a></h2>
+<p>You provide <code>.map()</code> with a <strong>function</strong>, and it applies that function to <strong>every image</strong> in a collection simultaneously.</p>
+<p>The function must:</p>
+<ol>
+<li>Accept a <strong>single image</strong> as input</li>
+<li>Return a <strong>single image</strong> as output</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Step 1: Define your function (image in → image out)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">addNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">addBands</span><span class="p">(</span><span class="nx">ndvi</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Step 2: Load your collection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]));</span>
+
+<span class="c1">// Step 3: Apply the function to every image at once</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">withNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDVI</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Original bands:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">bandNames</span><span class="p">());</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;After map bands:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">withNDVI</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">bandNames</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Step 1: Define your function (image in → image out)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">ndvi</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">addBands</span><span class="p">(</span><span class="n">ndvi</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Load your collection</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span>
+
+<span class="c1"># Step 3: Apply the function to every image at once</span>
+<span class="n">with_ndvi</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_ndvi</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After map bands:&#39;</span><span class="p">,</span> <span class="n">with_ndvi</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">bandNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="real-world-example-1-cloud-masking-an-entire-collection">Real-World Example 1: Cloud Masking an Entire Collection<a class="headerlink" href="#real-world-example-1-cloud-masking-an-entire-collection" title="Permanent link">&para;</a></h2>
+<p>Without <code>.map()</code>, you'd have to manually call <code>maskClouds(image1)</code>, <code>maskClouds(image2)</code>, etc. for every image. With <code>.map()</code>, one line does it all.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">maskClouds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">qa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">qa</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Remove clouds (bit 4)</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">mask</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Apply to thousands of images in one line!</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">cleanCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">maskClouds</span><span class="p">);</span>
+
+<span class="c1">// Create a cloud-free composite</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cleanCollection</span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">composite</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">30000</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Cloud-Free Composite&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mask_clouds</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;QA_PIXEL&#39;</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">qa</span><span class="o">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+
+<span class="c1"># Apply to thousands of images in one line!</span>
+<span class="n">clean_collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mask_clouds</span><span class="p">)</span>
+
+<span class="n">composite</span> <span class="o">=</span> <span class="n">clean_collection</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="real-world-example-2-calculating-water-area-over-time">Real-World Example 2: Calculating Water Area Over Time<a class="headerlink" href="#real-world-example-2-calculating-water-area-over-time" title="Permanent link">&para;</a></h2>
+<p>Here <code>.map()</code> computes the water surface area for <strong>each image</strong> in a collection and tags the result as a property — enabling a time-series chart.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">studyArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">,</span><span class="w"> </span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">addWaterArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// NDWI &gt; 0.15 = water</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">water</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B8&#39;</span><span class="p">]).</span><span class="nx">gt</span><span class="p">(</span><span class="mf">0.15</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Calculate area in km²</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">water</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+<span class="w">                  </span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">({</span>
+<span class="w">                    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+<span class="w">                    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e9</span>
+<span class="w">                  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">areaKm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;nd&#39;</span><span class="p">)).</span><span class="nx">divide</span><span class="p">(</span><span class="mf">1e6</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;water_area_km2&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">areaKm2</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">studyArea</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addWaterArea</span><span class="p">);</span>
+
+<span class="c1">// Now each image has a &#39;water_area_km2&#39; property — ready for charting!</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">ui</span><span class="p">.</span><span class="nx">Chart</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">seriesByRegion</span><span class="p">(</span><span class="nx">s2</span><span class="p">,</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">(),</span><span class="w"> </span><span class="s1">&#39;water_area_km2&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">study_area</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">,</span> <span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">])</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_water_area</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">water</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B8&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="mf">0.15</span><span class="p">)</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">water</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">pixelArea</span><span class="p">())</span> \
+                <span class="o">.</span><span class="n">reduceRegion</span><span class="p">(</span>
+                    <span class="n">reducer</span><span class="o">=</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+                    <span class="n">geometry</span><span class="o">=</span><span class="n">study_area</span><span class="p">,</span>
+                    <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="n">maxPixels</span><span class="o">=</span><span class="mf">1e9</span>
+                <span class="p">)</span>
+    <span class="n">area_km2</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Number</span><span class="p">(</span><span class="n">area</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nd&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mf">1e6</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;water_area_km2&#39;</span><span class="p">,</span> <span class="n">area_km2</span><span class="p">)</span>
+
+<span class="n">s2</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2_SR_HARMONIZED&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">study_area</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_water_area</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="chaining-multiple-map-calls">Chaining Multiple <code>.map()</code> Calls<a class="headerlink" href="#chaining-multiple-map-calls" title="Permanent link">&para;</a></h2>
+<p>You can chain <code>.map()</code> calls to apply several processing steps in sequence:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">processed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">maskClouds</span><span class="p">)</span><span class="w">   </span><span class="c1">// Step 1: Remove clouds</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDVI</span><span class="p">)</span><span class="w">      </span><span class="c1">// Step 2: Add NDVI band</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addWaterArea</span><span class="p">);</span><span class="w"> </span><span class="c1">// Step 3: Calculate water area</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">processed</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mask_clouds</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_ndvi</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="map-vs-for-loop-when-to-use-which"><code>.map()</code> vs <code>for</code> Loop — When to Use Which<a class="headerlink" href="#map-vs-for-loop-when-to-use-which" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situation</th>
+<th style="text-align: left;">Use <code>.map()</code></th>
+<th style="text-align: left;">Use <code>for</code> loop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Processing satellite images</td>
+<td style="text-align: left;">✅ Always</td>
+<td style="text-align: left;">❌ Never</td>
+</tr>
+<tr>
+<td style="text-align: left;">Looping over a Python list of strings</td>
+<td style="text-align: left;">❌</td>
+<td style="text-align: left;">✅</td>
+</tr>
+<tr>
+<td style="text-align: left;">Applying a function to a FeatureCollection</td>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;">Iterating over a list of numbers client-side</td>
+<td style="text-align: left;">❌</td>
+<td style="text-align: left;">✅</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Never Use <code>for</code> Loops on GEE Collections</p>
+<p>Attempting to loop over an <code>ImageCollection</code> with a Python/JS <code>for</code> loop will either fail or download the entire collection to your computer — which is impossibly slow. Always use <code>.map()</code>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The Function Must Return the Same Type</p>
+<p>If your collection contains <code>ee.Image</code> objects, your <code>.map()</code> function must also <strong>return an <code>ee.Image</code></strong>. Returning anything else will cause an error.</p>
+</div>
 
 
 

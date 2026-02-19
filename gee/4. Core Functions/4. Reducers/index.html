@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reducers-summarizing-data-across-space-and-time" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1196,6 +1201,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reducers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1213,6 +1238,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-temporal-reducers-collection-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Temporal Reducers (Collection → Image)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Temporal Reducers (Collection → Image)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-temporal-reducers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Temporal Reducers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-a-cloud-free-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Creating a Cloud-Free Composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-spatial-reducers-pixels-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Spatial Reducers (Pixels → Number)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Spatial Reducers (Pixels → Number)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduceregion-the-most-powerful-spatial-reducer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .reduceRegion() — The Most Powerful Spatial Reducer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-combining-multiple-reducers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Combining Multiple Reducers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-reducing-over-a-feature-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Reducing Over a Feature Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference Cheat Sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3220,6 +3364,116 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-temporal-reducers-collection-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Temporal Reducers (Collection → Image)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Temporal Reducers (Collection → Image)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-temporal-reducers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Temporal Reducers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-creating-a-cloud-free-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Creating a Cloud-Free Composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-spatial-reducers-pixels-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Spatial Reducers (Pixels → Number)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Spatial Reducers (Pixels → Number)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduceregion-the-most-powerful-spatial-reducer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .reduceRegion() — The Most Powerful Spatial Reducer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-combining-multiple-reducers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Combining Multiple Reducers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-reducing-over-a-feature-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Reducing Over a Feature Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference Cheat Sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3236,9 +3490,247 @@
 
 
 
-  <h1>Reducers</h1>
+<h1 id="reducers-summarizing-data-across-space-and-time">Reducers — Summarizing Data Across Space and Time<a class="headerlink" href="#reducers-summarizing-data-across-space-and-time" title="Permanent link">&para;</a></h1>
+<p>A <strong>Reducer</strong> is a mathematical operation that condenses many values into a single summary value.</p>
+<p>Think of it like a grading system. A student gets 10 test scores throughout the year. The reducer calculates their <strong>mean score</strong> — compressing 10 values into 1 meaningful number.</p>
+<p>In Earth Engine, reducers work across two dimensions:</p>
+<pre class="mermaid"><code>graph TD
+    A[Reducers] --&gt; B["📅 Temporal Reduction\n(Many Images → One Image)"]
+    A --&gt; C["📐 Spatial Reduction\n(Many Pixels → One Number)"]
+    B --&gt; D["Example: .median() on a collection"]
+    C --&gt; E["Example: .reduceRegion() on an image"]
+    style A fill:#4db6ac,color:#fff,stroke:#333
+    style B fill:#e3f2fd,stroke:#333
+    style C fill:#e8f5e9,stroke:#333</code></pre>
+<hr />
+<h2 id="part-1-temporal-reducers-collection-image">Part 1: Temporal Reducers (Collection → Image)<a class="headerlink" href="#part-1-temporal-reducers-collection-image" title="Permanent link">&para;</a></h2>
+<p>These reduce an <strong>ImageCollection</strong> (many images over time) into a <strong>single image</strong>.</p>
+<h3 id="common-temporal-reducers">Common Temporal Reducers<a class="headerlink" href="#common-temporal-reducers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Reducer Method</th>
+<th style="text-align: left;">What it Returns</th>
+<th style="text-align: left;">Best Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.median()</code></td>
+<td style="text-align: left;">Middle value across time</td>
+<td style="text-align: left;">Cloud-free composites</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.mean()</code></td>
+<td style="text-align: left;">Average value</td>
+<td style="text-align: left;">Temperature, rainfall</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.min()</code></td>
+<td style="text-align: left;">Lowest value</td>
+<td style="text-align: left;">Driest/coolest period</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.max()</code></td>
+<td style="text-align: left;">Highest value</td>
+<td style="text-align: left;">Flood extent, fire detection</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.sum()</code></td>
+<td style="text-align: left;">Total cumulative value</td>
+<td style="text-align: left;">Annual rainfall total</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.mosaic()</code></td>
+<td style="text-align: left;">Latest pixel on top</td>
+<td style="text-align: left;">Quick visual composite</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-creating-a-cloud-free-composite">Example: Creating a Cloud-Free Composite<a class="headerlink" href="#example-creating-a-cloud-free-composite" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]));</span>
 
+<span class="c1">// Median removes outliers (e.g., clouds) naturally</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">medianComposite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
 
+<span class="c1">// Mean is good for continuous variables like temperature</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">meanImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">mean</span><span class="p">();</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span><span class="w"> </span><span class="mf">20.30</span><span class="p">]),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">medianComposite</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;SR_B4&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B3&#39;</span><span class="p">,</span><span class="s1">&#39;SR_B2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="mf">7000</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">30000</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Median Composite&#39;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">85.82</span><span class="p">,</span> <span class="mf">20.30</span><span class="p">]))</span>
+
+<span class="n">median_composite</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">mean_image</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="part-2-spatial-reducers-pixels-number">Part 2: Spatial Reducers (Pixels → Number)<a class="headerlink" href="#part-2-spatial-reducers-pixels-number" title="Permanent link">&para;</a></h2>
+<p>These reduce <strong>all pixels within a region</strong> of an image into a <strong>single summary value</strong> (or a dictionary of values).</p>
+<p>This is how you answer questions like:</p>
+<ul>
+<li><em>"What is the average NDVI value inside my study area?"</em></li>
+<li><em>"What is the total area of flood-affected pixels?"</em></li>
+<li><em>"What is the maximum elevation inside this district?"</em></li>
+</ul>
+<h3 id="reduceregion-the-most-powerful-spatial-reducer"><code>.reduceRegion()</code> — The Most Powerful Spatial Reducer<a class="headerlink" href="#reduceregion-the-most-powerful-spatial-reducer" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Calculate the mean NDVI over a study area</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">studyArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="mf">85.5</span><span class="p">,</span><span class="w"> </span><span class="mf">20.1</span><span class="p">,</span><span class="w"> </span><span class="mf">86.1</span><span class="p">,</span><span class="w"> </span><span class="mf">20.6</span><span class="p">]);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">studyArea</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">ndvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">]).</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndvi</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">(),</span><span class="w">  </span><span class="c1">// The operation</span>
+<span class="w">  </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span><span class="w">         </span><span class="c1">// Where to apply it</span>
+<span class="w">  </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w">                   </span><span class="c1">// Pixel resolution in meters</span>
+<span class="w">  </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e9</span><span class="w">               </span><span class="c1">// Safety limit</span>
+<span class="p">});</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Mean NDVI in study area:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">stats</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">study_area</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span><span class="mf">85.5</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">,</span> <span class="mf">86.1</span><span class="p">,</span> <span class="mf">20.6</span><span class="p">])</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">study_area</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">median</span><span class="p">()</span>
+
+<span class="n">ndvi</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+
+<span class="n">stats</span> <span class="o">=</span> <span class="n">ndvi</span><span class="o">.</span><span class="n">reduceRegion</span><span class="p">(</span>
+    <span class="n">reducer</span><span class="o">=</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">study_area</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">maxPixels</span><span class="o">=</span><span class="mf">1e9</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean NDVI:&#39;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="part-3-combining-multiple-reducers">Part 3: Combining Multiple Reducers<a class="headerlink" href="#part-3-combining-multiple-reducers" title="Permanent link">&para;</a></h2>
+<p>You can compute multiple statistics simultaneously using <code>.combine()</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">combinedReducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">combine</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">min</span><span class="p">(),</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">combine</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">(),</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">combine</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">stdDev</span><span class="p">(),</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">fullStats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndvi</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">combinedReducer</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">studyArea</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e9</span>
+<span class="p">});</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;NDVI Statistics:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">fullStats</span><span class="p">);</span>
+<span class="c1">// Returns: {NDVI_mean: ..., NDVI_min: ..., NDVI_max: ..., NDVI_stdDev: ...}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">combined_reducer</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> \
+    <span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">stdDev</span><span class="p">(),</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">full_stats</span> <span class="o">=</span> <span class="n">ndvi</span><span class="o">.</span><span class="n">reduceRegion</span><span class="p">(</span>
+    <span class="n">reducer</span><span class="o">=</span><span class="n">combined_reducer</span><span class="p">,</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">study_area</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">maxPixels</span><span class="o">=</span><span class="mf">1e9</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NDVI Statistics:&#39;</span><span class="p">,</span> <span class="n">full_stats</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="part-4-reducing-over-a-feature-collection">Part 4: Reducing Over a Feature Collection<a class="headerlink" href="#part-4-reducing-over-a-feature-collection" title="Permanent link">&para;</a></h2>
+<p>When you have multiple regions (e.g., multiple districts), use <code>.reduceRegions()</code> to compute stats for each region at once.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JavaScript</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Get NDVI stats for each district in a FeatureCollection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">districts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;FAO/GAUL/2015/level2&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s1">&#39;ADM1_NAME&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Odisha&#39;</span><span class="p">));</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">withNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ndvi</span><span class="p">.</span><span class="nx">reduceRegions</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">districts</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span>
+<span class="p">});</span>
+
+<span class="c1">// Each feature now has a &#39;mean&#39; NDVI property</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Districts with NDVI:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">withNDVI</span><span class="p">.</span><span class="nx">first</span><span class="p">());</span>
+<span class="nx">Export</span><span class="p">.</span><span class="nx">table</span><span class="p">.</span><span class="nx">toDrive</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="nx">withNDVI</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Odisha_District_NDVI&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">fileFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;CSV&#39;</span>
+<span class="p">});</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">districts</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;FAO/GAUL/2015/level2&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="s1">&#39;ADM1_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;Odisha&#39;</span><span class="p">))</span>
+
+<span class="n">with_ndvi</span> <span class="o">=</span> <span class="n">ndvi</span><span class="o">.</span><span class="n">reduceRegions</span><span class="p">(</span>
+    <span class="n">collection</span><span class="o">=</span><span class="n">districts</span><span class="p">,</span>
+    <span class="n">reducer</span><span class="o">=</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mi">30</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First district NDVI:&#39;</span><span class="p">,</span> <span class="n">with_ndvi</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="quick-reference-cheat-sheet">Quick Reference Cheat Sheet<a class="headerlink" href="#quick-reference-cheat-sheet" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph LR
+    A[Your Goal] --&gt; B{What kind of reduction?}
+    B --&gt;|Many images → one image| C["collection.median()\ncollection.mean()"]
+    B --&gt;|Pixels in area → stats| D["image.reduceRegion()"]
+    B --&gt;|Multiple regions| E["image.reduceRegions()"]
+    B --&gt;|Images + time → chart| F["ui.Chart.image.series()"]
+    style C fill:#e3f2fd,stroke:#333
+    style D fill:#e8f5e9,stroke:#333
+    style E fill:#fff3e0,stroke:#333
+    style F fill:#fce4ec,stroke:#333</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Scale Matters</p>
+<p>The <code>scale</code> parameter in <code>reduceRegion</code> sets the pixel size in metres for the calculation. Use the <strong>native resolution</strong> of your dataset (Landsat = 30m, Sentinel-2 = 10m, MODIS = 250m+) to get the most accurate results.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Always Set <code>maxPixels</code></p>
+<p>Without <code>maxPixels</code>, Earth Engine will refuse to run large computations to protect you from runaway tasks. Set it to <code>1e9</code> (1 billion) for most cases.</p>
+</div>
 
 
 
