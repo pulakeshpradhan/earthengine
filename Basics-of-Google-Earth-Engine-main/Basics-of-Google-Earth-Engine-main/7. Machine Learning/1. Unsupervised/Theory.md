@@ -1,3 +1,0 @@
-```javascript
-
-// To Do list

@@ -46,9 +46,6 @@ extra:
     - name: English
       link: /earthengine/
       lang: en
-    - name: हिन्दी (Hindi)
-      link: /earthengine/hi/
-      lang: hi
     - name: বাংলা (Bengali)
       link: /earthengine/bn/
       lang: bn
@@ -79,8 +76,6 @@ plugins:
         - locale: en
           name: English
           default: true
-        - locale: hi
-          name: हिन्दी
         - locale: bn
           name: বাংলা
       fallback_to_default: true
