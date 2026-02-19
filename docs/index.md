@@ -36,70 +36,22 @@ Let's load and display a satellite image. Click the tabs to see the code in your
 
 === "JavaScript"
     ```javascript
-    // Define region of interest and filter ImageCollection
-    var roi = ee.Geometry.Point([85.895153, 20.461628]);
-    var collection = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
-      .filterDate('2022-01-01', '2022-12-31')
-      .filterBounds(roi);
+    // Load a Landsat 8 image
+    var image = ee.Image('LANDSAT/LC08/C02/T1_L2/LC08_044034_20140318');
 
-    // Define and map NDVI calculation function
-    var calculateNDVI = function(image) {
-      var ndvi = image.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI');
-      return image.addBands(ndvi);
+    // Define how to display it (RGB = Red, Green, Blue bands)
+    var visParams = {
+      bands: ['SR_B4', 'SR_B3', 'SR_B2'],
+      min: 7000,
+      max: 12000
     };
-    var ndviCollection = collection.map(calculateNDVI);
-
-    // Calculate mean NDVI over ROI for each image
-    var meanNDVI = ndviCollection.map(function(image) {
-      var mean = image.select('NDVI').reduceRegion({
-        reducer: ee.Reducer.mean(),
-        geometry: roi,
-        scale: 30
-      });
-      return image.set('meanNDVI', mean.get('NDVI'));
-    });
-
-    // Convert to FeatureCollection and export table to Google Drive
-    var ndviTimeSeries = meanNDVI.map(function(image) {
-      return ee.Feature(null, {
-        'date': image.date().format('YYYY-MM-dd'),
-        'meanNDVI': image.get('meanNDVI')
-      });
-    });
     
-    Export.table.toDrive({
-      collection: ndviTimeSeries,
-      description: 'NDVI_TimeSeries',
-      fileFormat: 'CSV'
-    });
-
-    // Create a chart of NDVI over time
-    var ndviChart = ui.Chart.feature.byFeature({
-      features: ndviTimeSeries,
-      xProperty: 'date',
-      yProperties: ['meanNDVI']
-    }).setOptions({
-      title: 'Mean NDVI Over Time',
-      hAxis: {title: 'Date'},
-      vAxis: {title: 'Mean NDVI'},
-      lineWidth: 1,
-      pointSize: 3,
-    });
-    print(ndviChart);
-
-    // Create a median NDVI composite for 2022
-    var medianNDVI = ndviCollection.select('NDVI').median().clip(roi);
-
-    // Export the NDVI composite image to Google Drive
-    Export.image.toDrive({
-      image: medianNDVI,
-      description: 'Median_NDVI_2022',
-      folder: 'EarthEngineExports',
-      region: roi.buffer(10000).bounds(), // Exporting 10km area around the point
-      scale: 30,
-      crs: 'EPSG:4326',
-      maxPixels: 1e13
-    });
+    // Center the map and add the image
+    Map.centerObject(image, 8);
+    Map.addLayer(image, visParams, 'Landsat Image');
+    
+    // Print information about the image
+    print('Image details:', image);
     ```
 
 === "Python"
@@ -109,49 +61,39 @@ Let's load and display a satellite image. Click the tabs to see the code in your
 
     # Initialize Earth Engine
     ee.Initialize()
-
-    # Define region of interest and filter ImageCollection
-    roi = ee.Geometry.Point([85.895153, 20.461628])
-    collection = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2") \
-      .filterDate('2022-01-01', '2022-12-31') \
-      .filterBounds(roi)
-
-    # Define NDVI calculation function
-    def calculate_ndvi(image):
-        ndvi = image.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI')
-        return image.addBands(ndvi)
-
-    ndvi_collection = collection.map(calculate_ndvi)
-
-    # Calculate mean NDVI over ROI for each image
-    def get_mean_ndvi(image):
-        mean = image.select('NDVI').reduceRegion(
-            reducer=ee.Reducer.mean(),
-            geometry=roi,
-            scale=30
-        )
-        return image.set('meanNDVI', mean.get('NDVI'))
-
-    mean_ndvi_collection = ndvi_collection.map(get_mean_ndvi)
-
-    # Create a median NDVI composite for 2022
-    median_ndvi = ndvi_collection.select('NDVI').median()
-
-    # Display results on a map
+    
+    # Load a Landsat 8 image
+    image = ee.Image('LANDSAT/LC08/C02/T1_L2/LC08_044034_20140318')
+    
+    # Define how to display it (RGB = Red, Green, Blue bands)
+    vis_params = {
+        'bands': ['SR_B4', 'SR_B3', 'SR_B2'],
+        'min': 7000,
+        'max': 12000
+    }
+    
+    # Create a map and add the image
     Map = geemap.Map()
-    Map.centerObject(roi, 12)
-    Map.addLayer(median_ndvi, {'min': 0, 'max': 1, 'palette': ['blue', 'white', 'green']}, 'Median NDVI')
+    Map.centerObject(image, 8)
+    Map.addLayer(image, vis_params, 'Landsat Image')
+    
+    # Print information about the image
+    print('Image details:', image.getInfo())
+    
+    # Display the map
     Map
     ```
 
-**What this script does:**
+![Landsat 8 Image Example (Grand Canyon)](https://eoimages.gsfc.nasa.gov/images/imagerecords/80000/80913/grandcanyon_oli_2013076_lrg.jpg)
 
-1. **Defines a Point of Interest**: Uses specific coordinates to focus the analysis.
-2. **Filters Data**: Searches the massive Landsat 8 catalog for all images from 2022 covering that point.
-3. **Calculates NDVI**: Automatically computes vegetation health (NDVI) for every single image in the collection.
-4. **Time-Series Analysis**: Calculates the average NDVI for each date to track changes over time.
-5. **Charts & Exports**: Generates a time-series chart and prepares a CSV export of the data to your Google Drive.
-6. **Composite Image**: Creates a "cloud-free" median composite of NDVI for the entire year and exports the resulting map.
+*Above: Example of a Landsat 8 image (Grand Canyon). The code above loads a similar image over California.*
+
+**What this does:**
+
+1. Loads a satellite image from 2014
+2. Selects the Red, Green, and Blue bands to create a natural color image
+3. Displays it on a map
+4. Prints information about the image
 
 ---
 
@@ -292,6 +234,131 @@ Instead of one image, let's work with many images over time:
 2. Filters to only images with less than 20% cloud cover
 3. Combines them into one cloud-free image (using the median value)
 4. Displays the result
+
+---
+
+## Key Earth Engine Operations at a Glance
+
+This comprehensive script demonstrates how to filter data, perform analysis (NDVI), create charts, and export results all in one workflow.
+
+=== "JavaScript"
+    ```javascript
+    // Define region of interest and filter ImageCollection
+    var roi = ee.Geometry.Point([85.895153, 20.461628]);
+    var collection = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+      .filterDate('2022-01-01', '2022-12-31')
+      .filterBounds(roi);
+
+    // Define and map NDVI calculation function
+    var calculateNDVI = function(image) {
+      var ndvi = image.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI');
+      return image.addBands(ndvi);
+    };
+    var ndviCollection = collection.map(calculateNDVI);
+
+    // Calculate mean NDVI over ROI for each image
+    var meanNDVI = ndviCollection.map(function(image) {
+      var mean = image.select('NDVI').reduceRegion({
+        reducer: ee.Reducer.mean(),
+        geometry: roi,
+        scale: 30
+      });
+      return image.set('meanNDVI', mean.get('NDVI'));
+    });
+
+    // Convert to FeatureCollection and export table to Google Drive
+    var ndviTimeSeries = meanNDVI.map(function(image) {
+      return ee.Feature(null, {
+        'date': image.date().format('YYYY-MM-dd'),
+        'meanNDVI': image.get('meanNDVI')
+      });
+    });
+    
+    Export.table.toDrive({
+      collection: ndviTimeSeries,
+      description: 'NDVI_TimeSeries',
+      fileFormat: 'CSV'
+    });
+
+    // Create a chart of NDVI over time
+    var ndviChart = ui.Chart.feature.byFeature({
+      features: ndviTimeSeries,
+      xProperty: 'date',
+      yProperties: ['meanNDVI']
+    }).setOptions({
+      title: 'Mean NDVI Over Time',
+      hAxis: {title: 'Date'},
+      vAxis: {title: 'Mean NDVI'},
+      lineWidth: 1,
+      pointSize: 3,
+    });
+    print(ndviChart);
+
+    // Create a median NDVI composite for 2022
+    var medianNDVI = ndviCollection.select('NDVI').median().clip(roi);
+
+    // Export the NDVI composite image to Google Drive
+    Export.image.toDrive({
+      image: medianNDVI,
+      description: 'Median_NDVI_2022',
+      folder: 'EarthEngineExports',
+      region: roi.buffer(10000).bounds(), // Exporting 10km area around the point
+      scale: 30,
+      crs: 'EPSG:4326',
+      maxPixels: 1e13
+    });
+    ```
+
+=== "Python"
+    ```python
+    import ee
+    import geemap
+
+    # Initialize Earth Engine
+    ee.Initialize()
+
+    # Define region of interest and filter ImageCollection
+    roi = ee.Geometry.Point([85.895153, 20.461628])
+    collection = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2") \
+      .filterDate('2022-01-01', '2022-12-31') \
+      .filterBounds(roi)
+
+    # Define NDVI calculation function
+    def calculate_ndvi(image):
+        ndvi = image.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI')
+        return image.addBands(ndvi)
+
+    ndvi_collection = collection.map(calculate_ndvi)
+
+    # Calculate mean NDVI over ROI for each image
+    def get_mean_ndvi(image):
+        mean = image.select('NDVI').reduceRegion(
+            reducer=ee.Reducer.mean(),
+            geometry=roi,
+            scale=30
+        )
+        return image.set('meanNDVI', mean.get('NDVI'))
+
+    mean_ndvi_collection = ndvi_collection.map(get_mean_ndvi)
+
+    # Create a median NDVI composite for 2022
+    median_ndvi = median_ndvi = ndvi_collection.select('NDVI').median()
+
+    # Display results on a map
+    Map = geemap.Map()
+    Map.centerObject(roi, 12)
+    Map.addLayer(median_ndvi, {'min': 0, 'max': 1, 'palette': ['blue', 'white', 'green']}, 'Median NDVI')
+    Map
+    ```
+
+**What this script does:**
+
+1. **Defines a Point of Interest**: Uses specific coordinates to focus the analysis.
+2. **Filters Data**: Searches the massive Landsat 8 catalog for all images from 2022 covering that point.
+3. **Calculates NDVI**: Automatically computes vegetation health (NDVI) for every single image in the collection.
+4. **Time-Series Analysis**: Calculates the average NDVI for each date to track changes over time.
+5. **Charts & Exports**: Generates a time-series chart and prepares a CSV export of the data to your Google Drive.
+6. **Composite Image**: Creates a "cloud-free" median composite of NDVI for the entire year and exports the resulting map.
 
 ---
 
