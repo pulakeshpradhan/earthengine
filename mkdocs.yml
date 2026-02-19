@@ -40,15 +40,6 @@ theme:
     - content.code.copy
     - content.code.annotate
 
-extra:
-  alternate:
-    - name: English
-      link: /earthengine/
-      lang: en
-    - name: বাংলা (Bengali)
-      link: /earthengine/bn/
-      lang: bn
-
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -70,18 +61,39 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-      default_language: en
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
       languages:
         - locale: en
           name: English
           default: true
+          build: true
         - locale: bn
           name: বাংলা
-      fallback_to_default: true
+          build: true
+          nav_translations:
+            Home: হোম
+            The Basics: মূল বিষয়
+            Detailed Guide: বিস্তারিত গাইড
+            Programming Basics: প্রোগ্রামিং মূল বিষয়
+            Getting Started with GEE: GEE দিয়ে শুরু করুন
+            Data Types in GEE: GEE-এর ডেটা টাইপ
+            Core Functions: মূল ফাংশন
+            Working with Raster Data: রাস্টার ডেটা নিয়ে কাজ
+            Working with Vector Data: ভেক্টর ডেটা নিয়ে কাজ
+            Charts & Visualization: চার্ট ও ভিজুয়ালাইজেশন
+            Core Reference: মূল রেফারেন্স
+            Machine Learning: মেশিন লার্নিং
+            Real-World Projects: বাস্তব জীবনের প্রকল্প
+            Exercises: অনুশীলন
+            Quick Reference: দ্রুত রেফারেন্স
 
 nav:
-  - Home: index.md
-  - The Basics: gee/basics.md
+  - Home & Basics:
+      - Home: index.md
+      - The Basics: gee/basics.md
   - Detailed Guide:
       - Programming Basics:
           - What is Programming?: programming/1. What is Programming.md
@@ -148,8 +160,9 @@ nav:
           - Image Processing: lulc/README.md
       - Spatial Analysis: lulc/Spatial-Analyst.md
       - Advanced Sampling: gee/9. Advanced Analysis/1. Random Sample.md
-  - Exercises: gee/10. Exercises/1. Data Type.md
-  - Quick Reference:
-      - Keyboard Shortcuts: gee/0. Supplementary/1. Keyboard Shortcuts for Google Earth Engine.md
-      - Projection Guide: gee/0. Supplementary/reprojection.md
-      - 10-Day Learning Path: gee/0. Supplementary/10Days.md
+  - Exercises & Reference:
+      - Exercises: gee/10. Exercises/1. Data Type.md
+      - Quick Reference:
+          - Keyboard Shortcuts: gee/0. Supplementary/1. Keyboard Shortcuts for Google Earth Engine.md
+          - Projection Guide: gee/0. Supplementary/reprojection.md
+          - 10-Day Learning Path: gee/0. Supplementary/10Days.md
