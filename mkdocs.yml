@@ -79,18 +79,15 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        en:
+        - locale: en
           name: English
-          build: true
-        hi:
+          default: true
+        - locale: hi
           name: हिन्दी
-          build: true
-        bn:
+        - locale: bn
           name: বাংলা
-          build: true
-        or:
+        - locale: or
           name: ଓଡ଼ିଆ
-          build: true
       fallback_to_default: true
 
 nav:
