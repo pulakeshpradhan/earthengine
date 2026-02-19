@@ -14,7 +14,7 @@ extra_javascript:
 
 theme:
   name: material
-  language: en # Change this to your preferred default (e.g., 'fr', 'es', 'hi')
+  language: en
   palette:
     - scheme: default
       primary: teal
@@ -40,7 +40,6 @@ theme:
     - content.code.copy
     - content.code.annotate
 
-# This section allows you to override default theme text (Instructions/Labels)
 extra:
   alternate:
     - name: English
@@ -82,9 +81,6 @@ plugins:
 
 nav:
   - Home: index.md
-  - Data Catalogs: gee/2. Data Catalogs/1. Earth Engine Data Catalog.md
-  - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
-  - Dive into Coding: programming/1. What is Programming.md
   - The Basics: gee/basics.md
   - Detailed Guide:
       - Programming Basics:
@@ -92,33 +88,68 @@ nav:
           - Understanding Data Types: programming/2. Data Types.md
           - Working with Functions: programming/3. Functions.md
           - Using Loops Efficiently: programming/4. Loops.md
-      - Core Concepts:
+      - Getting Started with GEE:
+          - Code Editor: gee/1. Code Editor/3. JavaScript vs Python.md
+          - Data Catalogs: gee/2. Data Catalogs/1. Earth Engine Data Catalog.md
+      - Data Types in GEE:
+          - Variables: gee/3. Data Types/1. Variables.md
+          - Numbers & Math: gee/3. Data Types/2. Numbers.md
+          - Geometry: gee/3. Data Types/4. Geometry.md
+          - Functions: gee/3. Data Types/5. Functions.md
+      - Core Functions:
+          - Filtering: gee/4. Core Functions/1. Filter.md
+          - Custom Functions: gee/4. Core Functions/2. function().md
+          - Mapping: gee/4. Core Functions/3. map().md
+          - Reducers: gee/4. Core Functions/4. Reducers.md
+      - Working with Raster Data:
+          - Overview: gee/5. Working with Raster Data/README.md
+          - Single Band Images: gee/5. Working with Raster Data/1. Single Band Images.md
+          - Multi Band Images: gee/5. Working with Raster Data/2. Multi Band Images.md
+          - Calculating Indices: gee/5. Working with Raster Data/3. Calculating Indices.md
+          - Time Series Analysis: gee/5. Working with Raster Data/4. Time Series Analysis.md
+          - Exporting Data: gee/5. Working with Raster Data/5. Exporting Data.md
+          - Export Examples: gee/5. Working with Raster Data/6. Export Examples.md
+      - Working with Vector Data:
+          - Overview: gee/6. Working with Vector Data/README.md
+          - Understanding Features: gee/6. Working with Vector Data/1. Overview of Features.md
+          - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
+          - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
+          - Feature Operations: gee/6. Working with Vector Data/4. Feature Operations.md
+          - Geometries: gee/6. Working with Vector Data/5. Geometries.md
+      - Charts & Visualization:
+          - Chart Basics: gee/8. Charts/1. Chart Basics.md
+          - Chart Reference: gee/8. Charts/2. Chart Reference.md
+      - Core Reference:
           - Best Practices: gee/modern_best_practices.md
-          - JavaScript vs Python: gee/1. Code Editor/3. JavaScript vs Python.md
           - Syntax Guide: gee/gee_syntax.md
           - Scale & Projection: gee/scale_projection.md
           - Fixing Errors: gee/Debugging.md
-      - Working with Data:
-          - Satellite Images (Raster): 
-              - Overview: gee/5. Working with Raster Data/README.md
-              - Single Band Images: gee/5. Working with Raster Data/1. Single Band Images.md
-              - Multi Band Images: gee/5. Working with Raster Data/2. Multi Band Images.md
-              - Calculating Indices: gee/5. Working with Raster Data/3. Calculating Indices.md
-              - Time Series Analysis: gee/5. Working with Raster Data/4. Time Series Analysis.md
-              - Exporting Data: gee/5. Working with Raster Data/5. Exporting Data.md
-          - Maps & Boundaries (Vector):
-              - Overview: gee/6. Working with Vector Data/README.md
-              - Understanding Features: gee/6. Working with Vector Data/1. Overview of Features.md
-              - Feature Collections: gee/6. Working with Vector Data/2. Feature Collections.md
-              - Exporting Vectors: gee/6. Working with Vector Data/3. Exporting Vectors.md
+          - Code Examples: gee/code_examples.md
+  - Machine Learning:
+      - Unsupervised Learning: gee/7. Machine Learning/1. Unsupervised/Theory.md
+      - Supervised Learning:
+          - Classification: gee/7. Machine Learning/2. Supervised/1. Classification.md
+          - Regression: gee/7. Machine Learning/2. Supervised/2. Regression.md
+      - Build Classifier:
+          - Export Classifier: gee/7. Machine Learning/3. Build Classifier/1. Export Classifier.md
+          - New Classifier: gee/7. Machine Learning/3. Build Classifier/2. New Classifier.md
   - Real-World Projects:
       - Water Body Mapping:
           - Understanding Water Data: gee/Projects/1.Water Body Mapping/2. Exploring GSW Dataset.md
           - Creating Water Charts: gee/Projects/1.Water Body Mapping/3. Water Surface Area Charting.md
           - Mapping Floods: gee/Projects/1.Water Body Mapping/4. Flood Mapping.md
-      - Land Classification: lulc/Supervised LULC Classification GEE.md
-      - Spatial Analysis Tools: lulc/Spatial-Analyst.md
-      - Advanced Sampling: gee/Advance Analysis/1. Random Sample.md
+      - Water Quality:
+          - Chlorophyll Mapping: gee/Projects/2. Water Quality/1. Chlorophyll Mapping.md
+      - Susceptibility Mapping:
+          - Landslide Susceptibility: gee/Projects/3. Susceptibility/1. Landslide.md
+          - Flood Susceptibility: gee/Projects/3. Susceptibility/2. Flood.md
+      - Land Classification:
+          - LULC Classification: lulc/Supervised LULC Classification GEE.md
+          - Image Processing: lulc/README.md
+      - Spatial Analysis: lulc/Spatial-Analyst.md
+      - Advanced Sampling: gee/9. Advanced Analysis/1. Random Sample.md
+  - Exercises: gee/10. Exercises/1. Data Type.md
   - Quick Reference:
       - Keyboard Shortcuts: gee/0. Supplementary/1. Keyboard Shortcuts for Google Earth Engine.md
       - Projection Guide: gee/0. Supplementary/reprojection.md
+      - 10-Day Learning Path: gee/0. Supplementary/10Days.md
