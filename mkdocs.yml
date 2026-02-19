@@ -61,9 +61,8 @@ plugins:
   - search
 
 nav:
-  - Home: index.md
-  - Getting Started:
-      - Quick Start (Try It Now!): gee/quick_start.md
+  - Home:
+      - Home: index.md
       - Sign Up & Setup: gee/1. Code Editor/0. Registration.md
       - Understanding the Interface: gee/1. Code Editor/1. User Interface of Code Editor.md
       - JavaScript vs Python: gee/1. Code Editor/3. Javascipt vs python.md

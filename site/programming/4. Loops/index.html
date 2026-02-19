@@ -2024,13 +2024,17 @@ Think of it as an <strong>Assembly Line</strong>.</p>
 <li>The computer applies the instruction to every item <strong>at the same time</strong>.</li>
 </ol>
 <pre class="mermaid"><code>graph TD
-    subgraph Serial_Loop [Standard For-Loop]
+    subgraph Serial_Loop ["Standard For-Loop"]
         A[Start] --&gt; B[Item 1] --&gt; C[Item 2] --&gt; D[Item 3] --&gt; E[Finish]
     end
 
-    subgraph Parallel_Map [GEE .map Function]
-        F[Start] --&gt; G[Item 1] &amp; H[Item 2] &amp; I[Item 3]
-        G &amp; H &amp; I --&gt; J[Finish]
+    subgraph Parallel_Map ["GEE .map Function"]
+        F[Start] --&gt; G[Item 1]
+        F --&gt; H[Item 2]
+        F --&gt; I[Item 3]
+        G --&gt; J[Finish]
+        H --&gt; J
+        I --&gt; J
     end
     style Parallel_Map fill:#bfb,stroke:#333</code></pre>
 <h2 id="example-the-assembly-line">Example: The Assembly Line<a class="headerlink" href="#example-the-assembly-line" title="Permanent link">&para;</a></h2>
