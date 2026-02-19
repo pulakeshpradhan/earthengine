@@ -52,9 +52,6 @@ extra:
     - name: বাংলা (Bengali)
       link: /earthengine/bn/
       lang: bn
-    - name: ଓଡ଼ିଆ (Odia)
-      link: /earthengine/or/
-      lang: or
 
 markdown_extensions:
   - admonition
@@ -86,8 +83,6 @@ plugins:
           name: हिन्दी
         - locale: bn
           name: বাংলা
-        - locale: or
-          name: ଓଡ଼ିଆ
       fallback_to_default: true
 
 nav:
