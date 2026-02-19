@@ -853,10 +853,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-map-function-earth-engines-loop" class="md-nav__link">
+  <a href="#map-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The map() Function (Earth Engine's Loop)
+        map() ফাংশন (আর্থ ইঞ্জিন-এর লুপ)
       
     </span>
   </a>
@@ -864,10 +864,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-the-assembly-line" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example: The Assembly Line
+        উদাহরণ: অ্যাসেম্বলি লাইন
       
     </span>
   </a>
@@ -875,10 +875,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-map-instead-of-for-loops" class="md-nav__link">
+  <a href="#for-map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why .map() instead of for loops?
+        for লুপের বদলে কেন .map() ব্যবহার করবেন?
       
     </span>
   </a>
@@ -2018,10 +2018,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-map-function-earth-engines-loop" class="md-nav__link">
+  <a href="#map-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The map() Function (Earth Engine's Loop)
+        map() ফাংশন (আর্থ ইঞ্জিন-এর লুপ)
       
     </span>
   </a>
@@ -2029,10 +2029,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-the-assembly-line" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example: The Assembly Line
+        উদাহরণ: অ্যাসেম্বলি লাইন
       
     </span>
   </a>
@@ -2040,10 +2040,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-map-instead-of-for-loops" class="md-nav__link">
+  <a href="#for-map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why .map() instead of for loops?
+        for লুপের বদলে কেন .map() ব্যবহার করবেন?
       
     </span>
   </a>
@@ -2067,17 +2067,15 @@
 
 
 
-<h1 id="loops-doing-things-again-and-again">Loops (Doing Things Again and Again)<a class="headerlink" href="#loops-doing-things-again-and-again" title="Permanent link">&para;</a></h1>
-<p>Imagine you want to calculate the NDVI for <strong>every</strong> day in a year.
-Writing code 365 times is boring. That’s why we use <strong>Loops</strong>.</p>
-<p>In standard programming, you might write code like: "For Day 1, do this. For Day 2, do this."</p>
-<h2 id="the-map-function-earth-engines-loop">The <code>map()</code> Function (Earth Engine's Loop)<a class="headerlink" href="#the-map-function-earth-engines-loop" title="Permanent link">&para;</a></h2>
-<p>In Google Earth Engine, we use a special kind of loop called <code>.map()</code>.
-Think of it as an <strong>Assembly Line</strong>.</p>
+<h1 id="loops-doing-things-again-and-again">লুপ (Loops): বারবার একই কাজ করা (Doing Things Again and Again)<a class="headerlink" href="#loops-doing-things-again-and-again" title="Permanent link">&para;</a></h1>
+<p>কল্পনা করুন আপনি এক বছরের <strong>প্রতিটি</strong> দিনের জন্য NDVI গণনা করতে চান। ৩৬৫ বার কোড লেখা খুবই বিরক্তিকর। এজন্যই আমরা <strong>লুপ (Loops)</strong> ব্যবহার করি।</p>
+<p>সাধারণ প্রোগ্রামিংয়ে আপনি হয়তো এভাবে কোড লিখতেন: "১ম দিনের জন্য এটি করো। ২য় দিনের জন্য এটি করো।"</p>
+<h2 id="map-"><code>map()</code> ফাংশন (আর্থ ইঞ্জিন-এর লুপ)<a class="headerlink" href="#map-" title="Permanent link">&para;</a></h2>
+<p>গুগল আর্থ ইঞ্জিন-এ আমরা <code>.map()</code> নামে একটি বিশেষ ধরণের লুপ ব্যবহার করি। এটিকে একটি <strong>অ্যাসেম্বলি লাইন (Assembly Line)</strong> হিসেবে চিন্তা করুন।</p>
 <ol>
-<li>You create a master instruction (a Function).</li>
-<li>You feed a collection of items (Images) into the line.</li>
-<li>The computer applies the instruction to every item <strong>at the same time</strong>.</li>
+<li>আপনি একটি প্রধান নির্দেশিকা (একটি ফাংশন) তৈরি করেন।</li>
+<li>আপনি অনেকগুলো জিনিসের একটি সংগ্রহ (যেমন- ইমেজ কালেকশন) এই লাইনে পাঠিয়ে দেন।</li>
+<li>কম্পিউটার প্রতিটি জিনিসের ওপর <strong>একই সময়ে (at the same time)</strong> সেই নির্দেশিকাটি প্রয়োগ করে।</li>
 </ol>
 <pre class="mermaid"><code>graph TD
     subgraph Serial_Loop ["Standard For-Loop"]
@@ -2093,40 +2091,40 @@ Think of it as an <strong>Assembly Line</strong>.</p>
         I --&gt; J
     end
     style Parallel_Map fill:#bfb,stroke:#333</code></pre>
-<h2 id="example-the-assembly-line">Example: The Assembly Line<a class="headerlink" href="#example-the-assembly-line" title="Permanent link">&para;</a></h2>
-<p>Let's assume we have a box of 10 apples (<code>ImageCollection</code>) and we want to peel them (<code>Function</code>).</p>
+<h2 id="_1">উদাহরণ: অ্যাসেম্বলি লাইন<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ধরে নিন আমাদের কাছে ১০টি আপেলের একটি বক্স (<code>ImageCollection</code>) আছে এবং আমরা সেগুলো খোসা ছাড়াতে (<code>Function</code>) চাই।</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1">// The collection: 3 years of images</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// সংগ্রহ বা কালেকশন: ৩ বছরের ইমেজ</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">);</span>
 
-<span class="c1">// The instruction: Calculate NDVI for one image</span>
+<span class="c1">// নির্দেশিকা: একটি ইমেজের জন্য NDVI গণনা করা</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">addNDVI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SR_B4&#39;</span><span class="p">]);</span>
 <span class="p">};</span>
 
-<span class="c1">// The loop: Apply instruction to all images</span>
+<span class="c1">// লুপ: সমস্ত ইমেজের ওপর নির্দেশিকাটি প্রয়োগ করুন</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">processedCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addNDVI</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># The collection: 3 years of images</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># সংগ্রহ বা কালেকশন: ৩ বছরের ইমেজ</span>
 <span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">)</span>
 
-<span class="c1"># The instruction: Calculate NDVI for one image</span>
+<span class="c1"># নির্দেশিকা: একটি ইমেজের জন্য NDVI গণনা করা</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">add_ndvi</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;SR_B5&#39;</span><span class="p">,</span> <span class="s1">&#39;SR_B4&#39;</span><span class="p">])</span>
 
-<span class="c1"># The loop: Apply instruction to all images</span>
+<span class="c1"># লুপ: সমস্ত ইমেজের ওপর নির্দেশিকাটি প্রয়োগ করুন</span>
 <span class="n">processed_collection</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_ndvi</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
 </div>
-<h2 id="why-map-instead-of-for-loops">Why <code>.map()</code> instead of <code>for</code> loops?<a class="headerlink" href="#why-map-instead-of-for-loops" title="Permanent link">&para;</a></h2>
-<p>Standard <code>for</code> loops run on your computer (Client-side).
-<code>.map()</code> runs on Google's supercomputers (Server-side). It is <strong>much faster</strong> for processing thousands of satellite images.</p>
+<h2 id="for-map"><code>for</code> লুপের বদলে কেন <code>.map()</code> ব্যবহার করবেন?<a class="headerlink" href="#for-map" title="Permanent link">&para;</a></h2>
+<p>সাধারণ <code>for</code> লুপ আপনার কম্পিউটারে চলে (Client-side)।
+অন্যদিকে, <code>.map()</code> চলে গুগলের সুপারকম্পিউটারে (Server-side)। হাজার হাজার স্যাটেলাইট ইমেজ প্রসেস করার জন্য এটি <strong>অনেক গুণ বেশি দ্রুত</strong>।</p>
 
 
 

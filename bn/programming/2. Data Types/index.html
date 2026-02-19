@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-data-types-the-ingredients" class="md-skip">
+        <a href="#understanding-data-types" class="md-skip">
           কনটেন্টে যান
         </a>
       
@@ -797,10 +797,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-types-standard-programming" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic Types (Standard Programming)
+        বেসিক টাইপ (সাধারণ প্রোগ্রামিং)
       
     </span>
   </a>
@@ -808,10 +808,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#earth-engine-types-geospatial" class="md-nav__link">
+  <a href="#-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Earth Engine Types (Geospatial)
+        আর্থ ইঞ্জিন টাইপ (জিও-স্প্যাশিয়াল)
       
     </span>
   </a>
@@ -819,10 +819,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-does-this-matter" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why does this matter?
+        এটি কেন গুরুত্বপূর্ণ?
       
     </span>
   </a>
@@ -2018,10 +2018,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-types-standard-programming" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic Types (Standard Programming)
+        বেসিক টাইপ (সাধারণ প্রোগ্রামিং)
       
     </span>
   </a>
@@ -2029,10 +2029,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#earth-engine-types-geospatial" class="md-nav__link">
+  <a href="#-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Earth Engine Types (Geospatial)
+        আর্থ ইঞ্জিন টাইপ (জিও-স্প্যাশিয়াল)
       
     </span>
   </a>
@@ -2040,10 +2040,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-does-this-matter" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why does this matter?
+        এটি কেন গুরুত্বপূর্ণ?
       
     </span>
   </a>
@@ -2067,40 +2067,49 @@
 
 
 
-<h1 id="understanding-data-types-the-ingredients">Understanding Data Types (The Ingredients)<a class="headerlink" href="#understanding-data-types-the-ingredients" title="Permanent link">&para;</a></h1>
-<p>Just like a recipe has flour, sugar, and eggs, programming has strictly defined types of ingredients.
-A computer cannot act on "flour" unless it knows it's a "Powder".</p>
-<p>In Google Earth Engine, we use special types designed for maps.</p>
-<h2 id="basic-types-standard-programming">Basic Types (Standard Programming)<a class="headerlink" href="#basic-types-standard-programming" title="Permanent link">&para;</a></h2>
-<p>These are common to both JavaScript and Python.</p>
+<h1 id="understanding-data-types">ডেটা টাইপ বোঝা (Understanding Data Types)<a class="headerlink" href="#understanding-data-types" title="Permanent link">&para;</a></h1>
+<p>একটি রেসিপিতে যেমন ময়দা, চিনি এবং ডিম থাকে, প্রোগ্রামিংয়েও তেমনি সুনির্দিষ্ট ধরণের উপকরণ থাকে। একটি কম্পিউটার "ময়দা" এর ওপর কাজ করতে পারে না যতক্ষণ না সে জানে যে এটি একটি "পাউডার"।</p>
+<p>গুগল আর্থ ইঞ্জিন-এ, আমরা মানচিত্র বা ম্যাপের জন্য ডিজাইন করা কিছু বিশেষ ধরণের ডেটা ব্যবহার করি।</p>
+<h2 id="_1">বেসিক টাইপ (সাধারণ প্রোগ্রামিং)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>এগুলো জাভাস্ক্রিপ্ট এবং পাইথন উভয়ের ক্ষেত্রেই সাধারণ।</p>
 <ol>
-<li><strong>String</strong>: Text (always in quotes).</li>
-<li><code>'Hello World'</code></li>
+<li>
+<p><strong>স্ট্রিং (String)</strong>: টেক্সট বা লেখা (সবসময় উদ্ধৃতি চিহ্নের ভিতরে থাকে)।</p>
+</li>
+<li>
+<p><code>'Hello World'</code></p>
+</li>
 <li>
 <p><code>'LANDSAT/LC08/C02/T1_L2'</code></p>
 </li>
 <li>
-<p><strong>Number</strong>: Values for math.</p>
-</li>
-<li><code>42</code> (Integer)</li>
-<li>
-<p><code>3.14</code> (Decimal/Float)</p>
+<p><strong>নাম্বার (Number)</strong>: গণিতের জন্য ব্যবহৃত মান।</p>
 </li>
 <li>
-<p><strong>List</strong>: A collection of items (in square brackets).</p>
+<p><code>42</code> (পূর্ণসংখ্যা বা Integer)</p>
 </li>
-<li><code>['Apples', 'Bananas', 'Cherries']</code></li>
+<li>
+<p><code>3.14</code> (দশমিক সংখ্যা বা Float)</p>
+</li>
+<li>
+<p><strong>লিস্ট (List)</strong>: অনেকগুলো জিনিসের সংগ্রহ (থার্ড ব্র্যাকেট বা Square Brackets-এর মধ্যে থাকে)।</p>
+</li>
+<li>
+<p><code>['Apples', 'Bananas', 'Cherries']</code></p>
+</li>
 <li>
 <p><code>[1, 2, 3]</code></p>
 </li>
 <li>
-<p><strong>Dictionary (Object in JS)</strong>: Key-Value pairs (like an address book).</p>
+<p><strong>ডিকশনারি (Dictionary - জাভাস্ক্রিপ্টে একে Object বলা হয়)</strong>: কী-ভ্যালু (Key-Value) জোড়া (আপনার ফোনের অ্যাড্রেস বুকের মতো)।</p>
 </li>
-<li><code>{'name': 'Paris', 'population': 2161000}</code></li>
+<li>
+<p><code>{'name': 'Paris', 'population': 2161000}</code></p>
+</li>
 <li><code>{'color': 'red', 'size': 10}</code></li>
 </ol>
 <hr />
-<h2 id="earth-engine-types-geospatial">Earth Engine Types (Geospatial)<a class="headerlink" href="#earth-engine-types-geospatial" title="Permanent link">&para;</a></h2>
+<h2 id="-">আর্থ ইঞ্জিন টাইপ (জিও-স্প্যাশিয়াল)<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>graph TD
     subgraph Client-Side [Standard Information]
         A[String]
@@ -2122,42 +2131,52 @@ A computer cannot act on "flour" unless it knows it's a "Powder".</p>
     D -.-&gt; G
     style Client-Side fill:#f9f,stroke:#333
     style Server-Side fill:#bfb,stroke:#333</code></pre>
-<p>These are the special containers Google created for satellite data.</p>
+<p>এগুলো হলো স্যাটেলাইট ডেটা প্রসেস করার জন্য গুগলের তৈরি করা বিশেষ কন্টেইনার।</p>
 <ol>
-<li><strong>Image (<code>ee.Image</code>)</strong></li>
-<li>A single picture (Raster).</li>
 <li>
-<p>Contains bands (Red, Green, Blue, NIR).</p>
+<p><strong>ইমেজ (Image: <code>ee.Image</code>)</strong></p>
 </li>
 <li>
-<p><strong>ImageCollection (<code>ee.ImageCollection</code>)</strong></p>
-</li>
-<li>A folder of many images.</li>
-<li>
-<p>Example: All Landsat photos taken in 2023.</p>
+<p>একটি একক ছবি (Raster)।</p>
 </li>
 <li>
-<p><strong>Feature (<code>ee.Feature</code>)</strong></p>
-</li>
-<li>A single shape (Vector) with data attached.</li>
-<li>
-<p>Example: The border of France.</p>
+<p>এতে বিভিন্ন ব্যান্ড থাকে (যেমন- লাল, সবুজ, নীল, ইনফ্রারেড বা NIR)।</p>
 </li>
 <li>
-<p><strong>FeatureCollection (<code>ee.FeatureCollection</code>)</strong></p>
+<p><strong>ইমেজ কালেকশন (ImageCollection: <code>ee.ImageCollection</code>)</strong></p>
 </li>
-<li>A group of features.</li>
-<li>Example: All countries in the world.</li>
+<li>
+<p>অনেকগুলো ইমেজের একটি ফোল্ডার বা সংগ্রহ।</p>
+</li>
+<li>
+<p>উদাহরণ: ২০২৩ সালে তোলা সমস্ত ল্যান্ডস্যাট ছবি।</p>
+</li>
+<li>
+<p><strong>ফিচার (Feature: <code>ee.Feature</code>)</strong></p>
+</li>
+<li>
+<p>তথ্য যুক্ত একটি একক আকার বা শেপ (Vector)।</p>
+</li>
+<li>
+<p>উদাহরণ: বাংলাদেশের সীমানা।</p>
+</li>
+<li>
+<p><strong>ফিচার কালেকশন (FeatureCollection: <code>ee.FeatureCollection</code>)</strong></p>
+</li>
+<li>
+<p>অনেকগুলো ফিচারের একটি গ্রুপ।</p>
+</li>
+<li>উদাহরণ: বিশ্বের সমস্ত দেশের সীমানা।</li>
 </ol>
 <hr />
-<h2 id="why-does-this-matter">Why does this matter?<a class="headerlink" href="#why-does-this-matter" title="Permanent link">&para;</a></h2>
-<p>You can't mix them up!</p>
+<h2 id="_2">এটি কেন গুরুত্বপূর্ণ?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>আপনি এগুলো উল্টোপাল্টা মিশিয়ে ফেলতে পারবেন না!</p>
 <ul>
-<li>You can <strong>Clip</strong> an Image with a Feature.</li>
-<li>You can <strong>Filter</strong> an ImageCollection with a Geometry.</li>
-<li>But you cannot <strong>Add</strong> an Image to a Number directly (without using special functions).</li>
+<li>আপনি একটি ফিচার দিয়ে একটি ইমেজকে <strong>ক্লিপ (Clip)</strong> বা কাটতে পারেন।</li>
+<li>আপনি একটি জিওমেট্রি দিয়ে একটি ইমেজ কালেকশনকে <strong>ফিল্টার (Filter)</strong> করতে পারেন।</li>
+<li>কিন্তু আপনি সরাসরি একটি নাম্বারের সাথে একটি ইমেজ <strong>যোগ (Add)</strong> করতে পারবেন না (বিশেষ ফাংশন ব্যবহার করা ছাড়া)।</li>
 </ul>
-<p>Think of it like cooking: You can whisk eggs, but you can't whisk a rock!</p>
+<p>এটি রান্নার মতো: আপনি ডিম ফেটাতে পারেন, কিন্তু আপনি একটি পাথর ফেটাতে পারবেন না!</p>
 
 
 
