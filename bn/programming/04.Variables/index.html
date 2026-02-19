@@ -29,7 +29,7 @@
     
     
       
-        <title>প্রোগ্রামিং-এ ভ্যারিয়েবল কী? (What is a Variable?) - Google Earth Engine - A Beginner's Guide</title>
+        <title>ভ্যারিয়েবল — প্রোগ্রামিং-এর স্টোরেজ বক্স (Variables — The Storage Boxes of Programming) - Google Earth Engine - A Beginner's Guide</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-what-is-a-variable" class="md-skip">
+        <a href="#-variables-the-storage-boxes-of-programming" class="md-skip">
           কনটেন্টে যান
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              প্রোগ্রামিং-এ ভ্যারিয়েবল কী? (What is a Variable?)
+              ভ্যারিয়েবল — প্রোগ্রামিং-এর স্টোরেজ বক্স (Variables — The Storage Boxes of Programming)
             
           </span>
         </div>
@@ -3185,6 +3185,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      সূচি তালিকা
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভ্যারিয়েবল ঘোষণা করা (Declaring a Variable)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভ্যারিয়েবলের প্রকারভেদ (Types of Variables)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        গুগল আর্থ ইঞ্জিনে ভ্যারিয়েবলের ব্যবহার
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভ্যারিয়েবল আপডেট করা (Updating a Variable)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-rules-for-naming-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ভ্যারিয়েবলের নাম দেওয়ার নিয়ম (Key Rules for Naming Variables)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3200,8 +3263,169 @@
 
 
 
-<h1 id="-what-is-a-variable">প্রোগ্রামিং-এ ভ্যারিয়েবল কী? (What is a Variable?)<a class="headerlink" href="#-what-is-a-variable" title="Permanent link">&para;</a></h1>
-<h1 id="-types-of-variables">প্রোগ্রামিং-এ ভ্যারিয়েবলের প্রকারভেদ (Types of Variables)<a class="headerlink" href="#-types-of-variables" title="Permanent link">&para;</a></h1>
+<h1 id="-variables-the-storage-boxes-of-programming">ভ্যারিয়েবল — প্রোগ্রামিং-এর স্টোরেজ বক্স (Variables — The Storage Boxes of Programming)<a class="headerlink" href="#-variables-the-storage-boxes-of-programming" title="Permanent link">&para;</a></h1>
+<p>একটি <strong>ভ্যারিয়েবল (Variable)</strong> হলো একটি লেবেলযুক্ত স্টোরেজ বক্সের মতো। আপনি তার ভেতরে কিছু রাখেন, বক্সটিকে একটি নাম দেন, এবং যখনই দরকার হয় সেই নাম ব্যবহার করে ভেতরের জিনিসটি নিয়ে আসেন।</p>
+<pre class="mermaid"><code>graph LR
+    A["var city = 'Delhi'"] --&gt; B["বক্সের নাম: city"]
+    B --&gt; C["ভেতরে আছে: 'Delhi'"]
+    style B fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
+<hr />
+<h2 id="declaring-a-variable">ভ্যারিয়েবল ঘোষণা করা (Declaring a Variable)<a class="headerlink" href="#declaring-a-variable" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// &#39;city&#39; নামে একটি ভ্যারিয়েবল তৈরি করুন এবং &#39;Delhi&#39; টেক্সটটি সংরক্ষণ করুন</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Delhi&#39;</span><span class="p">;</span>
+
+<span class="c1">// &#39;population&#39; নামে একটি ভ্যারিয়েবল তৈরি করুন এবং একটি সংখ্যা সংরক্ষণ করুন</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">population</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32941000</span><span class="p">;</span>
+
+<span class="c1">// উভয় ভ্যারিয়েবল কনসোলে প্রিন্ট করুন</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;শহর:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">city</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;জনসংখ্যা:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">population</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># &#39;city&#39; নামে একটি ভ্যারিয়েবল তৈরি করুন এবং &#39;Delhi&#39; টেক্সটটি সংরক্ষণ করুন</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s1">&#39;Delhi&#39;</span>
+
+<span class="c1"># &#39;population&#39; নামে একটি ভ্যারিয়েবল তৈরি করুন এবং একটি সংখ্যা সংরক্ষণ করুন</span>
+<span class="n">population</span> <span class="o">=</span> <span class="mi">32941000</span>
+
+<span class="c1"># উভয় ভ্যারিয়েবল প্রিন্ট করুন</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;শহর:&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;জনসংখ্যা:&#39;</span><span class="p">,</span> <span class="n">population</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="types-of-variables">ভ্যারিয়েবলের প্রকারভেদ (Types of Variables)<a class="headerlink" href="#types-of-variables" title="Permanent link">&para;</a></h2>
+<p>প্রতিটি মানের একটি <strong>টাইপ (Type)</strong> আছে। এটিকে স্টোরেজ বক্সের আকার হিসেবে ভাবুন — এটি নির্ধারণ করে বক্সের ভেতরে কী ধরণের জিনিস রাখা যাবে।</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">টাইপ (Type)</th>
+<th style="text-align: left;">উদাহরণ</th>
+<th style="text-align: left;">কী ধারণ করে</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>String (স্ট্রিং)</strong></td>
+<td style="text-align: left;"><code>'Hello'</code></td>
+<td style="text-align: left;">টেক্সট বা লেখা</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Number (নাম্বার)</strong></td>
+<td style="text-align: left;"><code>42</code>, <code>3.14</code></td>
+<td style="text-align: left;">পূর্ণসংখ্যা ও দশমিক</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Boolean (বুলিয়ান)</strong></td>
+<td style="text-align: left;"><code>true</code> / <code>false</code></td>
+<td style="text-align: left;">হ্যাঁ/না সিদ্ধান্ত</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>List (লিস্ট)</strong></td>
+<td style="text-align: left;"><code>['A', 'B', 'C']</code></td>
+<td style="text-align: left;">ক্রমবদ্ধ সংগ্রহ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dictionary (ডিকশনারি)</strong></td>
+<td style="text-align: left;"><code>{name: 'Delhi'}</code></td>
+<td style="text-align: left;">কী-ভ্যালু জোড়া</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>null (নাল)</strong></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">খালি / কোনো মান নেই</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+    A[ভ্যারিয়েবল] --&gt; B[String: টেক্সট]
+    A --&gt; C[Number: সংখ্যা]
+    A --&gt; D[Boolean: সত্য বা মিথ্যা]
+    A --&gt; E[List: সংগ্রহ]
+    A --&gt; F[Dictionary: কী-ভ্যালু]
+    style A fill:#4db6ac,color:#fff,stroke:#333
+    style B fill:#e8f5e9,stroke:#333
+    style C fill:#e3f2fd,stroke:#333
+    style D fill:#fff3e0,stroke:#333
+    style E fill:#f3e5f5,stroke:#333
+    style F fill:#fce4ec,stroke:#333</code></pre>
+<hr />
+<h2 id="_1">গুগল আর্থ ইঞ্জিনে ভ্যারিয়েবলের ব্যবহার<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>GEE-তে ভ্যারিয়েবল শুধু সাধারণ টেক্সট বা সংখ্যাই নয়, স্যাটেলাইট ইমেজ, জিওমেট্রি এবং কালেকশনের মতো জটিল অবজেক্টও সংরক্ষণ করে।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// String ভ্যারিয়েবল: একটি স্যাটেলাইট ডেটাসেটের ID</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">datasetId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">;</span>
+
+<span class="c1">// Number ভ্যারিয়েবল: সর্বোচ্চ মেঘের পরিমাণ</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">maxCloud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+
+<span class="c1">// GEE Object ভ্যারিয়েবল: একটি ফিল্টার করা ImageCollection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="nx">datasetId</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">maxCloud</span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;পাওয়া ইমেজের সংখ্যা:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># String ভ্যারিয়েবল: একটি স্যাটেলাইট ডেটাসেটের ID</span>
+<span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span>
+
+<span class="c1"># Number ভ্যারিয়েবল: সর্বোচ্চ মেঘের পরিমাণ</span>
+<span class="n">max_cloud</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># GEE Object ভ্যারিয়েবল: একটি ফিল্টার করা ImageCollection</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="n">max_cloud</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;পাওয়া ইমেজের সংখ্যা:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="updating-a-variable">ভ্যারিয়েবল আপডেট করা (Updating a Variable)<a class="headerlink" href="#updating-a-variable" title="Permanent link">&para;</a></h2>
+<p>যেকোনো সময় বক্সের ভেতরের জিনিস পরিবর্তন করতে পারবেন।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">season</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;শীত&#39;</span><span class="p">;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">season</span><span class="p">);</span><span class="w"> </span><span class="c1">// আউটপুট: শীত</span>
+
+<span class="nx">season</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;গ্রীষ্ম&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// বক্সের ভেতরের জিনিস আপডেট করুন</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">season</span><span class="p">);</span><span class="w"> </span><span class="c1">// আউটপুট: গ্রীষ্ম</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">season</span> <span class="o">=</span> <span class="s1">&#39;শীত&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>  <span class="c1"># আউটপুট: শীত</span>
+
+<span class="n">season</span> <span class="o">=</span> <span class="s1">&#39;গ্রীষ্ম&#39;</span>  <span class="c1"># ভ্যারিয়েবল আপডেট করুন</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>  <span class="c1"># আউটপুট: গ্রীষ্ম</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="key-rules-for-naming-variables">ভ্যারিয়েবলের নাম দেওয়ার নিয়ম (Key Rules for Naming Variables)<a class="headerlink" href="#key-rules-for-naming-variables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>নাম অবশ্যই <strong>একটি অক্ষর দিয়ে শুরু হতে হবে</strong> (সংখ্যা দিয়ে নয়)।</li>
+<li>কোনো স্পেস (ফাঁকা জায়গা) ব্যবহার করা যাবে না — JS-এ <code>camelCase</code> এবং Python-এ <code>snake_case</code> ব্যবহার করুন।</li>
+<li>নামগুলো <strong>কেস-সেনসিটিভ (Case-sensitive)</strong>: <code>myVar</code> এবং <code>myvar</code> আলাদা।</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">সেরা অনুশীলন (Best Practice)</p>
+<p>ভ্যারিয়েবলের নাম অর্থপূর্ণ রাখুন। <code>cloudCover</code> নামটি <code>x</code>-এর চেয়ে অনেক ভালো। ভবিষ্যতে কোড বুঝতে সহজ হবে!</p>
+</div>
 
 
 
@@ -3268,11 +3492,11 @@
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="https://unpkg.com/mermaid@11.12.2/dist/mermaid.min.js"></script>
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
       
     
   </body>

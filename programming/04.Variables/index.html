@@ -29,7 +29,7 @@
     
     
       
-        <title>What is variable in programming - Google Earth Engine - A Beginner's Guide</title>
+        <title>Variables — The Storage Boxes of Programming - Google Earth Engine - A Beginner's Guide</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-variable-in-programming" class="md-skip">
+        <a href="#variables-the-storage-boxes-of-programming" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              What is variable in programming
+              Variables — The Storage Boxes of Programming
             
           </span>
         </div>
@@ -3185,6 +3185,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaring a Variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-variables-work-in-google-earth-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Variables Work in Google Earth Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating a Variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-rules-for-naming-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Rules for Naming Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3200,8 +3263,169 @@
 
 
 
-<h1 id="what-is-variable-in-programming">What is variable in programming<a class="headerlink" href="#what-is-variable-in-programming" title="Permanent link">&para;</a></h1>
-<h1 id="types-of-variabls-in-programming">Types of variabls in programming<a class="headerlink" href="#types-of-variabls-in-programming" title="Permanent link">&para;</a></h1>
+<h1 id="variables-the-storage-boxes-of-programming">Variables — The Storage Boxes of Programming<a class="headerlink" href="#variables-the-storage-boxes-of-programming" title="Permanent link">&para;</a></h1>
+<p>A <strong>variable</strong> is like a labeled storage box. You put something inside it, give the box a name, and then use that name whenever you need the contents.</p>
+<pre class="mermaid"><code>graph LR
+    A["var city = 'Delhi'"] --&gt; B["Box labeled: city"]
+    B --&gt; C["Contains: 'Delhi'"]
+    style B fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
+<hr />
+<h2 id="declaring-a-variable">Declaring a Variable<a class="headerlink" href="#declaring-a-variable" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JavaScript</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a variable called &#39;city&#39; and store the text &#39;Delhi&#39;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Delhi&#39;</span><span class="p">;</span>
+
+<span class="c1">// Create a variable called &#39;population&#39; and store a number</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">population</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32941000</span><span class="p">;</span>
+
+<span class="c1">// Print both variables to the console</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;City:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">city</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Population:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">population</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a variable called &#39;city&#39; and store the text &#39;Delhi&#39;</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s1">&#39;Delhi&#39;</span>
+
+<span class="c1"># Create a variable called &#39;population&#39; and store a number</span>
+<span class="n">population</span> <span class="o">=</span> <span class="mi">32941000</span>
+
+<span class="c1"># Print both variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;City:&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Population:&#39;</span><span class="p">,</span> <span class="n">population</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="types-of-variables">Types of Variables<a class="headerlink" href="#types-of-variables" title="Permanent link">&para;</a></h2>
+<p>Every value has a <strong>type</strong>. Think of this as the shape of the storage box—it determines what fits inside.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>String</strong></td>
+<td style="text-align: left;"><code>'Hello'</code></td>
+<td style="text-align: left;">Text / words</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Number</strong></td>
+<td style="text-align: left;"><code>42</code>, <code>3.14</code></td>
+<td style="text-align: left;">Integers and decimals</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Boolean</strong></td>
+<td style="text-align: left;"><code>true</code> / <code>false</code></td>
+<td style="text-align: left;">Yes/No decisions</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>List</strong></td>
+<td style="text-align: left;"><code>['A', 'B', 'C']</code></td>
+<td style="text-align: left;">An ordered collection</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dictionary</strong></td>
+<td style="text-align: left;"><code>{name: 'Delhi'}</code></td>
+<td style="text-align: left;">Key-value pairs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>null</strong></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Empty / no value</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+    A[Variable] --&gt; B[String: Text]
+    A --&gt; C[Number: Math]
+    A --&gt; D[Boolean: True or False]
+    A --&gt; E[List: Collection]
+    A --&gt; F[Dictionary: Key-Value]
+    style A fill:#4db6ac,color:#fff,stroke:#333
+    style B fill:#e8f5e9,stroke:#333
+    style C fill:#e3f2fd,stroke:#333
+    style D fill:#fff3e0,stroke:#333
+    style E fill:#f3e5f5,stroke:#333
+    style F fill:#fce4ec,stroke:#333</code></pre>
+<hr />
+<h2 id="how-variables-work-in-google-earth-engine">How Variables Work in Google Earth Engine<a class="headerlink" href="#how-variables-work-in-google-earth-engine" title="Permanent link">&para;</a></h2>
+<p>In GEE, variables store not just simple text or numbers, but also complex objects like satellite images, geometries, and collections.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// String variable: the ID of a satellite dataset</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">datasetId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span><span class="p">;</span>
+
+<span class="c1">// Number variable: minimum cloud cover percentage</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">maxCloud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+
+<span class="c1">// GEE Object variable: a filtered ImageCollection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="nx">datasetId</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">maxCloud</span><span class="p">));</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Images found:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># String variable: the ID of a satellite dataset</span>
+<span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;LANDSAT/LC08/C02/T1_L2&#39;</span>
+
+<span class="c1"># Number variable: minimum cloud cover percentage</span>
+<span class="n">max_cloud</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># GEE Object variable: a filtered ImageCollection</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-12-31&#39;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">,</span> <span class="n">max_cloud</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Images found:&#39;</span><span class="p">,</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="updating-a-variable">Updating a Variable<a class="headerlink" href="#updating-a-variable" title="Permanent link">&para;</a></h2>
+<p>You can change the contents of a box at any time.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JavaScript</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">season</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Winter&#39;</span><span class="p">;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">season</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: Winter</span>
+
+<span class="nx">season</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Summer&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Update the box contents</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">season</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: Summer</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">season</span> <span class="o">=</span> <span class="s1">&#39;Winter&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>  <span class="c1"># Output: Winter</span>
+
+<span class="n">season</span> <span class="o">=</span> <span class="s1">&#39;Summer&#39;</span>  <span class="c1"># Update the variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>  <span class="c1"># Output: Summer</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="key-rules-for-naming-variables">Key Rules for Naming Variables<a class="headerlink" href="#key-rules-for-naming-variables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Names must <strong>start with a letter</strong> (not a number).</li>
+<li>No spaces — use <code>camelCase</code> (JS) or <code>snake_case</code> (Python).</li>
+<li>Names are <strong>case-sensitive</strong>: <code>myVar</code> ≠ <code>myvar</code>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Give your variables meaningful names. <code>cloudCover</code> is better than <code>x</code>. Your future self will thank you!</p>
+</div>
 
 
 
@@ -3268,11 +3492,11 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="https://unpkg.com/mermaid@11.12.2/dist/mermaid.min.js"></script>
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
       
     
   </body>
