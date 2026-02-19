@@ -3461,9 +3461,9 @@
 A <strong>filter</strong> lets you zero in on exactly the data you need — by date, location, cloud cover, or any other property.</p>
 <p>Think of it like searching a library. The catalog has a million books, but you only want books from 1990, written in English, about geography.</p>
 <pre class="mermaid"><code>flowchart LR
-    A["Huge ImageCollection\n(1000s of images)"] --&gt;|.filterDate()| B["Date range subset"]
-    B --&gt;|.filterBounds()| C["Spatial subset"]
-    C --&gt;|.filter()| D["Property subset\n(cloud &lt; 10%)"]
+    A["Huge ImageCollection\n(1000s of images)"] --&gt;|".filterDate()"| B["Date range subset"]
+    B --&gt;|".filterBounds()"| C["Spatial subset"]
+    C --&gt;|".filter()"| D["Property subset\n(cloud &lt; 10%)"]
     D --&gt; E["✅ Clean, focused dataset"]
     style A fill:#f9f,stroke:#333
     style E fill:#9f9,stroke:#333</code></pre>
