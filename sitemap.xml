@@ -78,6 +78,13 @@
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/0.%20Supplementary/3.%20Read%20Available%20Repositories/"/>
     </url>
     <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/0.%20Supplementary/4.%20Demo/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/0.%20Supplementary/4.%20Demo/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/0.%20Supplementary/4.%20Demo/"/>
+    </url>
+    <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/gee/0.%20Supplementary/projection/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
@@ -118,6 +125,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/"/>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/10.%20Exercises/1.%20Data%20Type/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/10.%20Exercises/1.%20Data%20Type/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/10.%20Exercises/1.%20Data%20Type/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/gee/2.%20Data%20Catalogs/1.%20Earth%20Engine%20Data%20Catalog/</loc>
@@ -260,6 +274,13 @@
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/5.%20Working%20with%20Raster%20Data/5.%20Exporting%20Data/"/>
     </url>
     <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/"/>
+    </url>
+    <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
@@ -286,6 +307,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/"/>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/gee/7.%20Machine%20Learning/1.%20Unsupervised/Theory/</loc>
@@ -330,32 +365,25 @@
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/7.%20Machine%20Learning/3.%20Build%20Classifier/2.%20New%20Classifier/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Advance%20Analysis/1.%20Random%20Sample/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/1.%20Chart%20Basics/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Advance%20Analysis/1.%20Random%20Sample/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Advance%20Analysis/1.%20Random%20Sample/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/1.%20Chart%20Basics/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/1.%20Chart%20Basics/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Exercises/1.%20Data%20Type/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/2.%20Chart%20Reference/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Exercises/1.%20Data%20Type/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Exercises/1.%20Data%20Type/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/2.%20Chart%20Reference/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/2.%20Chart%20Reference/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Print/Feature/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Print/Feature/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/Feature/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Print/FeatureGee/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Print/FeatureGee/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/FeatureGee/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/gee/Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/</loc>
@@ -447,41 +475,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Projects/Collection/Temperature%20Percentage%20Change/"/>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Projects/Collection/Temperature%20Percentage%20Change/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/charts/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/charts/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/charts/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/demo/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/demo/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/demo/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/exports/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/exports/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/exports/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/gee_syntex/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/gee_syntex/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/gee_syntex/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/geechart/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/geechart/"/>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/geechart/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/lulc/</loc>
@@ -659,6 +652,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/0.%20Supplementary/3.%20Read%20Available%20Repositories/"/>
     </url>
     <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/0.%20Supplementary/4.%20Demo/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/0.%20Supplementary/4.%20Demo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/0.%20Supplementary/4.%20Demo/"/>
+    </url>
+    <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/0.%20Supplementary/projection/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
@@ -699,6 +699,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/1.%20Code%20Editor/3.%20JavaScript%20vs%20Python/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/10.%20Exercises/1.%20Data%20Type/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/10.%20Exercises/1.%20Data%20Type/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/10.%20Exercises/1.%20Data%20Type/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/2.%20Data%20Catalogs/1.%20Earth%20Engine%20Data%20Catalog/</loc>
@@ -841,6 +848,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/5.%20Exporting%20Data/"/>
     </url>
     <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/5.%20Working%20with%20Raster%20Data/6.%20Export%20Examples/"/>
+    </url>
+    <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
@@ -867,6 +881,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/3.%20Exporting%20Vectors/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/4.%20Feature%20Operations/"/>
+    </url>
+    <url>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/6.%20Working%20with%20Vector%20Data/5.%20Geometries/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/7.%20Machine%20Learning/1.%20Unsupervised/Theory/</loc>
@@ -911,32 +939,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/7.%20Machine%20Learning/3.%20Build%20Classifier/2.%20New%20Classifier/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Advance%20Analysis/1.%20Random%20Sample/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/1.%20Chart%20Basics/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Advance%20Analysis/1.%20Random%20Sample/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Advance%20Analysis/1.%20Random%20Sample/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/1.%20Chart%20Basics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/1.%20Chart%20Basics/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Exercises/1.%20Data%20Type/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/2.%20Chart%20Reference/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Exercises/1.%20Data%20Type/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Exercises/1.%20Data%20Type/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/8.%20Charts/2.%20Chart%20Reference/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/8.%20Charts/2.%20Chart%20Reference/"/>
     </url>
     <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/Feature/</loc>
+        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/</loc>
         <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/Feature/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Print/Feature/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/FeatureGee/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Print/FeatureGee/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Print/FeatureGee/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/9.%20Advanced%20Analysis/1.%20Random%20Sample/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Projects/1.Water%20Body%20Mapping/2.%20Exploring%20GSW%20Dataset/</loc>
@@ -1028,41 +1049,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Projects/Collection/Temperature%20Percentage%20Change/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Projects/Collection/Temperature%20Percentage%20Change/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/charts/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/charts/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/charts/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/demo/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/demo/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/demo/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/exports/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/exports/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/exports/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/gee_syntex/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/gee_syntex/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/gee_syntex/"/>
-    </url>
-    <url>
-        <loc>https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/geechart/</loc>
-        <lastmod>2026-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="bn" href="https://pulakeshpradhan.github.io/earthengine/bn/gee/Tutoring/geechart/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://pulakeshpradhan.github.io/earthengine/gee/Tutoring/geechart/"/>
     </url>
     <url>
         <loc>https://pulakeshpradhan.github.io/earthengine/bn/lulc/</loc>
