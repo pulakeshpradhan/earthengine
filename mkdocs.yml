@@ -44,9 +44,17 @@ theme:
 extra:
   alternate:
     - name: English
-      link: ./
+      link: /earthengine/
       lang: en
-  # You can customize more text in the theme overrides if needed
+    - name: हिन्दी (Hindi)
+      link: /earthengine/hi/
+      lang: hi
+    - name: বাংলা (Bengali)
+      link: /earthengine/bn/
+      lang: bn
+    - name: ଓଡ଼ିଆ (Odia)
+      link: /earthengine/or/
+      lang: or
 
 markdown_extensions:
   - admonition
