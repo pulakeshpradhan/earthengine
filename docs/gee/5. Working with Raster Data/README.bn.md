@@ -20,12 +20,12 @@
 ## রাস্টার ওয়ার্কফ্লো (The Raster Workflow)
 
 ```mermaid
-graph LR
-    A[Catalog] -- অনুসন্ধান --> B[ImageCollection]
-    B -- ফিল্টার --> C[Filtered Collection]
-    C -- কম্পোজিট/রিডিউস --> D[Single Image]
-    D -- প্রসেস --> E[Analysis Result]
-    E -- ম্যাপ --> F[Visualization]
+flowchart LR
+    A["Catalog"] -- "অনুসন্ধান" --> B["ImageCollection"]
+    B -- "ফিল্টার" --> C["Filtered Collection"]
+    C -- "কম্পোজিট/রিডিউস" --> D["Single Image"]
+    D -- "প্রসেস" --> E["Analysis Result"]
+    E -- "ম্যাপ" --> F["Visualization"]
     style D fill:#f96,stroke:#333,stroke-width:2px
 ```
 

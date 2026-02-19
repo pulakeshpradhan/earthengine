@@ -286,12 +286,12 @@ Map.addLayer(aspect, {min: 0, max: 360, palette: ['blue', 'green', 'yellow', 'or
 *Functions for subsetting and filtering image collections and feature collections*
 
 ```mermaid
-graph LR
-    A[ImageCollection] --> B{Filter}
-    B -- filterDate --> C[Time Period]
-    B -- filterBounds --> D[Area of Interest]
-    B -- filter(ee.Filter.lt) --> E[Cloud Cover]
-    C & D & E --> F[Filtered Subset]
+flowchart LR
+    A["ImageCollection"] --> B{"Filter"}
+    B -- "filterDate" --> C["Time Period"]
+    B -- "filterBounds" --> D["Area of Interest"]
+    B -- "filter(ee.Filter.lt)" --> E["Cloud Cover"]
+    C & D & E --> F["Filtered Subset"]
     style F fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
@@ -412,11 +412,11 @@ print('Images from multiple paths:', multiPath.size());
 *Functions for performing calculations and manipulating image bands*
 
 ```mermaid
-graph LR
-    A[Raw Image] -- select --> B[Specific Bands]
-    B -- normalizedDifference --> C[NDVI / NDWI]
-    A -- add / subtract --> D[Change Detection]
-    A -- multiply / divide --> E[Scaling / Unit Conversion]
+flowchart LR
+    A["Raw Image"] -- "select" --> B["Specific Bands"]
+    B -- "normalizedDifference" --> C["NDVI / NDWI"]
+    A -- "add / subtract" --> D["Change Detection"]
+    A -- "multiply / divide" --> E["Scaling / Unit Conversion"]
     style C fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
@@ -734,11 +734,11 @@ print('European countries near Paris:', europeanCountriesNearParis);
 *Functions for computing statistics and aggregating data across collections and regions*
 
 ```mermaid
-graph LR
-    A[ImageCollection] -- reduce --> B(ee.Reducer)
-    B -- mean/median --> C[Single Composite Image]
-    D[Image + Region] -- reduceRegion --> E(ee.Reducer)
-    E -- mean/sum/histogram --> F[Dictionary of Stats]
+flowchart LR
+    A["ImageCollection"] -- "reduce" --> B["ee.Reducer"]
+    B -- "mean/median" --> C["Single Composite Image"]
+    D["Image + Region"] -- "reduceRegion" --> E["ee.Reducer"]
+    E -- "mean/sum/histogram" --> F["Dictionary of Stats"]
     style C fill:#ffd,stroke:#333,stroke-width:2px
     style F fill:#ffd,stroke:#333,stroke-width:2px
 ```
@@ -962,11 +962,11 @@ print('NDVI Statistics:', ndviStats);
 *Functions for exporting images and feature collections to Google Drive and Earth Engine assets*
 
 ```mermaid
-graph LR
-    A[Analysis Result] --> B{Export To}
-    B -- .toDrive --> C[Google Drive (.tif, .csv, .shp)]
-    B -- .toAsset --> D[Cloud Asset (Stay in GEE)]
-    B -- .toCloudStorage --> E[Google Cloud Bucket]
+flowchart LR
+    A["Analysis Result"] --> B{"Export To"}
+    B -- ".toDrive" --> C["Google Drive (.tif, .csv, .shp)"]
+    B -- ".toAsset" --> D["Cloud Asset (Stay in GEE)"]
+    B -- ".toCloudStorage" --> E["Google Cloud Bucket"]
     style C fill:#6bf,stroke:#333,stroke-width:2px
     style D fill:#6bf,stroke:#333,stroke-width:2px
 ```
@@ -1480,12 +1480,12 @@ Map.addLayer(coarseImage, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Aggreg
 Automated mapping of land types using machine learning.
 
 ```mermaid
-graph LR
-    A[Satellite Image Collection] -- filter & median --> B[Cloud-free Composite]
-    C[Training Points] -- sampleRegions --> D[Training Data]
-    D -- ee.Classifier.smileRandomForest --> E[Trained Classifier]
-    B -- .classify --> F[LULC Map]
-    F -- .clip --> G[Final Result]
+flowchart LR
+    A["Satellite Image Collection"] -- "filter & median" --> B["Cloud-free Composite"]
+    C["Training Points"] -- "sampleRegions" --> D["Training Data"]
+    D -- "ee.Classifier.smileRandomForest" --> E["Trained Classifier"]
+    B -- ".classify" --> F["LULC Map"]
+    F -- ".clip" --> G["Final Result"]
     style F fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
@@ -1523,11 +1523,11 @@ Map.addLayer(classified, {min: 0, max: 1, palette: ['red', 'blue']}, 'LULC Class
 Detecting how an area changed between two time periods.
 
 ```mermaid
-graph LR
-    A[Year 2015 Image] -- calculate --> B[NDVI 2015]
-    C[Year 2023 Image] -- calculate --> D[NDVI 2023]
-    D -- subtract --> E[NDVI Difference]
-    E -- threshold --> F[Significant Change Map]
+flowchart LR
+    A["Year 2015 Image"] -- "calculate" --> B["NDVI 2015"]
+    C["Year 2023 Image"] -- "calculate" --> D["NDVI 2023"]
+    D -- "subtract" --> E["NDVI Difference"]
+    E -- "threshold" --> F["Significant Change Map"]
     style F fill:#f66,stroke:#333,stroke-width:2px
 ```
 
