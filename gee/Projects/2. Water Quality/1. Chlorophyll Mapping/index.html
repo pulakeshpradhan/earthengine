@@ -3371,12 +3371,12 @@
 <hr />
 <h2 id="scientific-basis">🔬 Scientific Basis<a class="headerlink" href="#scientific-basis" title="Permanent link">&para;</a></h2>
 <p>Chlorophyll-a is a pigment found in algae and phytoplankton. High concentrations often indicate <strong>eutrophication</strong> (excess nutrients). We can estimate it by measuring the reflectance in the <strong>Red Edge</strong> and <strong>Red</strong> bands.</p>
-<pre class="mermaid"><code>graph LR
-    A[Sentinel-2] --&gt; B[Calculate NDWI]
-    B --&gt; C[Mask Land/Cloud]
-    A --&gt; D[Band Ratio B5/B4]
-    D --&gt; E[Empirical Formula]
-    E --&gt; F[Chlorophyll Concentration]
+<pre class="mermaid"><code>flowchart LR
+    A["Sentinel-2"] --&gt; B["Calculate NDWI"]
+    B --&gt; C["Mask Land/Cloud"]
+    A --&gt; D["Band Ratio B5/B4"]
+    D --&gt; E["Empirical Formula"]
+    E --&gt; F["Chlorophyll Concentration"]
     style F fill:#9f9,stroke:#333</code></pre>
 <hr />
 <h2 id="implementation">💻 Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>

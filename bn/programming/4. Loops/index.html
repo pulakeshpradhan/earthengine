@@ -3366,16 +3366,16 @@
 <li>আপনি অনেকগুলো জিনিসের একটি সংগ্রহ (যেমন- ইমেজ কালেকশন) এই লাইনে পাঠিয়ে দেন।</li>
 <li>কম্পিউটার প্রতিটি জিনিসের ওপর <strong>একই সময়ে (at the same time)</strong> সেই নির্দেশিকাটি প্রয়োগ করে।</li>
 </ol>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     subgraph Serial_Loop ["Standard For-Loop"]
-        A[Start] --&gt; B[Item 1] --&gt; C[Item 2] --&gt; D[Item 3] --&gt; E[Finish]
+        A["Start"] --&gt; B["Item 1"] --&gt; C["Item 2"] --&gt; D["Item 3"] --&gt; E["Finish"]
     end
 
     subgraph Parallel_Map ["GEE .map Function"]
-        F[Start] --&gt; G[Item 1]
-        F --&gt; H[Item 2]
-        F --&gt; I[Item 3]
-        G --&gt; J[Finish]
+        F["Start"] --&gt; G["Item 1"]
+        F --&gt; H["Item 2"]
+        F --&gt; I["Item 3"]
+        G --&gt; J["Finish"]
         H --&gt; J
         I --&gt; J
     end

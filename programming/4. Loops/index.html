@@ -3368,16 +3368,16 @@ Think of it as an <strong>Assembly Line</strong>.</p>
 <li>You feed a collection of items (Images) into the line.</li>
 <li>The computer applies the instruction to every item <strong>at the same time</strong>.</li>
 </ol>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     subgraph Serial_Loop ["Standard For-Loop"]
-        A[Start] --&gt; B[Item 1] --&gt; C[Item 2] --&gt; D[Item 3] --&gt; E[Finish]
+        A["Start"] --&gt; B["Item 1"] --&gt; C["Item 2"] --&gt; D["Item 3"] --&gt; E["Finish"]
     end
 
     subgraph Parallel_Map ["GEE .map Function"]
-        F[Start] --&gt; G[Item 1]
-        F --&gt; H[Item 2]
-        F --&gt; I[Item 3]
-        G --&gt; J[Finish]
+        F["Start"] --&gt; G["Item 1"]
+        F --&gt; H["Item 2"]
+        F --&gt; I["Item 3"]
+        G --&gt; J["Finish"]
         H --&gt; J
         I --&gt; J
     end

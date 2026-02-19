@@ -3635,17 +3635,17 @@
 <h2 id="_2">এটি কেন গুরুত্বপূর্ণ? ("ভুল সরঞ্জাম" ব্যবহারের সমস্যা)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>রান্নাঘরে যেমন আপনি পিৎজা ফেটাতে পারেন না বা স্প্রেডশিট দিয়ে ডিমের কুসুম কাটতে পারেন না, আর্থ ইঞ্জিন-এর ফাংশনগুলোও কেবল সুনির্দিষ্ট "উপকরণের" ওপর কাজ করে।</p>
 <h3 id="tool-compatibility-chart">টুল কম্প্যাটিবিলিটি চার্ট (Tool Compatibility Chart)<a class="headerlink" href="#tool-compatibility-chart" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    subgraph Single_Image [ee.Image]
-        A[একটি পিৎজা] -- ".clip(Cutter)" --&gt; B[কাটা পিৎজা]
+<pre class="mermaid"><code>flowchart TD
+    subgraph Single_Image ["ee.Image"]
+        A["একটি পিৎজা"] -- ".clip(Cutter)" --&gt; B["কাটা পিৎজা"]
     end
 
-    subgraph Pizza_Buffet [ee.ImageCollection]
-        C[বুফে লাইন] -- "❌ .clip()" --&gt; Error[কাজ করবে না!]
-        C -- ".median()" --&gt; D[একটি বিশাল পিৎজা]
-        D -- ".clip(Cutter)" --&gt; E[কাটা বিশাল পিৎজা]
+    subgraph Pizza_Buffet ["ee.ImageCollection"]
+        C["বুফে লাইন"] -- "❌ .clip()" --&gt; Error["কাজ করবে না!"]
+        C -- ".median()" --&gt; D["একটি বিশাল পিৎজা"]
+        D -- ".clip(Cutter)" --&gt; E["কাটা বিশাল পিৎজা"]
 
-        C -- ".map(clipFunc)" --&gt; F[কাটা পিৎজার বুফে]
+        C -- ".map(clipFunc)" --&gt; F["কাটা পিৎজার বুফে"]
     end
     style Single_Image fill:#bfb,stroke:#333
     style Pizza_Buffet fill:#f9f,stroke:#333

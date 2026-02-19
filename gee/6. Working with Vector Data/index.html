@@ -3526,11 +3526,11 @@
 </table>
 <hr />
 <h2 id="the-vector-workflow">The Vector Workflow<a class="headerlink" href="#the-vector-workflow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph LR
-    A[Geometry / Point] -- .buffer --&gt; B[Area of Interest]
-    C[FeatureCollection] -- .filter --&gt; D[Selected Features]
-    B &amp; D -- .clip --&gt; E[Clipped Raster]
-    E -- .reduceRegion --&gt; F[Zonal Statistics]
+<pre class="mermaid"><code>flowchart LR
+    A["Geometry / Point"] -- ".buffer" --&gt; B["Area of Interest"]
+    C["FeatureCollection"] -- ".filter" --&gt; D["Selected Features"]
+    B &amp; D -- ".clip" --&gt; E["Clipped Raster"]
+    E -- ".reduceRegion" --&gt; F["Zonal Statistics"]
     style F fill:#f96,stroke:#333,stroke-width:2px</code></pre>
 <h2 id="how-to-load-vector-data">How to Load Vector Data<a class="headerlink" href="#how-to-load-vector-data" title="Permanent link">&para;</a></h2>
 <h3 id="1-filtering-world-countries">1. Filtering World Countries<a class="headerlink" href="#1-filtering-world-countries" title="Permanent link">&para;</a></h3>

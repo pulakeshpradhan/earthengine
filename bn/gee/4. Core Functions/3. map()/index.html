@@ -3382,17 +3382,17 @@
 <p>সাধারণ প্রোগ্রামিংয়ে, একটি <code>for</code> লুপ আইটেমগুলো <strong>একটি একটি করে, আপনার কম্পিউটারে</strong> প্রক্রিয়া করে।
 গুগল আর্থ ইঞ্জিনে, <code>.map()</code> প্রতিটি আইটেম <strong>গুগলের সার্ভারে সমান্তরালভাবে</strong> প্রক্রিয়ার জন্য পাঠায়।</p>
 <p>এই মৌলিক পার্থক্যই আর্থ ইঞ্জিনকে এত শক্তিশালী করে তোলে।</p>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     subgraph for_loop ["❌ সাধারণ For-Loop (Client-side, ধীর)"]
-        A1[ছবি ১] --&gt; A2[ছবি ২] --&gt; A3[ছবি ৩] --&gt; A4[ছবি ৪]
+        A1["ছবি ১"] --&gt; A2["ছবি ২"] --&gt; A3["ছবি ৩"] --&gt; A4["ছবি ৪"]
     end
 
     subgraph map_func ["✅ GEE .map() (Server-side, সমান্তরাল)"]
-        B[সব ছবি] --&gt; C1[ছবি ১]
-        B --&gt; C2[ছবি ২]
-        B --&gt; C3[ছবি ৩]
-        B --&gt; C4[ছবি ৪]
-        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D[ফলাফল কালেকশন]
+        B["সব ছবি"] --&gt; C1["ছবি ১"]
+        B --&gt; C2["ছবি ২"]
+        B --&gt; C3["ছবি ৩"]
+        B --&gt; C4["ছবি ৪"]
+        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D["ফলাফল কালেকশন"]
     end
 
     style map_func fill:#e8f5e9,stroke:#4caf50

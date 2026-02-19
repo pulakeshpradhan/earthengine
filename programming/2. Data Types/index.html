@@ -3626,17 +3626,17 @@ A computer cannot act on "flour" unless it knows it's a "Powder".</p>
 <h2 id="why-does-this-matter-the-wrong-tool-error">Why does this matter? (The "Wrong Tool" Error)<a class="headerlink" href="#why-does-this-matter-the-wrong-tool-error" title="Permanent link">&para;</a></h2>
 <p>Just like you can't whisk a pizza or slice an egg yolk with a spreadsheet, Earth Engine functions only work on specific "Ingredients".</p>
 <h3 id="tool-compatibility-chart">Tool Compatibility Chart<a class="headerlink" href="#tool-compatibility-chart" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    subgraph Single_Image [ee.Image]
-        A[Single Pizza] -- ".clip(Cutter)" --&gt; B[Sliced Pizza]
+<pre class="mermaid"><code>flowchart TD
+    subgraph Single_Image ["ee.Image"]
+        A["Single Pizza"] -- ".clip(Cutter)" --&gt; B["Sliced Pizza"]
     end
 
-    subgraph Pizza_Buffet [ee.ImageCollection]
-        C[Buffet Line] -- "❌ .clip()" --&gt; Error[Does NOT work!]
-        C -- ".median()" --&gt; D[One Giant Pizza]
-        D -- ".clip(Cutter)" --&gt; E[Sliced Big Pizza]
+    subgraph Pizza_Buffet ["ee.ImageCollection"]
+        C["Buffet Line"] -- "❌ .clip()" --&gt; Error["Does NOT work!"]
+        C -- ".median()" --&gt; D["One Giant Pizza"]
+        D -- ".clip(Cutter)" --&gt; E["Sliced Big Pizza"]
 
-        C -- ".map(clipFunc)" --&gt; F[Buffet of Sliced Pizzas]
+        C -- ".map(clipFunc)" --&gt; F["Buffet of Sliced Pizzas"]
     end
     style Single_Image fill:#bfb,stroke:#333
     style Pizza_Buffet fill:#f9f,stroke:#333

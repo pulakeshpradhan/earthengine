@@ -3439,12 +3439,12 @@
 সহজ কথায়, <strong>প্রোগ্রামিং হলো কম্পিউটারকে নির্দেশ দেওয়া।</strong></p>
 <h2 id="the-recipe-analogy">রেসিপির সাথে তুলনা (The Recipe Analogy)<a class="headerlink" href="#the-recipe-analogy" title="Permanent link">&para;</a></h2>
 <p>কম্পিউটারকে একজন <strong>শেফ (Chef)</strong> হিসেবে ভাবুন যিনি খুব দ্রুত কাজ করেন, কিন্তু খুব একটা বুদ্ধিমান নন। কেক তৈরি করার জন্য তার সুনির্দিষ্ট নির্দেশনার প্রয়োজন।</p>
-<pre class="mermaid"><code>graph TD
-    A[শুরু: স্যান্ডউইচ তৈরি] --&gt; B[পাউরুটি নিন]
-    B --&gt; C[পনির যোগ করুন]
-    C --&gt; D[মাংস বা সবজি দিন]
-    D --&gt; E[স্যান্ডউইচ বন্ধ করুন]
-    E --&gt; F[খান!]
+<pre class="mermaid"><code>flowchart TD
+    A["শুরু: স্যান্ডউইচ তৈরি"] --&gt; B["পাউরুটি নিন"]
+    B --&gt; C["পনির যোগ করুন"]
+    C --&gt; D["মাংস বা সবজি দিন"]
+    D --&gt; E["স্যান্ডউইচ বন্ধ করুন"]
+    E --&gt; F["খান!"]
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
 <p><em>একটি প্রোগ্রাম হলো এই রেসিপির মতো ধাপগুলোর একটি ফ্লোচার্ট মাত্র।</em></p>
@@ -3472,13 +3472,13 @@
 </ul>
 <h3 id="logic-">৩. লজিক (Logic - সিদ্ধান্ত)<a class="headerlink" href="#logic-" title="Permanent link">&para;</a></h3>
 <p>মাঝে মাঝে রেসিপি পরিবর্তিত হয়। "যদি এটি নিরামিষ হয়, তবে ডিম বাদ দিন।"</p>
-<pre class="mermaid"><code>graph TD
-    A[শুরু: কেক বানানো] --&gt; B{এটি কি নিরামিষ?}
-    B -- হ্যাঁ --&gt; C[আপেল সস দিন]
-    B -- না --&gt; D[ডিম দিন]
-    C --&gt; E[মেশান]
+<pre class="mermaid"><code>flowchart TD
+    A["শুরু: কেক বানানো"] --&gt; B{"এটি কি নিরামিষ?"}
+    B -- "হ্যাঁ" --&gt; C["আপেল সস দিন"]
+    B -- "না" --&gt; D["ডিম দিন"]
+    C --&gt; E["মেশান"]
     D --&gt; E
-    E --&gt; F[বেক করুন]
+    E --&gt; F["বেক করুন"]
     style B fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
 <p><em>কম্পিউটার হ্যাঁ/না প্রশ্নের ভিত্তিতে পথ অনুসরণ করে। একেই বলা হয় লজিক।</em></p>
 <hr />

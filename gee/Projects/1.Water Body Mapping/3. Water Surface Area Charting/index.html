@@ -3414,13 +3414,13 @@
 <p>Learn how to calculate the total surface area of water bodies over time using Sentinel-2 satellite imagery and NDWI (Normalized Difference Water Index).</p>
 <hr />
 <h2 id="the-analysis-workflow">🛠️ The Analysis Workflow<a class="headerlink" href="#the-analysis-workflow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph TD
-    A[Sentinel-2 Collection] --&gt; B[Filter: Date, Bounds, Clouds]
-    B --&gt; C[Calculate NDWI Band]
-    C --&gt; D[Apply Threshold &gt; 0.15]
-    D --&gt; E[Calculate Area per Pixel]
-    E --&gt; F[Sum Area via reduceRegion]
-    F --&gt; G[Generate Time-Series Chart]
+<pre class="mermaid"><code>flowchart TD
+    A["Sentinel-2 Collection"] --&gt; B["Filter: Date, Bounds, Clouds"]
+    B --&gt; C["Calculate NDWI Band"]
+    C --&gt; D["Apply Threshold &gt; 0.15"]
+    D --&gt; E["Calculate Area per Pixel"]
+    E --&gt; F["Sum Area via reduceRegion"]
+    F --&gt; G["Generate Time-Series Chart"]
     style G fill:#6bf,stroke:#333</code></pre>
 <hr />
 <h2 id="1-setup-and-filtering">🛰️ 1. Setup and Filtering<a class="headerlink" href="#1-setup-and-filtering" title="Permanent link">&para;</a></h2>

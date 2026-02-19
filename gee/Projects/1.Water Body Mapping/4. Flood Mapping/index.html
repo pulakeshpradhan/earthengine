@@ -3420,12 +3420,12 @@
 </table>
 <hr />
 <h2 id="the-flood-detection-workflow">🛠️ The Flood Detection Workflow<a class="headerlink" href="#the-flood-detection-workflow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph LR
-    A[Before Flood Image] -- min --&gt; B[Reference Map]
-    C[After Flood Image] -- min --&gt; D[Flood Map]
-    B -- Thresholding --&gt; E[Change Detection]
-    D -- Thresholding --&gt; E
-    E -- mask --&gt; F[Final Flood Inundation]
+<pre class="mermaid"><code>flowchart LR
+    A["Before Flood Image"] -- "min" --&gt; B["Reference Map"]
+    C["After Flood Image"] -- "min" --&gt; D["Flood Map"]
+    B -- "Thresholding" --&gt; E["Change Detection"]
+    D -- "Thresholding" --&gt; E
+    E -- "mask" --&gt; F["Final Flood Inundation"]
     style F fill:#f66,stroke:#333</code></pre>
 <hr />
 <h2 id="code-implementation">💻 Code Implementation<a class="headerlink" href="#code-implementation" title="Permanent link">&para;</a></h2>

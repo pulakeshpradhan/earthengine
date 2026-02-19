@@ -3403,11 +3403,11 @@
 <h1 id="custom-functions-writing-reusable-tools">Custom Functions — Writing Reusable Tools<a class="headerlink" href="#custom-functions-writing-reusable-tools" title="Permanent link">&para;</a></h1>
 <p>A <strong>function</strong> is a named block of code that performs one specific task.
 Instead of copying and pasting the same logic 10 times, you write it once as a function and call it whenever you need it.</p>
-<pre class="mermaid"><code>graph LR
-    A[Write once] --&gt; B["maskClouds()"]
-    B --&gt; C[Use on Image 1]
-    B --&gt; D[Use on Image 2]
-    B --&gt; E[Use on Image 3]
+<pre class="mermaid"><code>flowchart LR
+    A["Write once"] --&gt; B["maskClouds()"]
+    B --&gt; C["Use on Image 1"]
+    B --&gt; D["Use on Image 2"]
+    B --&gt; E["Use on Image 3"]
     style B fill:#4db6ac,color:#fff,stroke:#333</code></pre>
 <hr />
 <h2 id="why-write-custom-functions">Why Write Custom Functions?<a class="headerlink" href="#why-write-custom-functions" title="Permanent link">&para;</a></h2>
@@ -3478,13 +3478,13 @@ Instead of copying and pasting the same logic 10 times, you write it once as a f
 <hr />
 <h2 id="real-gee-example-cloud-masking">Real GEE Example: Cloud Masking<a class="headerlink" href="#real-gee-example-cloud-masking" title="Permanent link">&para;</a></h2>
 <p>The most common custom function in Earth Engine — removing clouds from Landsat imagery.</p>
-<pre class="mermaid"><code>graph TD
-    A[Cloudy Landsat Image] --&gt; B[Select QA_PIXEL band]
-    B --&gt; C[Decode Cloud Bit]
-    C --&gt; D{Pixel cloudy?}
-    D -- Yes --&gt; E[Mask it out / hide]
-    D -- No --&gt; F[Keep it visible]
-    F --&gt; G[Clean Image]
+<pre class="mermaid"><code>flowchart TD
+    A["Cloudy Landsat Image"] --&gt; B["Select QA_PIXEL band"]
+    B --&gt; C["Decode Cloud Bit"]
+    C --&gt; D{"Pixel cloudy?"}
+    D -- Yes --&gt; E["Mask it out / hide"]
+    D -- No --&gt; F["Keep it visible"]
+    F --&gt; G["Clean Image"]
     style E fill:#f66,stroke:#333
     style G fill:#6f6,stroke:#333</code></pre>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JavaScript</label><label for="__tabbed_2_2">Python</label></div>

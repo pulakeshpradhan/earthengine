@@ -3265,7 +3265,7 @@
 
 <h1 id="variables-the-storage-boxes-of-programming">Variables — The Storage Boxes of Programming<a class="headerlink" href="#variables-the-storage-boxes-of-programming" title="Permanent link">&para;</a></h1>
 <p>A <strong>variable</strong> is like a labeled storage box. You put something inside it, give the box a name, and then use that name whenever you need the contents.</p>
-<pre class="mermaid"><code>graph LR
+<pre class="mermaid"><code>flowchart LR
     A["var city = 'Delhi'"] --&gt; B["Box labeled: city"]
     B --&gt; C["Contains: 'Delhi'"]
     style B fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
@@ -3343,12 +3343,12 @@
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>graph TD
-    A[Variable] --&gt; B[String: Text]
-    A --&gt; C[Number: Math]
-    A --&gt; D[Boolean: True or False]
-    A --&gt; E[List: Collection]
-    A --&gt; F[Dictionary: Key-Value]
+<pre class="mermaid"><code>flowchart TD
+    A["Variable"] --&gt; B["String: Text"]
+    A --&gt; C["Number: Math"]
+    A --&gt; D["Boolean: True or False"]
+    A --&gt; E["List: Collection"]
+    A --&gt; F["Dictionary: Key-Value"]
     style A fill:#4db6ac,color:#fff,stroke:#333
     style B fill:#e8f5e9,stroke:#333
     style C fill:#e3f2fd,stroke:#333

@@ -3451,11 +3451,11 @@
 <hr />
 <h2 id="4-analyzing-absolute-change">📈 4. Analyzing Absolute Change<a class="headerlink" href="#4-analyzing-absolute-change" title="Permanent link">&para;</a></h2>
 <p>The <code>change_abs</code> band shows the absolute change in water occurrence between two periods (1984-1999 and 2000-2021).</p>
-<pre class="mermaid"><code>graph LR
-    A[Raw Bands] --&gt; B[Subtract Periods]
-    B --&gt; C[Change Intensity]
-    C -- Red --&gt; D[Loss of Water]
-    C -- Green --&gt; E[Gain of Water]
+<pre class="mermaid"><code>flowchart LR
+    A["Raw Bands"] --&gt; B["Subtract Periods"]
+    B --&gt; C["Change Intensity"]
+    C -- "Red" --&gt; D["Loss of Water"]
+    C -- "Green" --&gt; E["Gain of Water"]
     style D fill:#f66
     style E fill:#6f6</code></pre>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">change</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gsw</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s2">&quot;change_abs&quot;</span><span class="p">);</span>

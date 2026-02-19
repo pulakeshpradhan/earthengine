@@ -4653,12 +4653,12 @@
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="filtering-data">Filtering Data<a class="headerlink" href="#filtering-data" title="Permanent link">&para;</a></h2>
 <p><em>Functions for subsetting and filtering image collections and feature collections</em></p>
-<pre class="mermaid"><code>graph LR
-    A[ImageCollection] --&gt; B{Filter}
-    B -- filterDate --&gt; C[Time Period]
-    B -- filterBounds --&gt; D[Area of Interest]
-    B -- filter(ee.Filter.lt) --&gt; E[Cloud Cover]
-    C &amp; D &amp; E --&gt; F[Filtered Subset]
+<pre class="mermaid"><code>flowchart LR
+    A["ImageCollection"] --&gt; B{"Filter"}
+    B -- "filterDate" --&gt; C["Time Period"]
+    B -- "filterBounds" --&gt; D["Area of Interest"]
+    B -- "filter(ee.Filter.lt)" --&gt; E["Cloud Cover"]
+    C &amp; D &amp; E --&gt; F["Filtered Subset"]
     style F fill:#f9f,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="collectionfilterdate2023-01-01-2023-12-31">collection.filterDate('2023-01-01', '2023-12-31')<a class="headerlink" href="#collectionfilterdate2023-01-01-2023-12-31" title="Permanent link">&para;</a></h3>
 <p>Filters images by date.</p>
@@ -4758,11 +4758,11 @@
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="mathematical-band-operations">Mathematical &amp; Band Operations<a class="headerlink" href="#mathematical-band-operations" title="Permanent link">&para;</a></h2>
 <p><em>Functions for performing calculations and manipulating image bands</em></p>
-<pre class="mermaid"><code>graph LR
-    A[Raw Image] -- select --&gt; B[Specific Bands]
-    B -- normalizedDifference --&gt; C[NDVI / NDWI]
-    A -- add / subtract --&gt; D[Change Detection]
-    A -- multiply / divide --&gt; E[Scaling / Unit Conversion]
+<pre class="mermaid"><code>flowchart LR
+    A["Raw Image"] -- "select" --&gt; B["Specific Bands"]
+    B -- "normalizedDifference" --&gt; C["NDVI / NDWI"]
+    A -- "add / subtract" --&gt; D["Change Detection"]
+    A -- "multiply / divide" --&gt; E["Scaling / Unit Conversion"]
     style C fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="var-ndvi-imagenormalizeddifferenceb5-b4">var ndvi = image.normalizedDifference(['B5', 'B4'])<a class="headerlink" href="#var-ndvi-imagenormalizeddifferenceb5-b4" title="Permanent link">&para;</a></h3>
 <p>Calculates NDVI (or any other index).</p>
@@ -5031,11 +5031,11 @@
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="reducing-statistics">Reducing &amp; Statistics<a class="headerlink" href="#reducing-statistics" title="Permanent link">&para;</a></h2>
 <p><em>Functions for computing statistics and aggregating data across collections and regions</em></p>
-<pre class="mermaid"><code>graph LR
-    A[ImageCollection] -- reduce --&gt; B(ee.Reducer)
-    B -- mean/median --&gt; C[Single Composite Image]
-    D[Image + Region] -- reduceRegion --&gt; E(ee.Reducer)
-    E -- mean/sum/histogram --&gt; F[Dictionary of Stats]
+<pre class="mermaid"><code>flowchart LR
+    A["ImageCollection"] -- "reduce" --&gt; B["ee.Reducer"]
+    B -- "mean/median" --&gt; C["Single Composite Image"]
+    D["Image + Region"] -- "reduceRegion" --&gt; E["ee.Reducer"]
+    E -- "mean/sum/histogram" --&gt; F["Dictionary of Stats"]
     style C fill:#ffd,stroke:#333,stroke-width:2px
     style F fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="var-mean-collectionreduceeereducermean">var mean = collection.reduce(ee.Reducer.mean())<a class="headerlink" href="#var-mean-collectionreduceeereducermean" title="Permanent link">&para;</a></h3>
@@ -5233,11 +5233,11 @@
 <p><a href="#comprehensive-google-earth-engine-gee-syntax-reference">Back to top</a></p>
 <h2 id="exporting-data">Exporting Data<a class="headerlink" href="#exporting-data" title="Permanent link">&para;</a></h2>
 <p><em>Functions for exporting images and feature collections to Google Drive and Earth Engine assets</em></p>
-<pre class="mermaid"><code>graph LR
-    A[Analysis Result] --&gt; B{Export To}
-    B -- .toDrive --&gt; C[Google Drive (.tif, .csv, .shp)]
-    B -- .toAsset --&gt; D[Cloud Asset (Stay in GEE)]
-    B -- .toCloudStorage --&gt; E[Google Cloud Bucket]
+<pre class="mermaid"><code>flowchart LR
+    A["Analysis Result"] --&gt; B{"Export To"}
+    B -- ".toDrive" --&gt; C["Google Drive (.tif, .csv, .shp)"]
+    B -- ".toAsset" --&gt; D["Cloud Asset (Stay in GEE)"]
+    B -- ".toCloudStorage" --&gt; E["Google Cloud Bucket"]
     style C fill:#6bf,stroke:#333,stroke-width:2px
     style D fill:#6bf,stroke:#333,stroke-width:2px</code></pre>
 <h3 id="exportimagetodriveimage-img-description-export-scale-30-region-geometry">Export.image.toDrive({image: img, description: 'export', scale: 30, region: geometry})<a class="headerlink" href="#exportimagetodriveimage-img-description-export-scale-30-region-geometry" title="Permanent link">&para;</a></h3>
@@ -5695,12 +5695,12 @@
 <h2 id="common-real-world-workflows">Common Real-World Workflows<a class="headerlink" href="#common-real-world-workflows" title="Permanent link">&para;</a></h2>
 <h3 id="1-land-use-land-cover-lulc-classification">1. Land Use / Land Cover (LULC) Classification<a class="headerlink" href="#1-land-use-land-cover-lulc-classification" title="Permanent link">&para;</a></h3>
 <p>Automated mapping of land types using machine learning.</p>
-<pre class="mermaid"><code>graph LR
-    A[Satellite Image Collection] -- filter &amp; median --&gt; B[Cloud-free Composite]
-    C[Training Points] -- sampleRegions --&gt; D[Training Data]
-    D -- ee.Classifier.smileRandomForest --&gt; E[Trained Classifier]
-    B -- .classify --&gt; F[LULC Map]
-    F -- .clip --&gt; G[Final Result]
+<pre class="mermaid"><code>flowchart LR
+    A["Satellite Image Collection"] -- "filter &amp; median" --&gt; B["Cloud-free Composite"]
+    C["Training Points"] -- "sampleRegions" --&gt; D["Training Data"]
+    D -- "ee.Classifier.smileRandomForest" --&gt; E["Trained Classifier"]
+    B -- ".classify" --&gt; F["LULC Map"]
+    F -- ".clip" --&gt; G["Final Result"]
     style F fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
 <p><strong>Example Code:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// 1. Prepare Data</span>
@@ -5730,11 +5730,11 @@
 </code></pre></div>
 <h3 id="2-time-series-change-detection">2. Time-Series Change Detection<a class="headerlink" href="#2-time-series-change-detection" title="Permanent link">&para;</a></h3>
 <p>Detecting how an area changed between two time periods.</p>
-<pre class="mermaid"><code>graph LR
-    A[Year 2015 Image] -- calculate --&gt; B[NDVI 2015]
-    C[Year 2023 Image] -- calculate --&gt; D[NDVI 2023]
-    D -- subtract --&gt; E[NDVI Difference]
-    E -- threshold --&gt; F[Significant Change Map]
+<pre class="mermaid"><code>flowchart LR
+    A["Year 2015 Image"] -- "calculate" --&gt; B["NDVI 2015"]
+    C["Year 2023 Image"] -- "calculate" --&gt; D["NDVI 2023"]
+    D -- "subtract" --&gt; E["NDVI Difference"]
+    E -- "threshold" --&gt; F["Significant Change Map"]
     style F fill:#f66,stroke:#333,stroke-width:2px</code></pre>
 <p><strong>Example Code:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">roi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4</span><span class="p">,</span><span class="w"> </span><span class="mf">37.7</span><span class="p">]).</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>

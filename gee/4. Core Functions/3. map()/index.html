@@ -3404,17 +3404,17 @@
 <p>In standard programming, a <code>for</code> loop processes items <strong>one by one, on your computer</strong>.
 In Google Earth Engine, <code>.map()</code> sends each item to <strong>Google's servers to be processed in parallel</strong>.</p>
 <p>This is the fundamental difference that makes Earth Engine powerful.</p>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     subgraph for_loop ["❌ Standard For-Loop (Client-side, slow)"]
-        A1[Image 1] --&gt; A2[Image 2] --&gt; A3[Image 3] --&gt; A4[Image 4]
+        A1["Image 1"] --&gt; A2["Image 2"] --&gt; A3["Image 3"] --&gt; A4["Image 4"]
     end
 
     subgraph map_func ["✅ GEE .map() (Server-side, parallel)"]
-        B[All Images] --&gt; C1[Image 1]
-        B --&gt; C2[Image 2]
-        B --&gt; C3[Image 3]
-        B --&gt; C4[Image 4]
-        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D[Results Collection]
+        B["All Images"] --&gt; C1["Image 1"]
+        B --&gt; C2["Image 2"]
+        B --&gt; C3["Image 3"]
+        B --&gt; C4["Image 4"]
+        C1 &amp; C2 &amp; C3 &amp; C4 --&gt; D["Results Collection"]
     end
 
     style map_func fill:#e8f5e9,stroke:#4caf50

@@ -3439,12 +3439,12 @@
 At its core, <strong>programming is just giving instructions.</strong></p>
 <h2 id="the-recipe-analogy">The Recipe Analogy<a class="headerlink" href="#the-recipe-analogy" title="Permanent link">&para;</a></h2>
 <p>Think of a computer as a <strong>Chef</strong> who is very fast, but not very smart. It needs exact instructions to bake a cake.</p>
-<pre class="mermaid"><code>graph TD
-    A[Start: Make Sandwich] --&gt; B[Get Bread]
-    B --&gt; C[Add Cheese]
-    C --&gt; D[Add Ham]
-    D --&gt; E[Close Sandwich]
-    E --&gt; F[Eat!]
+<pre class="mermaid"><code>flowchart TD
+    A["Start: Make Sandwich"] --&gt; B["Get Bread"]
+    B --&gt; C["Add Cheese"]
+    C --&gt; D["Add Ham"]
+    D --&gt; E["Close Sandwich"]
+    E --&gt; F["Eat!"]
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#9f9,stroke:#333,stroke-width:2px</code></pre>
 <p><em>A program is just a flowchart of steps, like this recipe.</em></p>
@@ -3472,13 +3472,13 @@ If you tell a computer, you have to list every single step like above.</p>
 </ul>
 <h3 id="3-logic-the-decisions">3. Logic (The Decisions)<a class="headerlink" href="#3-logic-the-decisions" title="Permanent link">&para;</a></h3>
 <p>Sometimes the recipe changes. "IF it is vegan, THEN skip the eggs."</p>
-<pre class="mermaid"><code>graph TD
-    A[Start: Bake Cake] --&gt; B{Is it Vegan?}
-    B -- Yes --&gt; C[Use Apple Sauce]
-    B -- No --&gt; D[Use Eggs]
-    C --&gt; E[Mix Batter]
+<pre class="mermaid"><code>flowchart TD
+    A["Start: Bake Cake"] --&gt; B{"Is it Vegan?"}
+    B -- "Yes" --&gt; C["Use Apple Sauce"]
+    B -- "No" --&gt; D["Use Eggs"]
+    C --&gt; E["Mix Batter"]
     D --&gt; E
-    E --&gt; F[Bake]
+    E --&gt; F["Bake"]
     style B fill:#ffd,stroke:#333,stroke-width:2px</code></pre>
 <p><em>Computers follow paths based on Yes/No questions. This is called Logic.</em></p>
 <hr />

@@ -3494,8 +3494,8 @@
 <p>A <strong>Reducer</strong> is a mathematical operation that condenses many values into a single summary value.</p>
 <p>Think of it like a grading system. A student gets 10 test scores throughout the year. The reducer calculates their <strong>mean score</strong> — compressing 10 values into 1 meaningful number.</p>
 <p>In Earth Engine, reducers work across two dimensions:</p>
-<pre class="mermaid"><code>graph TD
-    A[Reducers] --&gt; B["📅 Temporal Reduction\n(Many Images → One Image)"]
+<pre class="mermaid"><code>flowchart TD
+    A["Reducers"] --&gt; B["📅 Temporal Reduction\n(Many Images → One Image)"]
     A --&gt; C["📐 Spatial Reduction\n(Many Pixels → One Number)"]
     B --&gt; D["Example: .median() on a collection"]
     C --&gt; E["Example: .reduceRegion() on an image"]
@@ -3713,12 +3713,12 @@
 </div>
 <hr />
 <h2 id="quick-reference-cheat-sheet">Quick Reference Cheat Sheet<a class="headerlink" href="#quick-reference-cheat-sheet" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph LR
-    A[Your Goal] --&gt; B{What kind of reduction?}
-    B --&gt;|Many images → one image| C["collection.median()\ncollection.mean()"]
-    B --&gt;|Pixels in area → stats| D["image.reduceRegion()"]
-    B --&gt;|Multiple regions| E["image.reduceRegions()"]
-    B --&gt;|Images + time → chart| F["ui.Chart.image.series()"]
+<pre class="mermaid"><code>flowchart LR
+    A["Your Goal"] --&gt; B{"What kind of reduction?"}
+    B --&gt;|"Many images → one image"| C["collection.median()\ncollection.mean()"]
+    B --&gt;|"Pixels in area → stats"| D["image.reduceRegion()"]
+    B --&gt;|"Multiple regions"| E["image.reduceRegions()"]
+    B --&gt;|"Images + time → chart"| F["ui.Chart.image.series()"]
     style C fill:#e3f2fd,stroke:#333
     style D fill:#e8f5e9,stroke:#333
     style E fill:#fff3e0,stroke:#333

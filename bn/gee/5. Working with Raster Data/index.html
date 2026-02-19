@@ -3499,12 +3499,12 @@
 </table>
 <hr />
 <h2 id="the-raster-workflow">রাস্টার ওয়ার্কফ্লো (The Raster Workflow)<a class="headerlink" href="#the-raster-workflow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph LR
-    A[Catalog] -- অনুসন্ধান --&gt; B[ImageCollection]
-    B -- ফিল্টার --&gt; C[Filtered Collection]
-    C -- কম্পোজিট/রিডিউস --&gt; D[Single Image]
-    D -- প্রসেস --&gt; E[Analysis Result]
-    E -- ম্যাপ --&gt; F[Visualization]
+<pre class="mermaid"><code>flowchart LR
+    A["Catalog"] -- "অনুসন্ধান" --&gt; B["ImageCollection"]
+    B -- "ফিল্টার" --&gt; C["Filtered Collection"]
+    C -- "কম্পোজিট/রিডিউস" --&gt; D["Single Image"]
+    D -- "প্রসেস" --&gt; E["Analysis Result"]
+    E -- "ম্যাপ" --&gt; F["Visualization"]
     style D fill:#f96,stroke:#333,stroke-width:2px</code></pre>
 <h2 id="_3">কীভাবে ডেটাসেট লোড করবেন<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>এই ইমেজগুলো ব্যবহার করতে হলে ক্যাটালগ থেকে সেগুলোকে "কল" বা ডাকতে হয়।</p>

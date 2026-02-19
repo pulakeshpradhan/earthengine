@@ -3460,7 +3460,7 @@
 <p>In Google Earth Engine, datasets often contain <strong>thousands of images</strong> spanning decades.
 A <strong>filter</strong> lets you zero in on exactly the data you need — by date, location, cloud cover, or any other property.</p>
 <p>Think of it like searching a library. The catalog has a million books, but you only want books from 1990, written in English, about geography.</p>
-<pre class="mermaid"><code>graph LR
+<pre class="mermaid"><code>flowchart LR
     A["Huge ImageCollection\n(1000s of images)"] --&gt;|.filterDate()| B["Date range subset"]
     B --&gt;|.filterBounds()| C["Spatial subset"]
     C --&gt;|.filter()| D["Property subset\n(cloud &lt; 10%)"]
